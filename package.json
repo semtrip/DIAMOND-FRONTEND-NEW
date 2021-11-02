@@ -1,6 +1,6 @@
 {
-    "name": "cobalt-front",
-    "description": "Frontend for Cobal RP project",
+    "name": "daimond-front",
+    "description": "Frontend for Daimond RP project",
     "version": "0.1.0",
     "private": true,
     "license": "UNLICENSED",
@@ -8,7 +8,7 @@
     "homepage": ".",
     "repository": {
         "type": "git",
-        "url": "https://github.com/semtrip/COBALT-RP-FRONTEND"
+        "url": "https://github.com/semtrip/Daimond-RP-FRONTEND"
     },
     "dependencies": {
         "@dnd-kit/core": "^1.2.0",
