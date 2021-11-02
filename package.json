@@ -8,7 +8,7 @@
     "homepage": ".",
     "repository": {
         "type": "git",
-        "url": "https://github.com/semtrip/Daimond-RP-FRONTEND"
+        "url": "https://github.com/semtrip/DAIMOND-FRONTEND-NEW"
     },
     "dependencies": {
         "@dnd-kit/core": "^1.2.0",
