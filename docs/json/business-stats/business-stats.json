@@ -1,0 +1,78 @@
+{
+    "businessName": [
+        "АВТОСАЛОН",
+        "Магазин товаров"
+    ],
+    "businessBalance": 250000,
+    "dailyConsumption": [
+        {
+            "reason": "ya ne ebu po4emy",
+            "price": 8000
+        },
+        {
+            "reason": "ya ne ebu po4emy",
+            "price": 5000
+        },
+        {
+            "reason": "ya ne ebu po4emy",
+            "price": 3000
+        }
+    ],
+    "dailyIncome": [
+        {
+            "reason": "Просто пиздатый магазин",
+            "price": 5000
+        },
+        {
+            "reason": "Просто пиздатый магазин",
+            "price": 5000
+        },
+        {
+            "reason": "Просто пиздатый магазин",
+            "price": 1000000
+        }
+    ],
+    "oftenBuy": [
+        {
+            "name": "Апельсиновый сок",
+            "price": 200
+        },
+        {
+            "name": "Апельсиновый сок",
+            "price": 200
+        }
+    ],
+
+    "weeklyStatistics": {
+        "consumption": [
+            {
+                "dayName": "Понедельник",
+                "value": 70000
+            },
+            {
+                "dayName": "Вторник",
+                "value": 50000
+            }
+        ],
+        "income": [
+            {
+                "dayName": "Понедельник",
+                "value": 20000
+            },
+            {
+                "dayName": "Вторник",
+                "value": 40000
+            }
+        ],
+        "quantitySoldItems": [
+            {
+                "dayName": "Понедельник",
+                "value": 200
+            },
+            {
+                "dayName": "Вторник",
+                "value": 250
+            }
+        ]
+    }
+}

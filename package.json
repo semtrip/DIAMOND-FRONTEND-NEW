@@ -1,0 +1,81 @@
+{
+    "name": "cobalt-front",
+    "description": "Frontend for Cobal RP project",
+    "version": "0.1.0",
+    "private": true,
+    "license": "UNLICENSED",
+    "author": "semtrip <semtrip1@gmail.com>",
+    "homepage": ".",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/semtrip/COBALT-RP-FRONTEND"
+    },
+    "dependencies": {
+        "@dnd-kit/core": "^1.2.0",
+        "@dnd-kit/sortable": "^3.1.0",
+        "@dnd-kit/utilities": "^2.0.0",
+        "@sfgrp/svg-radial-menu": "^1.0.6",
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^11.2.7",
+        "@testing-library/user-event": "^12.6.2",
+        "classnames": "^2.3.1",
+        "mobx": "^6.3.2",
+        "mobx-react-lite": "^3.2.0",
+        "moment": "^2.29.1",
+        "react": "^17.0.2",
+        "react-circular-progressbar": "^2.0.4",
+        "react-colorful": "^5.2.3",
+        "react-dom": "^17.0.2",
+        "react-input-range": "^1.3.0",
+        "react-loader-spinner": "^4.0.0",
+        "react-responsive-select": "^7.0.2",
+        "react-scripts": "^4.0.3",
+        "react-select": "^4.3.1",
+        "react-signature-pad-wrapper": "^1.3.0",
+        "react-switch": "^6.0.0",
+        "react-transition-group": "^4.4.2",
+        "recharts": "^2.0.9",
+        "sass": "^1.35.1",
+        "uuid": "^8.3.2"
+    },
+    "scripts": {
+        "dev": "react-scripts start",
+        "build": "react-scripts build",
+        "build:dev": "dotenv -e .env.development react-scripts build",
+        "eject": "react-scripts eject",
+        "zip": "react-scripts build & node scripts/archiver",
+        "analyze": "node scripts/analyze",
+        "stats": "sloc . -e node_modules",
+        "tsc:w": "tsc -w"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            "defaults",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "^15.14.0",
+        "@types/react": "^17.0.13",
+        "@types/react-dom": "^17.0.8",
+        "@types/react-transition-group": "^4.4.2",
+        "@types/uuid": "^8.3.1",
+        "archiver": "^5.3.0",
+        "dotenv-cli": "^4.0.0",
+        "sloc": "^0.2.1",
+        "typescript": "^4.3.5",
+        "webpack-bundle-analyzer": "^4.4.2"
+    }
+}
