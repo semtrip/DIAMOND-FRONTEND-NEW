@@ -1,7 +1,6 @@
 import React from 'react';
 import InfoPlayer from './InfoPlayer';
 import BoxCreate from './BoxCreate';
-import EventManager from "../../../../EventManager";
 
 class ChangePlayer extends React.Component {
     constructor(props) {
@@ -54,7 +53,8 @@ class ChangePlayer extends React.Component {
     }
 
     componentDidMount() {
-        EventManager.addHandler('ChangePlayer', value => {
+        const { EventManager: em } = window;
+        em.addHandler('ChangePlayer', value => {
             if (value.type === 'show') {
                 this.setState({ show: true })
             } else if (value.type === 'hide') {
@@ -73,7 +73,8 @@ class ChangePlayer extends React.Component {
     }
 
     componentWillUnmount() {
-        EventManager.removeHandler('ChangePlayer');
+        const { EventManager: em } = window;
+        em.removeHandler('ChangePlayer');
     }
 
     clickLeftArrow(index) {

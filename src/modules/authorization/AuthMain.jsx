@@ -3,7 +3,6 @@ import './css/auto.css'
 import Authorization from './Pages/Authorization';
 import {BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import CreatePlayer from './Pages/CreatePlayer';
-import EventManager from "../../globals.ts";
 
 class AuthMain extends React.Component {
     constructor(props) {
@@ -19,7 +18,8 @@ class AuthMain extends React.Component {
     }
 
     componentDidMount() {
-        EventManager.addHandler('authMain', value => {
+        const { EventManager: em } = window;
+        em.addHandler('authMain', value => {
             if (value.type === 'show') {
                 this.setState({show: true})
             } else if (value.type === 'hide') {
@@ -33,7 +33,8 @@ class AuthMain extends React.Component {
     }
 
     componentWillUnmount() {
-        EventManager.removeHandler('authMain');
+        const { EventManager: em } = window;
+        em.removeHandler('authMain');
     }
 
     render() {

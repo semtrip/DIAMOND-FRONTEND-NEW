@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from 'react';
-import EventManager from "../../../EventManager";
 import Button from '../uikit/Button';
 import Title from '../uikit/Title';
 import Logo from '../img/logo.svg';
@@ -36,9 +35,11 @@ class Authorization extends React.Component {
     }
 
     componentDidMount() {
+        const { EventManager: em } = window;
         document.addEventListener("keydown", this.handleKeyPress);
 
-        EventManager.addHandler('authMain:2', value => {
+        em.addHandler('authMain:2', value => {
+
             if (value.type === 'login') {
                 this.setState({ defaultLogin: value.login })
 
@@ -47,8 +48,9 @@ class Authorization extends React.Component {
     }
 
     componentWillUnmount() {
+        const { EventManager: em } = window;
         document.removeEventListener("keydown", this.handleKeyPress);
-        EventManager.removeHandler('authMain:2');
+        em.removeHandler('authMain:2');
     }
 
     handleChange(value) {
