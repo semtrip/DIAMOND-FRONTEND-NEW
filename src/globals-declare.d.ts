@@ -1,5 +1,4 @@
 type TTrigger = (eventName: string, ...args: any) => void
-type TFrontTrigger = (triggerName: string, ...args: any) => void
 
 interface IEventManager {
   events: any,
