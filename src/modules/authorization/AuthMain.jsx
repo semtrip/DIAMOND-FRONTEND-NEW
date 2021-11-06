@@ -4,6 +4,8 @@ import Authorization from './Pages/Authorization';
 import {BrowserRouter as Router, Route, Redirect} from "react-router-dom";
 import CreatePlayer from './Pages/CreatePlayer';
 
+const { EventManager: em } = window;
+
 class AuthMain extends React.Component {
     constructor(props) {
         super(props)
@@ -18,7 +20,6 @@ class AuthMain extends React.Component {
     }
 
     componentDidMount() {
-        const { EventManager: em } = window;
         em.addHandler('authMain', value => {
             if (value.type === 'show') {
                 this.setState({show: true})
@@ -33,10 +34,8 @@ class AuthMain extends React.Component {
     }
 
     componentWillUnmount() {
-        const { EventManager: em } = window;
         em.removeHandler('authMain');
     }
-
     render() {
         if (!this.state.show) {
             return null;

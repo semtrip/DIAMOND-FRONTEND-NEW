@@ -1,0 +1,195 @@
+.accountmenu__content__quest__blitem {
+    display       : flex;
+    height        : 95%;
+    width         : 100%;
+    margin-top    : 1rem;
+    box-sizing    : border-box;
+    border-radius : 15px;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__questinfo__container {
+    height    : 90%;
+    overflow-y: auto;
+}
+
+.answer {
+    padding-left : 3.5rem;
+    padding-right: 3.5rem;
+}
+
+.accountmenu__cards__question__icon__container__active .accountmenu__cards__question__icon {
+    width       : 1.6rem;
+    margin-right: 1.2rem;
+}
+
+.accountmenu__content__cards__container__info {
+    display       : flex;
+    flex-direction: column;
+    padding-bottom: 4rem;
+    border-bottom : 1px solid rgba(255, 255, 255, 0.1);
+    padding-left  : 3.5rem;
+    padding-right : 3.5rem;
+}
+
+.accountmenu__content__cards__header__name {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 2rem;
+    color      : #fff;
+}
+
+
+.accounmenu__cards__quest__data__container {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    width         : 100%;
+}
+
+.accountmenu__content__cards__questinfo__container::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.accountmenu__content__cards__questinfo__container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.accountmenu__content__cards__questinfo__container::-webkit-scrollbar-thumb {
+    background   : #FD0023;
+    border-radius: 2px;
+}
+
+.accountmenu__content__quest__container {
+    height          : 80px;
+    max-width       : 950px;
+    display         : flex;
+    flex-direction  : row;
+    align-items     : center;
+    overflow-x      : auto;
+    white-space     : nowrap;
+    background-color: #121214;
+    border-radius   : 2px;
+}
+
+.accountmenu__content__quest__container::-webkit-scrollbar {
+    height: 0.4rem;
+    width : 1rem;
+}
+
+.accountmenu__content__quest__container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.accountmenu__content__quest__container::-webkit-scrollbar-thumb {
+    background   : #FD0023;
+    border-radius: 2px;
+}
+
+.accountmenu__cards__quest {
+    width         : 170px;
+    padding       : 0 1rem;
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    cursor        : pointer;
+}
+
+.accountmenu__cards__quest.active {
+    border-bottom: 5px solid #FD0023;
+}
+
+.accountmenu__cards__quest__text {
+    color      : #fff;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1rem;
+}
+
+.accountmenu__cards__questmenu__icon.done {
+    filter: hue-rotate(130deg) drop-shadow(0px 0px 10px #11DD31);
+}
+
+.accountmenu__cards__questmenu__icon {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    font-size      : 1.4rem;
+    filter         : drop-shadow(0px 0px 10px #DD1111)
+}
+
+.accountmenu__content__cards__questinfo__img__container {
+    width  : 100%;
+    opacity: 0.5;
+}
+
+.accountmenu__content__cards__questinfo__header {
+    display       : flex;
+    flex-direction: column;
+    padding-left  : 1rem;
+    margin-bottom : 4vh;
+}
+
+.accountmenu__content__cards__questinfo__header__name {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1.8rem;
+    z-index    : 10;
+}
+
+.accountmenu__content__cards__questinfo__header__count {
+    margin-top : 2vh;
+    font-family: 'Montserrat';
+    color      : #fff;
+    font-size  : 1.2rem;
+    z-index    : 10;
+}
+
+.accountmenu__content__cards__questinfo__list__item {
+    z-index         : 10;
+    background-color: #121214;
+    max-height      : 128px;
+    border-radius   : 6px;
+    margin-bottom   : 1rem;
+    margin-right    : 1rem;
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+    align-items     : center;
+}
+
+.accountmenu__content__cards__questinfo__list__item__info {
+    display       : flex;
+    flex-direction: column;
+    padding       : 1rem;
+}
+
+.accountmenu__content__cards__questinfo__item__name {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1.2rem;
+    z-index    : 10;
+}
+
+.accountmenu__content__cards__questinfo__item__info {
+    color        : #fff;
+    font-family  : 'Montserrat';
+    margin-top   : 0.4rem;
+    font-size    : 1.2rem;
+    margin-bottom: 1rem;
+    z-index      : 10;
+}
+
+.accountmenu__content__cards__questinfo__item__btmdata {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+}
+
+.accountmenu__content__cards__questinfo__item__reward {
+    color      : #00D879;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1rem;
+    margin-top : 1rem;
+}

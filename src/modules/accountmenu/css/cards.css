@@ -1,0 +1,12 @@
+.accountmenu__content__cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    flex-direction: row;
+    width: 76%;
+    background-color: #151618;
+    border-radius: 0px 6px 6px 0px;
+    position: relative;
+}

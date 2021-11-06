@@ -1,0 +1,422 @@
+.accountmenu__content__cards__item {
+    display       : flex;
+    height        : 100%;
+    width         : 32%;
+    box-sizing    : border-box;
+    border-radius : 15px;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__main {
+    display       : flex;
+    height        : 250px;
+    width         : 500px;
+    background    : #121214;
+    box-sizing    : border-box;
+    border-radius : 6px;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__item__finance {
+    width         : 350px;
+    background    : #121214;
+    box-sizing    : border-box;
+    border-radius : 6px;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__item__general__person {
+    height: 100%;
+}
+
+.accountmenu__cards__icline__data {
+    font-family: 'Montserrat';
+    box-sizing : border-box;
+    display    : flex;
+    padding    : 2px 1rem;
+}
+
+.accountmenu__cards__icline__data__title {
+    margin-right: auto;
+    font-size   : 1.1rem;
+    color       : #fff;
+}
+
+.accountmenu__cards__icline__data__info {
+    font-size: 1rem;
+}
+
+.accountmenu__cards__stats {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    padding        : 0 3.5rem;
+}
+
+.accountmenu__cards__stats__item {
+    display       : flex;
+    flex-direction: column;
+}
+
+.accountmenu__cards__stats__title {
+    font-family: 'Montserrat';
+    font-size  : 1.1rem;
+}
+
+.accountmenu__cards__stats__value {
+    font-family: 'Montserrat';
+    font-size  : 1rem;
+    margin-top : 0.4rem;
+}
+
+
+.accountmenu__cards__stats__progressbar {
+    width           : 7rem;
+    height          : 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius   : 2px;
+    margin-top      : 8%;
+    margin-bottom   : 8%;
+}
+
+.accountmenu__hr {
+    background-color: rgba(72, 72, 72, 0.1);
+    display         : flex;
+    height          : 4px;
+    justify-content : center;
+    margin-left     : 3.5rem;
+    margin-right    : 3.5rem;
+    margin-top      : auto;
+    margin-bottom   : auto;
+}
+
+.accountmenu__cards__logindata {
+    margin-bottom  : 4%;
+    padding-left   : 3.5rem;
+    padding-right  : 3.5rem;
+    display        : flex;
+    justify-content: space-between;
+    flex-direction : row;
+    align-items    : center;
+    margin-top     : 18%;
+}
+
+.accountmenu__cards__logindata__item {
+    display       : flex;
+    flex-direction: column;
+}
+
+.accountmenu__cards__logindata__item__title {
+    font-family: 'Montserrat';
+    font-size  : 1rem;
+    color      : rgba(255, 255, 255, 0.5);
+}
+
+.accountmenu__cards__logindata__item__subtitle {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1rem;
+    color      : #fff;
+    margin-top : 5%;
+}
+
+.accountmenu__content__cards__status {
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-items    : center;
+    padding        : 1rem;
+}
+
+.accountmenu__content__cards__status__card {
+    font-family  : 'Montserrat';
+    padding      : 1rem 2rem;
+    background   : linear-gradient(99.3deg, rgba(0, 255, 163, 0.088) -5.23%, rgba(0, 255, 163, 0) 104.11%);
+    box-sizing   : border-box;
+    border-radius: 6px;
+    width        : fit-content;
+}
+
+.accountmenu__content__cards__status__mcircle {
+    width           : 5rem;
+    height          : 5rem;
+    border-radius   : 50%;
+    background-color: transparent;
+    border          : 4px solid #484848;
+}
+
+.accountmenu__content__cards__status__circle {
+    width          : 13rem;
+    height         : 13rem;
+    border-radius  : 50%;
+    border         : 4px solid #43b2ea;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    flex-direction : column;
+    box-shadow     : 0 0 16px rgba(85, 190, 243, 0.34);
+}
+
+.accountmenu__content__cards__status__circle__ttext {
+    font-family   : 'RobotoLight';
+    color         : #9e9e9e;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    font-size     : 0.8rem;
+    margin-bottom : 6%;
+}
+
+.accountmenu__content__cards__status__circle__mtext {
+    font-family   : 'RobotoBold';
+    color         : #fff;
+    text-transform: uppercase;
+    font-size     : 1.5rem;
+    text-align    : center;
+}
+
+.accountmenu__content__cards__status__circle__btext {
+    margin-top    : 6%;
+    font-family   : 'RobotoLight';
+    color         : #9e9e9e;
+    text-transform: uppercase;
+    font-size     : 0.9rem;
+}
+
+.accountmenu__content__cards__title {
+    margin-top : 1rem;
+    font-family: 'Montserrat';
+    font-size  : 1.2rem;
+}
+
+.accountmenu__content__cards__title_single {
+    margin-top   : 2rem;
+    font-family  : 'Montserrat';
+    font-weight  : 600;
+    font-size    : 1.2rem;
+    padding-left : 3.5rem;
+    margin-bottom: 1.6rem;
+    display      : flex;
+}
+
+.accountmenu__content__cards__title_heavy {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1.8rem;
+    text-align : center;
+}
+
+.accountmenu__content__cards__finance {
+    display       : flex;
+    flex-direction: column;
+    padding       : 1rem;
+}
+
+.accountmenu__content__cards__finance__card:first-child {
+    margin-right: 1.5rem;
+}
+
+.accountmenu__content__cards__finance__card {
+    display       : flex;
+    flex-direction: column;
+    padding-left  : 5%;
+    padding-right : 5%;
+    padding-bottom: 3%;
+    padding-top   : 3%;
+    min-width     : 30%;
+    border-radius : 0.4rem;
+    width         : 45%;
+}
+.accountmenu__content__cards__finance__card__icon_title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accountmenu__card__icon {
+    width : 2.2rem;
+    height: 2.2rem;
+}
+
+.accountmenu__content__cards__finance__container {
+    margin-top    : 4%;
+    display       : flex;
+    flex-direction: row;
+}
+
+.accountmenu__content__cards__finance__card__title {
+    font-family  : 'Montserrat';
+    font-weight  : 600;
+    font-size    : 1rem;
+    color        : #fff;
+    margin-top   : 5%;
+    margin-bottom: 5%;
+}
+
+.accountmenu__content__cards__finance__card__subtitle {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1rem;
+    color      : #fff;
+    padding-top: 0.5rem;
+}
+
+.accountmenu__content__cards__medicine {
+    display       : flex;
+    flex-direction: column;
+    padding-left  : 3.5rem;
+    padding-right : 3.5rem;
+    margin-bottom : 4%;
+}
+
+.accountmenu__content__cards__medicine__name {
+    font-family: 'Montserrat';
+    font-size  : 1.1rem;
+    color      : #fff;
+}
+
+.accountmenu__content__cards__medicine__status {
+    font-family : 'Montserrat';
+    font-weight : 600;
+    font-size   : 1.1rem;
+    margin-right: 0.4rem;
+}
+
+.accountmenu__content__cards__medicine__text {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size  : 1.1rem;
+}
+
+.accountmenu__content__cards__medicine__status__container {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    margin-top    : 1rem;
+    margin-bottom : 6%;
+}
+
+.accountmenu__content__cards__medicine__status__container__date {
+    display       : flex;
+    flex-direction: column;
+}
+
+.accountmenu__content__cards__medicine__status__container__date__text {
+    color      : #fff;
+    font-family: 'Montserrat';
+    font-size  : 0.95rem;
+    white-space: nowrap;
+}
+
+.accountmenu__content__cards__medicine__info {
+    font-family   : 'RobotoLight';
+    width         : 70%;
+    text-transform: uppercase;
+    color         : #d2d2d2;
+    font-size     : 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+.accountmenu__content__cards__medicine__container {
+    margin-top: auto;
+}
+
+.accountmenu__content__cards__item__list {
+    width: 46%;
+    display        : flex;
+    flex-direction : row;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+    align-items    : center;
+    height         : 2rem;
+    margin: 2px 1rem 0 0;
+    padding: 0;
+}
+
+.accountmenu__list {
+    overflow-y         : auto;
+    background-repeat  : no-repeat;
+    background-position: right top;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 225px;
+    margin: 1rem 0 0 1rem;
+}
+
+
+
+.accountmenu__list::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.accountmenu__list::-webkit-scrollbar-track {
+    background   : rgba(0, 0, 0, 0.0);
+    border-radius: 15px;
+}
+
+.accountmenu__list::-webkit-scrollbar-thumb {
+    background   : #FD0023;
+    border-radius: 15px;
+}
+
+.accountmenu__scrollable {
+    overflow-y: auto;
+}
+
+.accountmenu__scrollable::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+.accountmenu__scrollable::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.0);
+}
+
+.accountmenu__scrollable::-webkit-scrollbar-thumb {
+    background: #FD0023;
+    border-radius: 2px;
+}
+.accountmenu__scrollable {
+    overflow-y: auto;
+}
+
+.accountmenu__content__cards__item__list__title {
+    font-family: 'Montserrat';
+    font-size  : 1rem;
+    color      : #fff;
+}
+
+.accountmenu__content__cards__item__list__subtitle {
+    font-family: 'Montserrat';
+    font-size  : 1rem;
+    color      : #fff;
+}
+
+.accountmenu__cards__btnreports {
+    display       : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items   : center;
+    position: absolute;
+    right: 1.4rem;
+    top: 18rem;
+    width: 350px;
+}
+
+.wrapper__progress {
+    position: relative;
+    height  : auto;
+}
+
+.accountmenu__content__cards__item__stats{
+    width: 100%;
+    height: 300px;
+    border-radius: 6px;
+    margin-top: 5rem;
+    background    : #121214;
+}
+.stats_title{
+    display: block;
+    padding: 1rem;
+}

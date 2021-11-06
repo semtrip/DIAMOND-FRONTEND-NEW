@@ -1,0 +1,155 @@
+:root {
+    --bg-color: #0c0c0c;
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+.menu-box-content {
+    display: flex;
+    flex: 1 1 0%;
+    background-color: rgba(14, 14, 16, 0.6);
+    flex-direction: column;
+    outline: none;
+    border-radius: 2px;
+    padding: 2rem 0;  
+}
+
+.menu-box-footer {
+    background-color: rgba(14, 14, 16, 0.6);
+    padding: 2rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.logo-info__text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.logo-info__text.time{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.clock-img{
+    background: url('../img/clock.svg') no-repeat;
+    background-size: cover;
+    margin-right: 0.3rem;
+    width: 12px;
+    height: 12px;
+}
+
+.players-img{
+    background: url('../img/online-players.svg') no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.menu-box-content div, label {
+    outline: none;
+}
+
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    min-height: 568px;
+    right: 40px;
+    top: 90px;
+    background-color: rgba(18, 18, 20, 0.8);
+    outline: none;
+    z-index: 2;
+}
+
+.checkbox-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 100px;
+    background-color: #fff;
+}
+
+.checkmark:hover {
+    background-color: #FD0023;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #FD0023;
+}
+
+.checkmark:after {
+    content: "";
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    margin-bottom: 3px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menuContainer {
+    outline: none;
+}
+
+.menu-item {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: 0.5s ease;
+
+}
+
+.menu-item-inverted {
+    background-color: #151618;
+}
+
+.list-arrow-icon {
+    width: 24px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transition: 0.5s ease-in-out;
+}
