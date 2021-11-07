@@ -25,8 +25,10 @@ class NameCharacter extends React.Component {
         try {
             mp.trigger('client:events:custom:register', // eslint-disable-line
             this.props.first_name, this.props.last_name, this.props.old_input, this.props.promocode, this.props.referer, this.props.ationality[this.props.index_help]); 
+            alert("Функция отработала ", this.props.first_name, ' ', this.props.last_name, ' ', this.props.old_input)
         } catch (e) {
             console.log(e);
+            alert(e)
         }
     }
     
