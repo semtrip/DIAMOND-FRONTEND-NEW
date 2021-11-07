@@ -1,19 +1,19 @@
 import React from 'react'
 import '../css/propcard.css'
-import CarCard from '../../accountmenu/uikit/CarCard'
+//import CarCard from '../../accountmenu/uikit/CarCard'
 import { useState } from 'react'
 import BigButton from '../../accountmenu/uikit/BigButton'
-import Button from '../../accountmenu/uikit/Button'
+//import Button from '../../accountmenu/uikit/Button'
 import  { MdCard }from 'react-ionicons'
 import  { MdCash }from 'react-ionicons'
-import Alert from '../../alert/Alert'
+//import Alert from '../../alert/Alert'
 
 const PropertyHouse = (props) => {
     // <img className="govmenu__licensegov__propertycar__img" src={`https://gta-5.ru/server/client/images/cars/${props.name}_1.jpg`} />
 
     const { address, setAlert, gprice, tax, balance, maxbalance, garageTypes, roommatefree, garageCount, roommatemax, roommates } = props
     
-    const html = garageTypes.forEach((item) => `${item}<br>`)
+    //const html = garageTypes.forEach((item) => `${item}<br>`)
 
     const [ taxValue, setTaxValue ] = useState('')
 
@@ -28,7 +28,7 @@ const PropertyHouse = (props) => {
                         </span>
                         <div className="accountmenu__content__cards__house__hprice__sell" style={{marginTop: 0, paddingTop: '1%', paddingBottom: '2%'}}>
                                 <div className="accountmenu__content__cards__house__hprice__sell__linebtn">
-                                    <img src={'https://gta-5.ru/server/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
+                                    <img src={'https://gta-5.ru/server/client/images/mmenu/all/icons/money-bag.svg'} alt="" className="accountmenu__content__cards__house__hprice__sell__icon" />
                                     <span className="accountmenu__content__cards__house__hprice__sell__text">{`$ ${gprice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`}</span>
                                 </div>
                         </div>

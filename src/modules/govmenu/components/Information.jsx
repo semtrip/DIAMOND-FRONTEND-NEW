@@ -5,7 +5,7 @@ import { useState } from 'react'
 import ProgressBarCircle from '../../accountmenu/uikit/ProgressBarCircle'
 import  {MdInformation} from 'react-ionicons'
 
-const Information = ({  }) => {
+const Information = () => {
 
     const governor = { name: 'Donald Trump', date: '8 августа 2021 года' }
 

@@ -57,7 +57,7 @@ export default class Draggable extends React.Component {
 
     // Вызывайте этот метод для изменения координат компонента
     setPos = ({x, y}) => { // this.setPos({ x: 10, y: 15 })
-        let element = this.draggable.current
+        //let element = this.draggable.current
 
         //element.style.position = 'absolute'
         //element.style.left = `${x}px`

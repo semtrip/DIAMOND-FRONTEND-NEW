@@ -327,7 +327,7 @@ class Chat extends React.Component {
         };
 
         function escapeHtml(string) {
-            return String(string).replace(/[&<>"'`=\/]/g, function (s) {
+            return String(string).replace(/[&<>"'`=]/g, function (s) {
                 return entityMap[s];
             });
         }

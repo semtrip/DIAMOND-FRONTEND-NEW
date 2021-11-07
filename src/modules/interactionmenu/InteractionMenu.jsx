@@ -20,7 +20,7 @@ class InteractionMenu extends React.Component {
                 <div className="inter-menu" style={{left: this.props.x + "%", top: this.props.y + "%"}}>
                     {this.props.inter_menu.map((button, i) => {
                         if (!button.show) {
-                            return
+                            return false
                         }
                         const index = `intermenu${i}`
                         return (

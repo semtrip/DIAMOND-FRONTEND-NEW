@@ -37,6 +37,8 @@ const CardItem = ({ card, bankName, setSelected, selectedCard, index }) => {
             case 2:
                 img = GoldCardIcon
                 break;
+            default:
+                break;    
         }
         return img
     }
@@ -50,7 +52,7 @@ const CardItem = ({ card, bankName, setSelected, selectedCard, index }) => {
                         <br></br>
                         {card.name}
                     </span>
-                    <img src={getCardImage(index)} className="carditem__content__img" />
+                    <img src={getCardImage(index)} alt="" className="carditem__content__img" />
                 </div>
                 <span className="carditem__content__money">
                     {`${card.money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} $`}

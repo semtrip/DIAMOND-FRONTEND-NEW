@@ -19,7 +19,7 @@ class FaceLast extends React.Component {
                 <span className="title-in-block">Редактор</span>
                 <div className="header-title-editor margin-for-editor">Внешность</div>
                 {this.props.input_editor_face_last.map((e, index) => {
-                    let i = "input_editor_face_last" + index;
+                    //let i = "input_editor_face_last" + index;
                     return (
                             <SliderEditor
                                 index={index}

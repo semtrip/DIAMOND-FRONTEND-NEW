@@ -1,8 +1,8 @@
 import React from 'react'
 import '../css/general.css'
 import LineData from '../uikit/LineData'
-import StatContainer from '../uikit/StatContainer'
-import InfoBlock from '../uikit/InfoBlock'
+//import StatContainer from '../uikit/StatContainer'
+//import InfoBlock from '../uikit/InfoBlock'
 import Card from '../uikit/Card'
 import BigButton from '../uikit/BigButton'
 

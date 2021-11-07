@@ -248,7 +248,7 @@ class Bank extends React.Component {
                                     <div className="bank__menu__actions">
                                         {this.state.actionsList.map((item, index) => (
                                             <div className={this.state.cards ? (this.state.selectedAction === index ? this.getSelectedActionBackground(item.type) : "bank__menu__actions__item") : "bank__menu__actions__item_disabled"} key={`bank__menu__actions__item-${index}`} onClick={() => this.state.cards ? this.setState({ selectedAction: index }) : null}>
-                                                <img src={item.icon} className="bank__menu__actions__item__icon" />
+                                                <img src={item.icon} alt="" className="bank__menu__actions__item__icon" />
                                                 <span className="bank__menu__actions__item__text">{item.text}</span>
                                             </div>
                                         ))}
@@ -294,9 +294,8 @@ class Bank extends React.Component {
                                                             <span className="bank__menu__withdraw__btn">{`Выдать`}</span>
                                                         </div>
                                                         <div className="bank__menu__withdraw__img" />
-                                                    </div>
-                                                )
-                                                break;
+                                                    </div>  
+                                                ) 
                                             case 1:
                                                 return (
                                                     <div className="bank__menu__withdraw">
@@ -313,7 +312,6 @@ class Bank extends React.Component {
                                                         <div className="bank__menu__withdraw__img" />
                                                     </div>
                                                 )
-                                                break;
                                             case 2:
                                                 return (
                                                     <div className="bank__menu__transfer">
@@ -336,7 +334,6 @@ class Bank extends React.Component {
                                                         <div className="bank__menu__transfer__img" />
                                                     </div>
                                                 )
-                                                break;
                                             case 3:
                                                 return (
                                                     <div className="bank__menu__pincode">
@@ -358,21 +355,18 @@ class Bank extends React.Component {
                                                         </div>
                                                     </div>
                                                 )
-                                                break;
                                             case 4:
                                                 return (
                                                     <span className="bank__menu__blockcard" onClick={() => this.setState({ isShowModalBlocked: true })}>
                                                         {`Заблокировать карту`}
                                                     </span>
                                                 )
-                                                break;
                                             case -1:
                                                 return (
                                                     <span className="bank__menu__getcard" onClick={() => this.setState({page: 'create-card'})}>
                                                         {`Получить карту`}
                                                     </span>
                                                 )
-                                                break;
                                             default:
                                                 break;
                                         }

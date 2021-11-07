@@ -4,7 +4,7 @@ import "./css/certificate.css"
 
 import img_woman from "./img/woman.png"
 import img_man from "./img/man.png"
-import flag from "./img/logo-2.png"
+//import flag from "./img/logo-2.png"
 import gov from "./img/gov.png"
 import fib from "./img/fib.png"
 import lspd from "./img/lspd.png"

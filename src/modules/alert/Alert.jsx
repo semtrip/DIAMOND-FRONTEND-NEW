@@ -20,7 +20,7 @@ class Alert extends React.Component {
     }
 
     escapeRegExp = function (str) {
-        return str.toString().replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+        return str.toString().replace(/([.*+?^=!:${}()|[\]/\\])/g, "\\$1");
     };
 
     replaceAll(str, find, replace) {

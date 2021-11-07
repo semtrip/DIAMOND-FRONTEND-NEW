@@ -1,3 +1,4 @@
+import React  from 'react';
 import '../../css/base.css'
 import '../../css/adaptive.css'
 import '../../css/animate.css'
@@ -13,7 +14,7 @@ import Bank                           from '../bank/Bank'
 import CarShop                        from '../carshop/CarShop'
 import Certificate                    from '../certificate/Certificate'
 import Donate                         from '../donate/Donate'
-import EditorPlayer                   from '../editorplayer/EditorPlayer'
+//import EditorPlayer                   from '../editorplayer/EditorPlayer'
 
 
 
@@ -38,7 +39,6 @@ export default function App () {
       <CarShop />
       <Certificate />
       <Donate />
-      <EditorPlayer />
     </>
   )
 }

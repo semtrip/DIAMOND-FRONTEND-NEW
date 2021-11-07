@@ -118,8 +118,8 @@ const setActiveQuest = active => {
 }
 var iSpeed = 1
 const testSpeedometer = () => {
-    if (hudcData.type = 'show') {
-        if (iSpeed % 10 == 0) {
+    if (hudcData.type === 'show') {
+        if (iSpeed % 10 === 0) {
             SpeedData.light = !SpeedData.light
             SpeedData.door = !SpeedData.door
             SpeedData.engine = !SpeedData.engine
@@ -129,7 +129,7 @@ const testSpeedometer = () => {
         }
         setTimeout(() => {
             SpeedData.speed = SpeedData.speed - 1;
-            if (SpeedData.fuel != 0) {
+            if (SpeedData.fuel !== 0) {
                 SpeedData.fuel = SpeedData.fuel - 1
             }
             window.trigger('hudc', SpeedData)
@@ -143,8 +143,8 @@ const testSpeedometer = () => {
     }
 }
 const testSpeedometer2 = () => {
-    if (hudcData.type = 'show') {
-        if (iSpeed % 10 == 0) {
+    if (hudcData.type === 'show') {
+        if (iSpeed % 10 === 0) {
             SpeedData.light = !SpeedData.light
             SpeedData.door = !SpeedData.door
             SpeedData.engine = !SpeedData.engine

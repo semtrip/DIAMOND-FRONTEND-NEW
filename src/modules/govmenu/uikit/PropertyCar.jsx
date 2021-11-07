@@ -1,15 +1,15 @@
 import React from 'react'
 import '../css/propcard.css'
-import CarCard from '../../accountmenu/uikit/CarCard'
+//import CarCard from '../../accountmenu/uikit/CarCard'
 import { useState } from 'react'
 import BigButton from '../../accountmenu/uikit/BigButton'
-import Button from '../../accountmenu/uikit/Button'
+//import Button from '../../accountmenu/uikit/Button'
 import  { MdCard }from 'react-ionicons'
 import  { MdCash }from 'react-ionicons'
-import Alert from '../../alert/Alert'
+//import Alert from '../../alert/Alert'
 
 const PropertyCar = (props) => {
-    const { id, setAlert, type, name, vin, def, fuel, carclass, mark, number, price, tax, balance, maxbalance } = props
+    const { id, setAlert, type, name, vin, fuel, mark, price, tax, balance, maxbalance } = props
     
     const [ isHidden, setHidden ] = useState(true)
 
@@ -28,7 +28,7 @@ const PropertyCar = (props) => {
                         </span>
                         <div className="accountmenu__content__cards__house__hprice__sell" style={{marginTop: 0, paddingTop: '1%', paddingBottom: '2%'}}>
                                 <div className="accountmenu__content__cards__house__hprice__sell__linebtn">
-                                    <img src={'https://gta-5.ru/server/client/images/mmenu/all/icons/money-bag.svg'} className="accountmenu__content__cards__house__hprice__sell__icon" />
+                                    <img src={'https://gta-5.ru/server/client/images/mmenu/all/icons/money-bag.svg'} alt="" className="accountmenu__content__cards__house__hprice__sell__icon" />
                                     <span className="accountmenu__content__cards__house__hprice__sell__text">{`$ ${price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}`}</span>
                                 </div>
                         </div>
@@ -46,7 +46,7 @@ const PropertyCar = (props) => {
                             </span>
                         </span>
                     </div>
-                    <img src={`https://gta-5.ru/server/client/images/carsv/640/${id}.jpg`} className="govmenu__propertygov__info__img" />
+                    <img src={`https://gta-5.ru/server/client/images/carsv/640/${id}.jpg`} alt="" className="govmenu__propertygov__info__img" />
                     <span data-hidden={isHidden} className="chevron left" style={{marginRight: 0}}></span>
                 </div>
                 {!isHidden && (
