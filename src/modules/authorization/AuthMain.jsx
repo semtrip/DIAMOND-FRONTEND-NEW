@@ -16,7 +16,11 @@ class AuthMain extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        mp.trigger('client:ui:debug', 'AuthMain.jsx', error, errorInfo); // eslint-disable-line
+        try {
+            mp.trigger('client:ui:debug', 'AuthMain.jsx', error, errorInfo); // eslint-disable-line
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     componentDidMount() {
