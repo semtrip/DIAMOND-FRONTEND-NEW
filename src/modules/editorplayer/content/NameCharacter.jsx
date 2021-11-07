@@ -7,13 +7,15 @@ class NameCharacter extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        mp.trigger('client:ui:debug', 'NameCharacter.jsx', error, errorInfo); // eslint-disable-line
+        mp.trigger('client:ui:debug', 'NameCharacter.jsx', // eslint-disable-line
+         error, errorInfo);
     }
 
     changeAge(val) {
         this.addAnimation();
         try {
-            mp.trigger('client:events:custom:updateAge', val); // eslint-disable-line
+            mp.trigger('client:events:custom:updateAge', // eslint-disable-line
+             val); 
         } catch (e) {
             console.log(e);
         }
