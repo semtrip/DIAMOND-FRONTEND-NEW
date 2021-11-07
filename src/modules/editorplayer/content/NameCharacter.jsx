@@ -21,11 +21,10 @@ class NameCharacter extends React.Component {
 
     registerPlayer() {
         try {
-            mp.trigger('client:events:custom:register', this.props.first_name, this.props.last_name, this.props.old_input, this.props.promocode, this.props.referer, this.props.ationality[this.props.index_help]); // eslint-disable-line
-            alert(this.props.first_name, this.props.last_name, this.props.old_input, this.props.promocode, this.props.referer, this.props.ationality[this.props.index_help])
+            mp.trigger('client:events:custom:register', // eslint-disable-line
+            this.props.first_name, this.props.last_name, this.props.old_input, this.props.promocode, this.props.referer, this.props.ationality[this.props.index_help]); 
         } catch (e) {
             console.log(e);
-            alert(e)
         }
     }
     
