@@ -6,7 +6,7 @@ class Alert extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: false,
+            show: true,
             type: this.props.type === 0 ? 0 : this.props.type,
             position: 'center', //leftTop, left, leftBottom, centerTop, center, centerBottom, rightTop, right, rightBottom
             icon: 'unicorm', //unicorm
