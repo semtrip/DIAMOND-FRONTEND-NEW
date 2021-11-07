@@ -9,6 +9,11 @@ import Inventory                      from '../inventory/Inventory'
 import AccountMenu                    from '../accountmenu/AccountMenu'
 import GovMenu                        from '../govmenu/GovMenu'
 import Alert                          from '../alert/Alert'
+import Bank                           from '../bank/Bank'
+import CarShop                        from '../carshop/CarShop'
+import Certificate                    from '../certificate/Certificate'
+import Donate                         from '../donate/Donate'
+import EditorPlayer                   from '../editorplayer/EditorPlayer'
 
 
 
@@ -29,11 +34,11 @@ export default function App () {
       <AccountMenu />
       <GovMenu />
       <Alert />
+      <Bank />
+      <CarShop />
+      <Certificate />
+      <Donate />
+      <EditorPlayer />
     </>
   )
 }
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  console.log('Загрузился')
-  new AuthMain().setActiveApp()
-})

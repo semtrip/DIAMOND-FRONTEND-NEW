@@ -1,0 +1,1068 @@
+.main * {
+  margin     : 0;
+  padding    : 0;
+  font-family: Montserrat;
+  font-style : normal;
+  user-select: none;
+  outline    : none;
+  color      : white;
+}
+
+.main {
+  height          : 705px;
+  min-width       : 700px;
+  display         : flex;
+  flex-direction  : row;
+  justify-content : left;
+  position        : absolute;
+  top             : 50%;
+  left            : 50%;
+  transform       : translate(-50%, -50%);
+  background-color: #151618;
+  color           : white;
+  border          : 0;
+  border-radius   : 2px;
+}
+
+.main .close {
+  height  : 30px;
+  width   : 30px;
+  margin  : 10px 0;
+  position: absolute;
+  right   : 0;
+}
+
+.main .close:hover {
+  cursor: pointer;
+}
+
+.main .menu {
+  height          : 704px;
+  width           : 250px;
+  position        : relative;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  background-color: #121214;
+  border-radius   : 2px 0 0 2px;
+}
+
+.main .menu .logo {
+  height          : 80px;
+  width           : 80px;
+  margin-top      : 10px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  background-color: #0D0D0E;
+  border-radius   : 40px;
+}
+
+.main .menu .count-money {
+  height         : 30px;
+  width          : 100%;
+  display        : flex;
+  flex-direction : row;
+  justify-content: center;
+  align-items    : center;
+  margin         : 1vh 0;
+}
+
+.main .menu .count-money .background-for-logo {
+  height          : 24px;
+  width           : 24px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  margin-right    : 5px;
+  background-color: #FD0023;
+  border-radius   : 30px;
+}
+
+.main .menu .count-money .background-for-logo img {
+  height: 20px;
+  width : 20px;
+}
+
+.main .menu .count-money p {
+  font-size  : 22px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.main .menu .menu-buttons {
+  height         : 570px;
+  width          : 100%;
+  display        : flex !important;
+  flex-direction : column;
+  justify-content: space-between;
+  align-items    : flex-end;
+}
+
+.main .menu .menu-buttons .button {
+  width      : 200px;
+  padding    : 0 0 0 50px;
+  display    : flex;
+  align-items: center;
+  flex-grow  : 1;
+  text-align : left;
+  font-size  : 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color      : #5c5c5c;
+  cursor     : pointer;
+  transition : 0.5s ease;
+}
+
+.main .menu .menu-buttons .button:hover {
+  transition      : 0.5s ease;
+  color           : white;
+  background-color: #FD0023;
+}
+
+.main .menu .menu-buttons .button.active {
+  color           : white;
+  background-color: #FD0023;
+}
+
+.main .menu .menu-buttons .button.disabled {
+  background-image   : url(http://cdn.onlinewebfonts.com/svg/download_527463.png);
+  background-size    : 20px;
+  background-position: 80% 50%;
+  background-repeat  : no-repeat;
+  filter             : brightness(50%);
+}
+
+.main .menu .menu-buttons .button.disabled:hover {
+  color           : #5c5c5c;
+  background-color: transparent;
+}
+
+.main .item-cost {
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
+}
+
+.main .item-cost p {
+  font-size   : 22px;
+  font-weight : 600;
+  line-height : 27px;
+  margin-right: 5px;
+}
+
+.main .item-cost .background-for-logo {
+  height          : 24px;
+  width           : 24px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  margin-right    : 5px;
+  background-color: #FD0023;
+  border-radius   : 30px;
+}
+
+.main .item-cost .background-for-logo img {
+  height: 14px;
+  width : 14px;
+}
+
+.main .tab {
+  height         : 655px;
+  width          : 1050px;
+  margin         : 50px 0 0 20px;
+  position       : relative;
+  display        : none;
+  flex-direction : row;
+  flex-wrap      : wrap;
+  justify-content: space-around;
+  overflow-x     : unset;
+  overflow-y     : scroll;
+  /* Main */
+  /* Main */
+  /*Items*/
+  /*Items*/
+}
+
+.main .tab.active {
+  display: flex !important;
+}
+
+.main .tab::-webkit-scrollbar {
+  width: 3px;
+}
+
+.main .tab::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main .tab::-webkit-scrollbar-thumb {
+  background-color: #FD0023;
+  border-radius   : 30px;
+}
+
+.main .tab .main-box {
+  height          : 400px;
+  width           : 500px;
+  position        : relative;
+  background-color: #121214;
+  margin-bottom   : 20px;
+  transition      : 0.5s ease;
+}
+
+.main .tab .main-box:first-child,
+.main .tab .main-box:first-child:hover {
+  background-color   : #121214;
+  filter             : brightness(30%);
+}
+
+.main .tab .main-box:hover {
+  transition      : 0.5s ease;
+  background-color: #FD0023;
+  cursor          : pointer;
+}
+
+.main .tab .main-box img {
+  max-height: 300px;
+  max-width : 500px;
+}
+
+.main .tab .main-box .text {
+  height         : 100px;
+  max-width      : 500px;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : flex-start;
+}
+
+.main .tab .main-box .text h2 {
+  font-size  : 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color      : white;
+  padding    : 17px 0 10px 10px;
+}
+
+.main .tab .main-box .text p {
+  height     : 44px;
+  font-size  : 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color      : white;
+  padding    : 0 10px 10px 10px;
+}
+
+.main .tab .sub-box {
+  height          : 386px;
+  width           : 330px;
+  background-color: #121214;
+  margin-bottom   : 20px;
+  transition      : 0.5s ease;
+}
+
+.main .tab .sub-box:hover {
+  transition      : 0.5s ease;
+  background-color: #FD0023;
+  cursor          : pointer;
+}
+
+.main .tab .sub-box img {
+  height: 286px;
+  width : 330px;
+}
+
+.main .tab .sub-box .text {
+  height         : 100px;
+  width          : 330px;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  align-items    : flex-start;
+}
+
+.main .tab .sub-box .text h2 {
+  font-size  : 18px;
+  font-weight: 700;
+  line-height: 22px;
+  padding    : 20px 10px 10px 10px;
+  color      : white;
+}
+
+.main .tab .sub-box .text p {
+  height     : 30px;
+  font-size  : 12px;
+  font-weight: 500;
+  line-height: 15px;
+  padding    : 0 10px 20px 10px;
+}
+
+.main .tab .top-bar {
+  height         : 40px;
+  width          : 100%;
+  position       : absolute;
+  margin-right   : 20px;
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+}
+
+.main .tab .top-bar .search {
+  width           : 430px;
+  padding         : 20px;
+  font-weight     : 500;
+  font-size       : 16px;
+  line-height     : 20px;
+  color           : #5C5C5C;
+  background-color: #121214;
+  border          : 0;
+  border-radius   : 2px;
+}
+
+.main .tab .top-bar .select-box {
+  height     : 40px;
+  width      : 400px;
+  font-family: Montserrat;
+  font-style : normal;
+}
+
+.main .tab .top-bar .select-box__control {
+  font-family     : Montserrat;
+  font-weight     : 500;
+  font-size       : 16px;
+  line-height     : 20px;
+  color           : #5C5C5C;
+  background-color: #121214;
+  padding         : 10px;
+  border          : 0;
+  border-radius   : 2px;
+}
+
+.main .tab .top-bar .select-box__control--is-focused {
+  box-shadow: none;
+}
+
+.main .tab .top-bar .select-box__control--menu-is-open .select-box__indicator {
+  transform : rotate(180deg);
+  transition: 0.2s;
+}
+
+.main .tab .top-bar .select-box__menu {
+  color           : #5C5C5C;
+  background-color: #121214;
+}
+
+.main .tab .top-bar .select-box__option {
+  padding: 10px;
+}
+
+.main .tab .top-bar .select-box__option--is-focused {
+  color           : #5C5C5C;
+  background-color: #0D0D0E;
+}
+
+.main .tab .top-bar .select-box__option--is-selected {
+  color           : #5C5C5C;
+  background-color: #0D0D0E;
+}
+
+.main .tab .top-bar .select-box__indicator {
+  transition: 0.2s;
+}
+
+.main .tab .top-bar .select-box__indicator-separator {
+  display: none;
+}
+
+.main .tab .item-box {
+  height         : 310px;
+  width          : 330px;
+  position       : relative;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+  margin-bottom  : 20px;
+  transition     : 0.5s ease;
+}
+
+.main .tab .item-box .image-box {
+  height          : 230px;
+  width           : 330px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  background-color: #0D0D0E;
+  border-radius   : 2px 2px 0px 0px;
+}
+
+.main .tab .item-box .image-box img {
+  max-height: 229px;
+  max-width : 330px;
+}
+
+.main .tab .item-box .text {
+  height          : 80px;
+  width           : 320px;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  padding         : 10px 0 10px 10px;
+  background-color: #121214;
+  transition      : 0.5s ease;
+}
+
+.main .tab .item-box .text h2 {
+  font-size     : 20px;
+  font-weight   : 500;
+  line-height   : 24px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.main .tab .item-box .text p {
+  font-size   : 22px;
+  font-weight : 600;
+  line-height : 27px;
+  margin-right: 5px;
+}
+
+.main .tab .item-box:hover .on-hover {
+  display   : flex;
+  transition: 0.5s ease;
+}
+
+.main .tab .item-box .on-hover {
+  height          : 310px;
+  width           : 330px;
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  right           : 0;
+  bottom          : 0;
+  display         : none;
+  flex-direction  : column;
+  justify-content : center;
+  align-items     : center;
+  background-color: rgba(13, 13, 14, 0.8);
+  border-radius   : 2px 2px 0px 0px;
+  transition      : 0.5s ease;
+}
+
+.main .tab .item-box .on-hover button {
+  height          : 50px;
+  width           : 250px;
+  font-size       : 20px;
+  font-weight     : 500;
+  line-height     : 24px;
+  color           : #5c5c5c;
+  border          : 0;
+  background-color: #121214;
+  transition      : 0.5s ease;
+}
+
+.main .tab .item-box .on-hover button:hover {
+  transition      : 0.5s ease;
+  color           : white;
+  cursor          : pointer;
+  background-color: #FD0023;
+}
+
+.main .tab .items {
+  margin-top: 60px;
+}
+
+.main .tab .show-item {
+  width          : 100%;
+  margin-right   : 20px;
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+  align-items    : flex-start;
+}
+
+.main .tab .show-item .image-box img {
+  height: 605px;
+  width : 600px;
+}
+
+.main .tab .show-item .text-box {
+  height          : 605px;
+  width           : 390px;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  background-color: #121214;
+  border-radius   : 2px;
+}
+
+.main .tab .show-item .text-box .text {
+  margin: 10px 20px;
+}
+
+.main .tab .show-item .text-box .text h2 {
+  text-align    : center;
+  font-weight   : bold;
+  font-size     : 30px;
+  line-height   : 37px;
+  text-transform: uppercase;
+}
+
+.main .tab .show-item .text-box .text p {
+  margin-top : 15px;
+  font-weight: 500;
+  font-size  : 14px;
+  line-height: 17px;
+}
+
+.main .tab .show-item .text-box .button-box {
+  display       : flex;
+  flex-direction: column;
+  padding       : 1rem;
+}
+
+.main .tab .show-item .text-box .button-box .item-cost {
+  height         : 44px;
+  width          : 390px;
+  justify-content: center;
+}
+
+.main .tab .show-item .text-box .button-box .item-cost p {
+  font-weight: 600;
+  font-size  : 36px;
+  line-height: 44px;
+}
+
+.main .tab .show-item .text-box .button-box button {
+  height       : 50px;
+  font-weight  : 600;
+  font-size    : 18px;
+  line-height  : 22px;
+  text-align   : center;
+  color        : white;
+  outline      : none;
+  background   : #151618;
+  border       : 0;
+  border-radius: 2px;
+  margin       : 1rem 0.5rem 0 0.5rem;
+}
+
+.main .tab .show-item .text-box .button-box button:hover {
+  transition      : 0.5s ease;
+  background-color: #FD0023;
+  cursor          : pointer;
+}
+
+.main .tab .show-item .text-box .button-box .main-buttons {
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+}
+
+.main .tab .show-item .text-box .button-box .main-buttons.two button {
+  width: 180px;
+}
+
+.main .tab .show-item .text-box .button-box .main-buttons.one button {
+  flex-grow: 1;
+}
+
+.main .tab .cases-box {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  width         : 100%;
+  position      : relative;
+}
+
+.main .tab .cases-box h2 {
+  font-size  : 30px;
+  font-weight: bold;
+  line-height: 37px;
+}
+
+.main .tab .cases-box h2 span {
+  color: red;
+}
+
+.main .tab .cases-box button {
+  height          : 50px;
+  width           : 50px;
+  font-size       : 20px;
+  font-weight     : 500;
+  line-height     : 24px;
+  color           : white;
+  background-color: #121214;
+  border          : 0;
+  transition      : 0.5s ease;
+}
+
+.main .tab .cases-box button:hover {
+  color           : white;
+  background-color: #FD0023;
+  cursor          : pointer;
+}
+
+.main .tab .cases-box button.active {
+  color           : white;
+  background-color: #FD0023;
+}
+
+.main .tab .cases-box .roulette-container {
+  width     : 830px;
+  position  : relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.main .tab .cases-box .roulette-container .border {
+  height          : 192px;
+  width           : 830px;
+  margin-left     : -0.2px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  background-image: linear-gradient(270deg, #FD0023 0%, rgba(18, 18, 20, 0) 49.88%, #FD0023 100%);
+}
+
+.main .tab .cases-box .roulette-container .roulette-box {
+  height          : 190px;
+  width           : 828px;
+  background-color: #121214;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .selector {
+  height          : 190px;
+  width           : 4px;
+  z-index         : 1;
+  position        : absolute;
+  right           : 410px;
+  bottom          : 0;
+  background-color: #FD0023;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette {
+  height         : 152px;
+  margin         : 20px;
+  position       : relative;
+  right          : 0;
+  overflow       : hidden;
+  display        : flex;
+  flex-direction : row;
+  justify-content: flex-start;
+  align-items    : center;
+  list-style-type: none;
+  border         : 0;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li {
+  position    : relative;
+  display     : flex;
+  margin-right: 5px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-border {
+  height         : 150px;
+  width          : 152px;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  border-radius  : 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-border.blue {
+  background-image: linear-gradient(180deg, #1699E2 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-border.red {
+  background-image: linear-gradient(180deg, #E21616 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-border.purple {
+  background-image: linear-gradient(180deg, #C516E2 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-border.yellow {
+  background-image: linear-gradient(180deg, #DEE216 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-border.gray {
+  background-image: linear-gradient(180deg, #C8C6C6 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box {
+  height         : 149px;
+  width          : 149px;
+  position       : relative;
+  width          : 150px;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box img {
+  max-height: 120px;
+  max-width : 120px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.gray {
+  background   : linear-gradient(180deg, rgba(200, 198, 198, 0) 0%, rgba(200, 198, 198, 0.5) 100%), #151618;
+  border-radius: 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.gray .underline {
+  height       : 5px;
+  position     : absolute;
+  width        : 100%;
+  bottom       : 0;
+  background   : #C8C6C6;
+  border-radius: 0px 0px 2px 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box .wallet-cost {
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box .wallet-cost p {
+  font-size  : 36px;
+  font-weight: 600;
+  line-height: 44px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box .wallet-cost .background-for-logo {
+  height          : 30px;
+  width           : 30px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  margin-right    : 5px;
+  background-color: #FD0023;
+  border-radius   : 30px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box .wallet-cost .background-for-logo img {
+  height: 24px;
+  width : 24px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.blue {
+  background   : linear-gradient(180deg, rgba(22, 153, 226, 0) 0%, rgba(22, 153, 226, 0.5) 100%), #151618;
+  border-radius: 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.blue .underline {
+  height       : 5px;
+  position     : absolute;
+  width        : 100%;
+  bottom       : 0;
+  background   : #1699E2;
+  box-shadow   : 0px 0px 5px #1699E2;
+  border-radius: 0px 0px 2px 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.red {
+  background   : linear-gradient(180deg, rgba(226, 22, 22, 0) 0%, rgba(226, 22, 22, 0.5) 100%), #151618;
+  border-radius: 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.red .underline {
+  height       : 5px;
+  position     : absolute;
+  width        : 100%;
+  bottom       : 0;
+  background   : #E21616;
+  box-shadow   : 0px 0px 5px #E21616;
+  border-radius: 0px 0px 2px 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.purple {
+  background   : linear-gradient(180deg, rgba(197, 22, 226, 0) 0%, rgba(197, 22, 226, 0.5) 100%), #151618;
+  border-radius: 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.purple .underline {
+  height       : 5px;
+  position     : absolute;
+  width        : 100%;
+  bottom       : 0;
+  background   : #C516E2;
+  box-shadow   : 0px 0px 5px #C516E2;
+  border-radius: 0px 0px 2px 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.yellow {
+  background   : linear-gradient(180deg, rgba(222, 226, 22, 0) 0%, rgba(222, 226, 22, 0.5) 100%), #151618;
+  border-radius: 2px;
+}
+
+.main .tab .cases-box .roulette-container .roulette-box .roulette li .prize-box.yellow .underline {
+  height       : 5px;
+  position     : absolute;
+  width        : 100%;
+  bottom       : 0;
+  background   : #DEE216;
+  box-shadow   : 0px 0px 5px #DEE216;
+  border-radius: 0px 0px 2px 2px;
+}
+
+.main .tab .cases-box .roulette-container .count-money {
+  height         : 30px;
+  width          : 100%;
+  display        : flex;
+  flex-direction : row;
+  justify-content: flex-end;
+  align-items    : center;
+  margin         : 1vh 0;
+}
+
+.main .tab .cases-box .roulette-container .count-money .background-for-logo {
+  height          : 24px;
+  width           : 24px;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  margin-right    : 5px;
+  background-color: #FD0023;
+  border-radius   : 30px;
+}
+
+.main .tab .cases-box .roulette-container .count-money .background-for-logo img {
+  height: 20px;
+  width : 20px;
+}
+
+.main .tab .cases-box .roulette-container .count-money p {
+  font-size  : 22px;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.main .tab .cases-box .count-case {
+  margin: 10px 0;
+}
+
+.main .tab .cases-box .button-container {
+  width          : 610px;
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.main .tab .cases-box .button-container button {
+  width: 300px;
+}
+
+.main .tab .history-box {
+  width         : 100%;
+  display       : flex;
+  flex-direction: column;
+}
+
+.main .tab .history-box .button-box {
+  height : 40px;
+  width  : 300px;
+  margin : 0;
+  padding: 0;
+}
+
+.main .tab .history-box .button-box button {
+  height          : 40px;
+  width           : 150px;
+  font-size       : 18px;
+  font-weight     : 600;
+  line-height     : 22px;
+  color           : #5c5c5c;
+  background-color: #0D0D0E;
+  border          : 0;
+  transition      : 0.5s ease;
+}
+
+.main .tab .history-box .button-box button.active {
+  color           : white;
+  background-color: #FD0023;
+}
+
+.main .tab .history-box .button-box button:hover {
+  color           : white;
+  background-color: #FD0023;
+  cursor          : pointer;
+}
+
+.main .tab .history-box .top-bar-history-box {
+  height          : 40px;
+  margin-right    : 20px;
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  align-items     : center;
+  padding-left    : 20px;
+  background-color: #0D0D0E;
+}
+
+.main .tab .history-box .top-bar-history-box p {
+  font-size  : 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color      : white;
+}
+
+.main .tab .history-box .top-bar-history-box .date-time {
+  width: 150px;
+}
+
+.main .tab .history-box .top-bar-history-box .cost {
+  width: 100px;
+}
+
+.main .tab .history-box .top-bar-history-box .comment {
+  flex-grow: 1;
+}
+
+.main .tab .history-box .history-container {
+  height        : 100%;
+  margin-right  : 20px;
+  display       : flex;
+  flex-direction: column;
+}
+
+.main .tab .history-box .history-container .transaction {
+  height          : 50px;
+  display         : flex;
+  flex-direction  : row;
+  justify-content : center;
+  align-items     : center;
+  background-color: #121214;
+  padding-left    : 20px;
+}
+
+.main .tab .history-box .history-container .transaction p {
+  font-size  : 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color      : #5c5c5c;
+}
+
+.main .tab .history-box .history-container .transaction .date-time {
+  width: 150px;
+}
+
+.main .tab .history-box .history-container .transaction .cost {
+  width      : 100px;
+  font-weight: 600;
+  color      : white;
+}
+
+.main .tab .history-box .history-container .transaction .comment {
+  flex-grow: 1;
+}
+
+.main .tab .vip-box {
+  height: 605px !important;
+  width : 330px !important;
+}
+
+.main .tab .vip-box .image-box {
+  max-height: 524px !important;
+  height    : 524px !important;
+}
+
+.main .tab .vip-box .image-box img {
+  max-height: 524px !important;
+  height    : 524px !important;
+}
+
+.main .tab .vip-box:hover {
+  transition      : 0.5s ease;
+  background-color: #FD0023;
+  cursor          : pointer;
+}
+
+.main .tab .vip-box:hover .text {
+  background-color: #FD0023;
+}
+
+.main .tab .wallet-box {
+  height          : 200px;
+  width           : 500px;
+  display         : flex;
+  flex-direction  : row;
+  justify-content : space-around;
+  align-items     : center;
+  background-color: #121214;
+  border-radius   : 2px;
+}
+
+.main .tab .wallet-box .image-box {
+  max-height: 160px;
+  max-width : 160px;
+}
+
+.main .tab .wallet-box .text-box {
+  height         : 160px;
+  width          : 290px;
+  background     : none;
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+  align-items    : flex-end;
+  text-align     : right;
+}
+
+.main .tab .wallet-box .text-box .text h2 {
+  font-size    : 30px;
+  font-weight  : 700;
+  line-height  : 37px;
+  margin-bottom: 10px;
+}
+
+.main .tab .wallet-box .text-box .text p {
+  font-size  : 14px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.main .tab .wallet-box .text-box .cost-button {
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+  align-items    : center;
+}
+
+.main .tab .wallet-box .text-box .cost-button .item-cost {
+  margin-right: 10px;
+}
+
+.main .tab .wallet-box .text-box .cost-button .buy-item {
+  height          : 40px;
+  width           : 150px;
+  font-size       : 18px;
+  font-weight     : 600;
+  line-height     : 22px;
+  border          : 0;
+  color           : white;
+  background-color: #151618;
+  border-radius   : 2px;
+  transition      : 0.5s ease;
+}
+
+.main .tab .wallet-box .text-box .cost-button .buy-item:hover {
+  cursor          : pointer;
+  background-color: #FD0023;
+  transition      : 0.5s ease;
+}
+
+.main .tab#transport .item-box:hover,
+.main .tab#settings .item-box:hover,
+.main .tab#another .item-box:hover {
+  transition      : 0.5s ease;
+  background-color: #FD0023;
+  cursor          : pointer;
+}
+
+.main .tab#transport .item-box:hover .text,
+.main .tab#settings .item-box:hover .text,
+.main .tab#another .item-box:hover .text {
+  background-color: #FD0023;
+}
