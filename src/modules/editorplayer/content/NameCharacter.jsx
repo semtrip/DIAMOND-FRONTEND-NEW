@@ -7,15 +7,13 @@ class NameCharacter extends React.Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        mp.trigger('client:ui:debug', 'NameCharacter.jsx', // eslint-disable-line
-         error, errorInfo);
+        mp.trigger('client:ui:debug', 'NameCharacter.jsx', error, errorInfo); // eslint-disable-line
     }
 
     changeAge(val) {
-        this.addAnimation();
         try {
             mp.trigger('client:events:custom:updateAge', // eslint-disable-line
-             val); 
+                val);
         } catch (e) {
             console.log(e);
         }
@@ -24,9 +22,9 @@ class NameCharacter extends React.Component {
     registerPlayer() {
         try {
             mp.trigger('client:events:custom:register', // eslint-disable-line
-            this.props.first_name, this.props.last_name, this.props.old_input, this.props.promocode, this.props.referer, this.props.ationality[this.props.index_help]); 
+                this.props.first_name, this.props.last_name, this.props.old_input, this.props.promocode, this.props.referer, this.props.nationality[this.props.index_help]);
         } catch (e) {
-            console.log(e);
+            console.log();
         }
     }
     
