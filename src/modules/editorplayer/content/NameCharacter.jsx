@@ -25,6 +25,7 @@ class NameCharacter extends React.Component {
             alert(this.props.first_name, this.props.last_name, this.props.old_input, this.props.promocode, this.props.referer, this.props.ationality[this.props.index_help])
         } catch (e) {
             console.log(e);
+            alert(e)
         }
     }
     
