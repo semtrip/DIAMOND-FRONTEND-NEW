@@ -324,7 +324,8 @@ class EditorPlayer extends React.Component {
             ...prev.slider[1].index_help = 0,
             ...prev.slider[2].index_help = 10,
             ...prev.slider[3].index_help = 10,
-        }, this.updateStatsFamilyCharacter()));
+        }), 
+        () => this.updateStatsFamilyCharacter());
         this.setCustomization();
     }
 

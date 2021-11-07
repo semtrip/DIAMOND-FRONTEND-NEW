@@ -1,0 +1,313 @@
+@import url(../../../fonts/fontSFProDisplay.css);
+.menu-block {
+    position: relative;
+    width: 775px;
+    height: 362px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+}
+
+.menu-block .circle {
+    position: relative;
+    font-family: 'SF Pro Display UltraLight';
+    width: 182px;
+    height: 182px;
+    border: 28px solid rgba(207, 207, 207, .1);
+    box-sizing: border-box;
+    border-radius: 100px;
+    padding: 10px;
+    font-size: 9px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 28px;
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.menu-block .circle span {
+    font-family: 'SF Pro Display Bold';
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#back {
+    width: 55px;
+    font-family: 'SF Pro Display UltraLight';
+    font-size: 10px;
+    position: absolute;
+    bottom: 135px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-block .btns {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-block .menu-item {
+    font-family: 'SF Pro Display Medium';
+    position: absolute;
+    width: 270px;
+    height: 40px;
+    background: #EAEAEA;
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    font-size: 18px;
+    color: #222222;
+    cursor: pointer;
+}
+
+.menu-block .menu-item::first-letter {
+    text-transform: uppercase;
+}
+
+.menu-block .menu-item img {
+    margin-right: 17px;
+    pointer-events: none;
+}
+
+.menu-block .item-0 {
+    left: 0;
+    top: 160px;
+}
+
+.menu-block .item-0:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: -30.5px;
+    width: 5px;
+    height: 26px;
+    transform: rotate(181deg);
+}
+
+.menu-block .item-1 {
+    right: 0;
+    top: 160px;
+}
+
+.menu-block .item-1:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: -30.5px;
+    width: 5px;
+    height: 26px;
+}
+
+.menu-block .item-2 {
+    top: 0;
+    left: 252px;
+}
+
+.menu-block .item-2:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -64px;
+    width: 5px;
+    height: 26px;
+    transform: rotate(-90deg);
+}
+
+.menu-block .item-3 {
+    bottom: 0;
+    left: 252px;
+}
+
+.menu-block .item-3:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -64px;
+    width: 5px;
+    height: 26px;
+    transform: rotate(90deg);
+}
+
+.menu-block .item-4 {
+    top: 78px;
+    left: 34px;
+}
+
+.menu-block .item-4:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -23px;
+    right: -14px;
+    width: 5px;
+    height: 26px;
+    transform: rotate(-144deg);
+}
+
+.menu-block .item-5 {
+    top: 78px;
+    right: 34px;
+}
+
+.menu-block .item-5:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -22px;
+    left: -15px;
+    width: 5px;
+    height: 26px;
+    transform: rotate(-36deg);
+}
+
+.menu-block .item-6 {
+    bottom: 78px;
+    left: 34px;
+}
+
+.menu-block .item-6:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -23px;
+    right: -14px;
+    width: 5px;
+    height: 26px;
+    transform: rotate(144deg);
+}
+
+.menu-block .item-7 {
+    bottom: 78px;
+    right: 34px;
+}
+
+.menu-block .item-7:hover:hover::after {
+    content: '';
+    background-image: url(../img/mark.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -23px;
+    left: -14px;
+    width: 5px;
+    height: 26px;
+    transform: rotate(38deg);
+}
+
+.menu-block .menu-item:hover {
+    background: #1585FE;
+    color: #FFFFFF;
+}
+
+.menu-block .menu-item:hover img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.menu-block .no-active {
+    opacity: 0;
+}
+
+.no-active {
+    opacity: 0;
+}
+
+.menu-block .no-active-item {
+    top: 160px;
+    left: 250px;
+    bottom: 160px;
+    right: 252px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu-block .close {
+    background: url(../icons/close.svg) no-repeat;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -65px;
+    right: 0px;
+    cursor: pointer;
+    transition: all 2s;
+}
+
+@media (min-width: 2560px) {
+    .menu-block {
+        zoom: 1.4;
+    }
+}
+
+@media (max-width: 1600px) {
+    .menu-block {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 1440px) {
+    .menu-block {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 1366px) {
+    .menu-block {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 1280px) {
+    .menu-block {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu-block {
+        zoom: 0.7;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-block {
+        zoom: 0.6;
+    }
+}
