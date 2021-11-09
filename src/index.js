@@ -18,7 +18,7 @@ em.addHandler('notify', value => {
     notify(value.type, value.layout, value.text, value.time)
 });
 
-Noty.setMaxVisible(3);
+Noty.setMaxVisible(6);
 
 function notify(type, layout, message, time, theme) {
     let types = ['information', 'error', 'success', 'warn'];

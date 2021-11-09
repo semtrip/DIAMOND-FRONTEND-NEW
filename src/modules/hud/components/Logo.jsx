@@ -8,7 +8,7 @@ class Logo extends React.Component {
         this.state = {
             show: true,
             showAmmo: false,
-            showQuest: false,
+            showQuest: true,
             ammoCount: 0,
             ammoMode: 'auto',
             questTitle: 'Квестовое задание',
