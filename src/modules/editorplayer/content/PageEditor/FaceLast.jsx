@@ -37,7 +37,7 @@ class FaceLast extends React.Component {
                         <div className="box-last-btn">Назад</div>
                     </Link>
                     <div className="box-last-btn" onClick={() => this.props.reset(3)}>Сброс</div>
-                    <Link to="/choicerole" onClick={() => this.props.saveCustomization()}>
+                    <Link onClick={() => this.props.saveCustomization()}> {/* to="/choicerole" */}
                         <div className="box-last-btn">Сохранить</div>
                     </Link>
                 </div>

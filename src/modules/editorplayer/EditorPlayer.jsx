@@ -476,6 +476,9 @@ class EditorPlayer extends React.Component {
 
             mp.trigger('client:events:custom:save', // eslint-disable-line
                 this.state.stats.endurance, this.state.stats.driving, this.state.stats.flying, this.state.stats.psychics, this.state.stats.shooting, this.state.stats.stealth, this.state.stats.strength);
+            
+            mp.trigger('client:events:custom:choiceRole', // eslint-disable-line
+                0)
         } catch (e) {
             console.log(e);
         }

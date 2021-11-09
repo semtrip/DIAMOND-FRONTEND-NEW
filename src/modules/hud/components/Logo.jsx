@@ -8,7 +8,7 @@ class Logo extends React.Component {
         this.state = {
             show: true,
             showAmmo: false,
-            showQuest: false,
+            showQuest: true,
             ammoCount: 0,
             ammoMode: 'auto',
             questTitle: 'Квестовое задание',
@@ -67,7 +67,7 @@ class Logo extends React.Component {
         return (
             <React.Fragment>
                 <div className="logo-main">
-                    <div className="logo-info">
+                    <div className="logo-info" style={{ backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')' }}>
                         <div className="logo-info__text time"><div className="clock-img"></div>{this.state.date} {this.state.time}</div>
                         <span className="logo-info__text">ID: {this.state.id}</span>
                         <span className="logo-info__text"><div className="players-img"></div> {this.state.online}/{this.state.max_player}</span>

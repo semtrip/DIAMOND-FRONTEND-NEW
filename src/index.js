@@ -56,11 +56,11 @@ function notify(type, layout, message, time, theme) {
         default:
             break;
     }
-    //     <span class="message__notify__type">${notifyText}</span>
-    //     <span class="message__notify__icon"><img src="./img/${types[type]}.svg" alt=""></span>
     message = `
     <div class="message__notify__container message__notify__color__${type}">
-        <span class="message__notify">${message}</span>
+    <span class="message__notify__type">${notifyText}</span>
+    <span class="message__notify__icon"><img src="./img/${types[type]}.svg" alt=""></span>
+    <span class="message__notify">${message}</span>
     </div>`;
     let ntf = new Noty({
         type: types[type],
