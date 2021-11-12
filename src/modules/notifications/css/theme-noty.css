@@ -1,0 +1,146 @@
+@import url(../../../fonts/fontSFProDisplay.css);
+@media (min-width: 2560px) {
+    .notify-block {
+        zoom: 1.5;
+    }
+}
+
+@media (max-width: 1600px) {
+    .notify-block {
+        zoom: 0.9;
+    }
+}
+
+@media (max-width: 1440px) {
+    .notify-block {
+        zoom: 0.8;
+    }
+}
+
+@media (max-width: 1366px) {
+    .notify-block {
+        zoom: 0.7;
+    }
+}
+
+@media (max-width: 1280px) {
+    .notify-block {
+        zoom: 0.6;
+    }
+}
+
+@media (max-width: 1024px) {
+    .notify-block {
+        zoom: 0.5;
+    }
+}
+
+@media (max-width: 800px) {
+    .notify-block {
+        zoom: 0.4;
+    }
+}
+
+.notify_bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 38%;
+}
+
+.notify_bottomLeft {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+}
+
+.notify_bottomRight {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+}
+
+.notify_top {
+    position: absolute;
+    top: 0;
+    left: 38%;
+}
+
+.notify_topLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.notify_topRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.notify_center {
+    position: absolute;
+    top: 45%;
+    left: 38%;
+}
+
+.notify_centerLeft {
+    position: absolute;
+    top: 45%;
+    left: 0;
+}
+
+.notify_centerRight {
+    position: absolute;
+    top: 45%;
+    Right: 0;
+}
+
+.notify-block {
+    position: relative;
+    font-family: 'SF Pro Display Medium';
+    width: 430px;
+    min-height: 40px;
+    background: #191D24;
+    box-shadow: 0px 6px 10px -1px rgba(6, 25, 56, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999999999;
+    padding: 10px 0;
+    margin-top: 15px;
+    pointer-events: none;
+}
+
+.notify-block img {
+    margin-left: 25px;
+    width: 38px;
+    opacity: 1;
+}
+
+.notify-block span {
+    height: 80%;
+    width: 75%;
+    margin-right: 25px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.notify-block .timeline {
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #0085FF;
+}
+
+@keyframes timer {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}

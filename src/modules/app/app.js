@@ -23,10 +23,11 @@ import Tatoo                          from '../hudmenus/tatoo/Tatoo';
 import IDCard                         from '../idcard/IDCard';
 import License                        from '../license/License';
 import ModalInput                     from '../modalinput/ModalInput';
-import Notification                   from '../notification/Notification';
+import DialogModal                    from '../dialog/dialog';
 import Phone                          from '../phone/Phone';
 import RadialMenu                     from '../radialmenu/radialMenu';
 import WorkID                         from '../workid/WorkID';
+import Notifications                  from '../notifications/notifications';
 
 
 export default function App () {
@@ -42,6 +43,7 @@ export default function App () {
       {devModules}
       <EditorMain />
       <Walkietalkie />
+      <Notifications />
       <div className="box" id="box">
         <AuthMain />
         <Hud />
@@ -61,7 +63,7 @@ export default function App () {
         <IDCard />
         <License />
         <ModalInput />
-        <Notification />
+        <DialogModal />
         <Phone />
         <RadialMenu />
         <WorkID />

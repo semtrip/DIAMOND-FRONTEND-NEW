@@ -1,9 +1,9 @@
 import React from 'react';
-import './css/notification.css'
+import './css/dialog.css'
 
 const { EventManager: em } = window;
 
-class Notification extends React.Component {
+class Dialog extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -165,4 +165,4 @@ class Notification extends React.Component {
     }
 }
 
-export default Notification;
+export default Dialog;
