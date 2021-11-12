@@ -44,7 +44,8 @@
 .notify_bottom {
     position: absolute;
     bottom: 10px;
-    left: 38%;
+    left: 50%;
+    margin-left: -215px;
 }
 
 .notify_bottomLeft {
@@ -62,7 +63,8 @@
 .notify_top {
     position: absolute;
     top: 0;
-    left: 38%;
+    left: 50%;
+    margin-left: -215px;
 }
 
 .notify_topLeft {
@@ -79,20 +81,24 @@
 
 .notify_center {
     position: absolute;
-    top: 45%;
-    left: 38%;
+    top: 50%;
+    left: 50%;
+    margin-left: -215px;
+    margin-top: -20px;
 }
 
 .notify_centerLeft {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 0;
+    margin-top: -20px;
 }
 
 .notify_centerRight {
     position: absolute;
-    top: 45%;
+    top: 50%;
     Right: 0;
+    margin-top: -20px;
 }
 
 .notify-block {
