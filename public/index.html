@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8' />
     <meta name='viewport' content='width=device-width, initial-scale=0.5' />
-    <title>Cobalt RP</title>
+    <title>Diamond RP</title>
 </head>
 
 <body>
@@ -20,59 +20,5 @@
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.spatial.min.js"></script>
-<script>
-    const urlExp = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
-    let activeAudios = {};
-    Howler.html5 = false;
-
-    function playAudio(id, url, pos = 0, volume = 1) {
-        activeAudios[id] = new Howl({
-            id: id.toString(),
-            src: [url],
-            loop: false,
-            html5: false,
-            autoplay: false,
-            onend: function() {
-                return mp.trigger('audioFinish', id);
-            },
-            onloaderror: function(errCode, desc) {
-                return mp.trigger('audioError', id, JSON.stringify({
-                    code: errCode,
-                    error: desc
-                }));
-            },
-            onload: function() {
-                this.seek(pos / 1000);
-                this.play();
-            },
-            volume: volume,
-        });
-    }
-
-    function stopAudio(id) {
-        if (activeAudios[id]) {
-            activeAudios[id].on('load', () => {
-                setTimeout(() => {
-                    this.stop();
-                    this.unload();
-                }, 5);
-            })
-            activeAudios[id].stop();
-            activeAudios[id].unload();
-            activeAudios[id] = null;
-        }
-    }
-
-    function setVolume(id, volume, pan = 0) {
-        if (activeAudios[id] && volume >= 0 && volume <= 1) {
-            activeAudios[id].volume(volume);
-            activeAudios[id].stereo(pan);
-        }
-    }
-
-    function setPaused(id, paused = true) {
-        if (activeAudios[id]) paused === 'true' ? activeAudios[id].pause() : activeAudios[id].play();
-    }
-</script>
 
 </html>

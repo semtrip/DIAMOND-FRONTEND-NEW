@@ -4,6 +4,7 @@ import HistoryCall from './pages/HistoryCall';
 import Favorit from './pages/Favorit';
 import Contact from './pages/Contact';
 import Calls from '../../apps/Calls'
+import '../Calls/css/calls.css'
 
 class PhoneBook extends React.Component {
     constructor(props) {
