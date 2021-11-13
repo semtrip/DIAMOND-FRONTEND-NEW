@@ -2423,9 +2423,9 @@ class Inventory extends React.Component {
                                 <div>
                                     <Droppable className="trunk-info-menu droppable" id="move" that={this}>
                                         <div className="title-inv">
-                                            <span className="title-inv__name">
+                                            {/* <span className="title-inv__name">
                                                 Багажник
-                                            </span>
+                                            </span> */}
                                             <span className="weight-title-inv">
                                                 {this.numberToK(this.state.secondary_weight_now)} / {this.numberToK(this.state.secondary_weight_max)}
                                             </span>
