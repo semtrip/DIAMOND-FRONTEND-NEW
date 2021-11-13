@@ -11,15 +11,36 @@ const { EventManager: em } = window;
 let storage = {
     btns: 
     [
-        {id: 'openLock',title: 'Открыть/закрыть Т/С'},
-        {id: 'flip',title: 'Перевернуть Т/С'},
-        {id: 'eject',title: 'Выкинуть из Т/С'},
-        {id: 'doors',title: 'Двери',items: [
-            {id: 'openInv', title: 'Открыть багажник'},
-            {id: 'close', title: 'Закрыть багажник'},
-            {id: 'openC', title: 'Открыть капот'},
-            {id: 'closeC', title: 'Закрыть капот'}
-        ]}
+        {id: 'giveMoney', title: 'Передать деньги'},
+        {id: 'dating',title: 'Познакомиться'},
+        {id: 'unTieById',title: 'Снять стяжки'},
+        {id: 'inCarById',title: 'Затащить в ближайшее авто'},
+        {id: 'taskFollowById',title: 'Вести за собой'},
+        {id: 'taskRemoveMaskById',title: 'Снять маску с игрока'},
+        {id: 'showPlayerDoсMenu',title: 'Документы', items: [
+            {id: 'card_id', title: 'Паспорт'},
+            {id: 'work_lic', title: 'Разрешение на работу'},
+            {id: 'showLic',title: 'Лицензии', items: [
+                {id: 'a_lic', title: 'Лицензия категории `А`'},
+                {id: 'b_lic', title: 'Лицензия категории `B`'},
+                {id: 'c_lic', title: 'Лицензия категории `C`'},
+                {id: 'air_lic', title: 'Лицензия на авиатранспорт'},
+                {id: 'ship_lic', title: 'Лицензия на водный транспорт'},
+                {id: 'gun_lic', title: 'Лицензия на оружие'},
+                {id: 'taxi_lic', title: 'Лицензия на перевозку пассажиров'},
+                {id: 'law_lic', title: 'Лицензия юриста'},
+                {id: 'biz_lic', title: 'Лицензия на предпринимательство'},
+                {id: 'fish_lic', title: 'Разрешение на рыболовство'},
+                {id: 'marg_lic', title: 'Разрешение на употребление марихуаны'},]
+            },
+            {id: 'med_lic', title: 'Мед. страховка'},
+        ]},
+        {id: 'gos_lic',title: 'Удостоверение'},
+        {id: 'cuffItemById',title: 'Надеть наручники'},
+        {id: 'unCuffById',title: 'Снять наручники'},
+        {id: 'getInvById',title: 'Изъять конфискат'},
+        {id: 'getInvById2',title: 'Обыскать'},
+        {id: 'getPassById',title: 'Установить личность'}
     ]
 }
 
@@ -51,12 +72,6 @@ export default class Menu extends React.Component {
                 this.setState({show: true})
             } else if (value.type === 'hide') {
                 hideAudio.play()
-                // let elems = document.querySelectorAll('.menu-item')
-                // elems.forEach.call(elems, function(el) {
-                //     el.classList.add("no-active-item");
-                // });
-                // document.querySelector('.circle').classList.add("no-active");
-                // document.querySelector('.close').classList.add("no-active");
                 this.setState({show: false})
             } else if (value.type === 'updateData') {
                 storage.btns = value.choiceData
@@ -86,6 +101,7 @@ export default class Menu extends React.Component {
         } return data
     }
     menuClick = e => {
+        console.log(this.state.currentElement)
         e.preventDefault();
         audio.play()
         if (this.state.currentPage === 1) {
@@ -97,6 +113,7 @@ export default class Menu extends React.Component {
                     blockBtns: this.completion(data) , 
                     backBtn: true,
                     currentPage: this.state.currentPage + 1,
+                    currentElement: data,
                     oldCurrentElemetn: arr});
 
             } else if(storage.btns[e.target.id].items !== undefined) {
@@ -131,8 +148,8 @@ export default class Menu extends React.Component {
                     blockBtns: this.completion(data) , 
                     backBtn: true,
                     currentPage: this.state.currentPage + 1,
-                    oldCurrentElemetn: arr});
-
+                    oldCurrentElemetn: arr
+                });
             } else if(this.state.currentElement[e.target.id].items !== undefined) {
                         let data = this.state.currentElement[e.target.id].items
                         data = this.paginator(data)
