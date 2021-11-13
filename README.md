@@ -1,4 +1,4 @@
-# Daimond Front-end Repo
+# Dimond Front-end Repo
 
 # Скрипты
 
