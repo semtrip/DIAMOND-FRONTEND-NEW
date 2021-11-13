@@ -1,6 +1,7 @@
 /* body {
     background-color: #9a3f3f;
 } */
+
 .position-modal {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
@@ -9,6 +10,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 999999;
 }
 
 .main-input-modal {
