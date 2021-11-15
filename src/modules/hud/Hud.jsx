@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/hud.css'
+import './css/hud_new.css'
 import './css/main.css'
 import './css/checkbox.css'
 import './css/menu.css'

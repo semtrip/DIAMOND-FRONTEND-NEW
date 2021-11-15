@@ -83,15 +83,9 @@ class Gps extends React.Component {
             <React.Fragment>
 
                 <Draggable id="gps" className="gps-main">
-                    <Draggable id="zone" className="zone-box">
-                        <img src={Pointer} alt='' width='20px' className='zone-pointer'/>
-                        <div className={this.state.showGreen ? 'time-img-greenzone' : 'hide'}>
-                        </div>
-                        <div className={this.state.showYellow ? 'time-img-yellowzone' : 'hide'}></div>
-                    </Draggable>
                     <div className="gps-text">
                         <div className="gps-title">{this.state.district}</div>
-                        <div className="gps-txt">{this.state.street}</div>
+                        <div className="gps-txt"><img src={Pointer} alt="" />{this.state.street}</div>
                     </div>
                 </Draggable>
 

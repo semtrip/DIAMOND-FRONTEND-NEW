@@ -1,4 +1,5 @@
 import React from 'react';
+import user from '../img/user.svg'
 
 const { EventManager: em } = window;
 
@@ -8,7 +9,7 @@ class Logo extends React.Component {
         this.state = {
             show: true,
             showAmmo: false,
-            showQuest: true,
+            showQuest: false,
             ammoCount: 0,
             ammoMode: 'auto',
             questTitle: 'Квестовое задание',
@@ -17,9 +18,10 @@ class Logo extends React.Component {
             questAnim: '',
             date: '01.01',
             time: '12:00',
-            online: '0',
+            online: '175',
             max_player: '1000',
-            id: '0',
+            id: '13 (#4383)',
+            server: '1',
             color: '#48B9F2',
             background: 0.5,
         }
@@ -66,20 +68,20 @@ class Logo extends React.Component {
         }
         return (
             <React.Fragment>
-                <div className="logo-main">
-                    <div className="logo-info" style={{ backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')' }}>
-                        <div className="logo-info__text time"><div className="clock-img"></div>{this.state.date} {this.state.time}</div>
-                        <span className="logo-info__text">ID: {this.state.id}</span>
-                        <span className="logo-info__text"><div className="players-img"></div> {this.state.online}/{this.state.max_player}</span>
-                    </div>
-                    <div className="logo-img"></div>
-                    <div style={{ backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')' }}
-                        className={this.state.showAmmo ? 'logo-ammo' : 'hide'}>
+                <div className="hud-info">
+                    <div className="online"><img src={user} alt="" />{this.state.online}</div>
+                    <div className="id">ID: {this.state.id}</div>
+                    <div className="logo"></div>
+                    <div className="server">{this.state.server}</div>
+                </div>
+                <div className="hud-ammo">
+                    <div className={this.state.showAmmo ? 'logo-ammo' : 'hide'}>
                         <div className={'logo-ammo-img ammo-' + this.state.ammoMode}></div>
                         {this.state.ammoCount}
                     </div>
-                    <div style={{ backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')' }}
-                        className={this.state.showQuest ? 'logo-quest animated ' + this.state.questAnim : 'hide'}>
+                </div>
+                <div className="hud-quest">
+                    <div className={this.state.showQuest ? 'logo-quest animated ' + this.state.questAnim : 'hide'}>
                         <h2 className="quest-title">{this.state.questTitle}</h2>
                         <div className="quest-text">{this.state.questText}</div>
                         <div className="quest-desc">{this.state.questDesc}</div>

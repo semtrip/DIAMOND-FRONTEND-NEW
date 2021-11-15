@@ -3,7 +3,7 @@
 import React from 'react';
 import Button from '../uikit/Button';
 import Title from '../uikit/Title';
-import Logo from '../img/logo.svg';
+import Logo from '../img/logo.png';
 
 class Authorization extends React.Component {
     constructor(props) {

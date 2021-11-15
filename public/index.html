@@ -12,11 +12,97 @@
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        if ('alt' in window) {
-            window.alt = alt
-            alt.emit('ready')
+        if ('mp' in window) {
+            window.mp = mp
+            mp.emit('ready')
         }
     })
+</script>
+<script>
+    var timeOut = null;
+
+    function chatButtonClick(id) {
+
+        switch (id) {
+            case 'RP':
+                pushInput('')
+                removeClass(0)
+                break;
+            case 'OOC':
+                removeClass(1)
+                pushInput('/b')
+                break;
+            case 'DO':
+                removeClass(2)
+                pushInput('/do')
+                break;
+            case 'ME':
+                removeClass(3)
+                pushInput('/me')
+                break;
+            case 'REPORT':
+                removeClass(4)
+                pushInput('/report')
+                break;
+            default:
+
+                break;
+
+        }
+
+        function removeClass(id) {
+            var menuItem = document.querySelectorAll('.in_button');
+            try {
+                for (var i = 0; i <= menuItem.length; i++) {
+                    menuItem[i].classList.remove("active")
+                    menuItem[id].classList.add("active")
+                };
+            } catch {
+                return
+            }
+        }
+
+        function pushInput(data) {
+            var input = document.getElementById('chat_msg')
+            input.value = data
+        }
+    }
+
+
+    function getIndicesOf(searchStr, str, caseSensitive) {
+        var searchStrLen = searchStr.length;
+        if (searchStrLen === 0) {
+            return [];
+        }
+        var startIndex = 0,
+            index, indices = [];
+        if (!caseSensitive) {
+            str = str.toLowerCase();
+            searchStr = searchStr.toLowerCase();
+        }
+        while ((index = str.indexOf(searchStr, startIndex)) > -1) {
+            indices.push(index);
+            startIndex = index + searchStrLen;
+        }
+        return indices;
+    }
+
+    function chatOnKeyUp() {
+        try {
+            if (timeOut) {
+                clearTimeout(timeOut);
+                timeOut = null;
+            } else
+                mp.trigger('client:chatTyping', true); // eslint-disable-line
+
+            timeOut = setTimeout(function() {
+                mp.trigger('client:chatTyping', false); // eslint-disable-line
+                timeOut = null;
+            }, 1000);
+        } catch (e) {
+            console.log(e);
+        }
+    }
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.spatial.min.js"></script>

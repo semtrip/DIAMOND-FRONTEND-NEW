@@ -119,7 +119,8 @@
     color: #FF4F4F;
 }
 
-.phud-money {
+
+/* .phud-money {
     width: 187px;
     height: 50px;
     display: flex;
@@ -127,7 +128,7 @@
     flex-direction: row;
     overflow: hidden;
     margin-bottom: 0.5rem;
-}
+} 
 
 .money-box {
     display: flex;
@@ -146,7 +147,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-left: 0.6rem;
-}
+} */
 
 .use-mic {
     filter: brightness(0) saturate(100%) invert(59%) sepia(82%) saturate(454%) hue-rotate(169deg) brightness(97%) contrast(96%);
@@ -485,8 +486,8 @@ path.needs__progress_drink {
     border-radius: 10px;
 }
 
-.gps-main {
-    /*width: 386px;*/
+
+/* .gps-main {
     min-width: 115px;
     height: 64px;
     margin-left: 323px;
@@ -516,7 +517,7 @@ path.needs__progress_drink {
     color: rgb(255, 255, 255);
     font-size: 1rem;
     text-align: left;
-}
+} */
 
 .hud__hints {
     position: absolute;

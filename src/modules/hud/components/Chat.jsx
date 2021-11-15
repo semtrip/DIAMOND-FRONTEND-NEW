@@ -7,11 +7,10 @@ class Chat extends React.Component {
         super(props)
         this.state = {
             show: true,
-
-            fontFamily: 'Montserrat',
-            fontSize: 14,
-            lineHeight: 17,
-            fontWeight: 600,
+            fontFamily: 'SF Pro Display',
+            fontSize: 13,
+            lineHeight: 16,
+            fontWeight: 700,
             fontOutline: true,
             bgState: 0,
             bgOpacity: 0.5,
@@ -153,9 +152,19 @@ class Chat extends React.Component {
                     }
 
                     if (enable) {
-                        chat.input = $("#chat").append(`<div><input onkeyup="chatOnKeyUp()" id="chat_msg" type="text" placeholder="Введите сообщение..."/></div>`).children(":last");
+                        chat.input = $("#chat").append(`
+                        <div id="chat-msg-input">
+                            <input onkeyup="chatOnKeyUp()" id="chat_msg" type="text" placeholder="Говорить..."/>
+                            <div id="button-input">
+                            <span class="active in_button" onClick="chatButtonClick(this.id)" id="RP">PR</span>
+                            <span class="in_button" onClick="chatButtonClick(this.id)" id="OOC">OOC</span>
+                            <span class="in_button" onClick="chatButtonClick(this.id)" id="DO">/do</span>
+                            <span class="in_button" onClick="chatButtonClick(this.id)" id="ME">/me</span>
+                            <span class="in_button" onClick="chatButtonClick(this.id)" id="REPORT">Репорт</span>
+                            </div>
+                        </div>
+                        `).children(":last");
                         chat.input.children("input").focus();
-
                         if (chat.bgState === 1)
                             $('#chat_messages').css("background-color", "rgba(0, 0, 0, " + chat.bgOpacity + ")");
                         else if (chat.bgState === 2)
@@ -183,42 +192,6 @@ class Chat extends React.Component {
             }
         }
 
-        var timeOut = null;
-        function chatOnKeyUp() {
-            try {
-                if (timeOut) {
-                    clearTimeout(timeOut);
-                    timeOut = null;
-                }
-                else
-                    mp.trigger('client:chatTyping', true); // eslint-disable-line
-
-                timeOut = setTimeout(function () {
-                    mp.trigger('client:chatTyping', false); // eslint-disable-line
-                    timeOut = null;
-                }, 1000);
-            }
-            catch (e) {
-                console.log(e);
-            }
-        }
-
-        function getIndicesOf(searchStr, str, caseSensitive) {
-            var searchStrLen = searchStr.length;
-            if (searchStrLen === 0) {
-                return [];
-            }
-            var startIndex = 0, index, indices = [];
-            if (!caseSensitive) {
-                str = str.toLowerCase();
-                searchStr = searchStr.toLowerCase();
-            }
-            while ((index = str.indexOf(searchStr, startIndex)) > -1) {
-                indices.push(index);
-                startIndex = index + searchStrLen;
-            }
-            return indices;
-        }
 
         var chatAPI =
         {
@@ -336,7 +309,7 @@ class Chat extends React.Component {
             chat.container = $("#chat ul#chat_messages");
 
             $(".ui_element").show();
-            chatAPI.push("Добро пожаловать на Social Project");
+            chatAPI.push("Вы подключились к Diamond Roleplay! Приятной игры.");
 
             $("body").keydown(function (event) {
                 if (event.which === 84 && chat.input === null

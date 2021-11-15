@@ -2,7 +2,6 @@
 import React from 'react';
 
 import Draggable from '../Draggable';
-import Money from '../img/money.svg';
 
 import MicrophoneOff from '../img/mic-off.svg'
 import MicrophoneOn from '../img/mic_on.svg'
@@ -66,10 +65,11 @@ class Player extends React.Component {
                     <div className="player-hud__box">
                         <div className="player-hud__box__row">
                             <Draggable id="player-mic" className="phud-mic">
-                                <img src={this.state.microphone ? MicrophoneOn : MicrophoneOff} width="24" />
+                                <img src={this.state.microphone ? MicrophoneOn : MicrophoneOff} width="18" />
+                                <div className="help">B</div>
                             </Draggable>
 
-                            <Draggable id="player-needs" className="phud-needs">
+                            {/* <Draggable id="player-needs" className="phud-needs">
                                 <div className="needs-box">
                                     <img src={ThirstIcon} width='8' />
                                     <svg width='30' height='30' fill='none' className='svg-circle'>
@@ -82,16 +82,14 @@ class Player extends React.Component {
                                         <circle stroke='#FD7900' strokeWidth='4' r='13' cx='15' cy='15' strokeDasharray={`${82 * (this.state.eat / 100)} 82`} />
                                     </svg>
                                 </div>
-                            </Draggable>
+                            </Draggable> */}
                         </div>
-                        <Draggable id="player-money" className="phud-money">
-                            <div className="money-box">
-                                <img src={Money} width="16" />
-                                <div className="wallet-text">{this.state.wallet}</div>
-                            </div>
-                        </Draggable>
+
                     </div>
                 </div>
+                <Draggable id="player-money" className="phud-money">
+                    <div className="wallet-text">{this.state.wallet}</div>
+                </Draggable>
             </React.Fragment>
         )
     }
