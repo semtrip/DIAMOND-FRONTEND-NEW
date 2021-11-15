@@ -84,7 +84,7 @@ class Gps extends React.Component {
 
                 <Draggable id="gps" className="gps-main">
                     <div className="gps-text">
-                        <div className="gps-title">{this.state.district}</div>
+                        <div className="gps-title"><span className={this.state.showGreen ? 'green' : null ?? this.state.showYellow ? 'yellow' : null}>{this.state.district}</span></div>
                         <div className="gps-txt"><img src={Pointer} alt="" />{this.state.street}</div>
                     </div>
                 </Draggable>

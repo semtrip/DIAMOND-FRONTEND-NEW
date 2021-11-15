@@ -369,7 +369,7 @@
 .hud__speedometr__light_svg,
 .hud__speedometr__light {
     position: absolute;
-    fill: white;
+    fill: #7C7C7C;
     top: 6rem;
     left: 4rem;
 }
@@ -377,13 +377,13 @@
 .hud__speedometr__door_svg,
 .hud__speedometr__door {
     position: absolute;
-    fill: white;
+    fill: #7C7C7C;
     left: 4rem;
 }
 
 .hud__speedometr__door.active,
 .hud__speedometr__light.active {
-    fill: #00FD19;
+    fill: #FFFFFF;
 }
 
 .hud__speedometr__arrow-right {
@@ -440,7 +440,7 @@
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 12px;
-    color: #FDB600;
+    color: #FFFFFF;
     top: 0;
     left: 10px;
 }

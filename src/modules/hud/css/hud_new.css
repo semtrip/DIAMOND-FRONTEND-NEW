@@ -243,6 +243,14 @@
     justify-content: center;
 }
 
+.gps-text .green {
+    color: green;
+}
+
+.gps-text .yellow {
+    color: yellow;
+}
+
 .gps-title {
     font-family: 'SF Pro Display';
     font-size: 24px;

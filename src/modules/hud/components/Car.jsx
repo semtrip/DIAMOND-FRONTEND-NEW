@@ -97,8 +97,8 @@ class Car extends React.Component {
             <React.Fragment>
                 <div className="hud__speedometr">
                     <svg width='306' height='118' viewBox="0 0 153 59" fill='none' className='svg-speedometer'>
-                        <path d="M2 57C2 32.4818 27.2908 1.09764 75.2625 2.01986H151" stroke="#121214" stroke-opacity="0.8" stroke-width="4" stroke-linecap="round" stroke-dasharray="200 200" />
-                        <path d="M2 57C2 32.4818 27.2908 1.09764 75.2625 2.01986H151" stroke="#FD0023" stroke-opacity="0.5" stroke-width="4" stroke-linecap="round" stroke-dasharray={`${200 * (this.state.speed / 300)} 200`} />
+                        <path d="M2 57C2 32.4818 27.2908 1.09764 75.2625 2.01986H151" stroke="#7C7C7C" stroke-opacity="0.55" stroke-width="4" stroke-linecap="round" stroke-dasharray="200 200" />
+                        <path d="M2 57C2 32.4818 27.2908 1.09764 75.2625 2.01986H151" stroke="#0061BB" stroke-opacity="1" stroke-width="4" stroke-linecap="round" stroke-dasharray={`${200 * (this.state.speed / 300)} 200`} />
                     </svg>
                     <span className="hud__speedometr__speed">{this.state.speed}</span>
                     <span className="hud__speedometr__speed__subtitle">{this.state.speedLabel}</span>
@@ -153,8 +153,6 @@ class Car extends React.Component {
                         <span className="hud__speedometr__info__fuel__text">{`${this.state.fuel}L/${this.state.max_fuel}L`}</span>
                     </div>
                 </div>
-
-
             </React.Fragment>
         )
     }
