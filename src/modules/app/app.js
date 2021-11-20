@@ -9,7 +9,7 @@ import AuthMain                       from '../authorization/AuthMain'
 import Hud                            from '../hud/Hud'
 import Inventory                      from '../inventory/Inventory'  
 import AccountMenu                    from '../accountmenu/AccountMenu'
-import GovMenu                        from '../govmenu/GovMenu'
+//import GovMenu                        from '../govmenu/GovMenu'
 import Alert                          from '../alert/Alert'
 import Bank                           from '../bank/Bank'
 import CarShop                        from '../carshop/CarShop'
@@ -50,7 +50,7 @@ export default function App () {
         <Inventory />
         {/* TODO  // Дописать тесты*/}
         <AccountMenu />
-        <GovMenu />
+        {/* <GovMenu /> */}
         <Alert />
         <Bank />
         <CarShop />

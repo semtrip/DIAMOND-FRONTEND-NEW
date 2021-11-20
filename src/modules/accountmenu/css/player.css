@@ -1,0 +1,319 @@
+.player {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.player .head {
+    height: 80px;
+    width: 853px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player .head .playerName {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.player .head .playerName .icon {
+    width: 43px;
+    height: 43px;
+    background: rgba(27, 118, 255, 0.4);
+    border: 1px dashed #1B76FF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player .head .playerName span {
+    font-weight: 500;
+    font-size: 20px;
+    color: #585D68;
+    margin-left: 9px;
+}
+
+.player .head .playerName span b {
+    color: #FFFFFF;
+    margin-right: 10px;
+}
+
+.player .head .buttonBlock {
+    width: 311px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player .head .buttonBlock .button {
+    width: 137px;
+    height: 48px;
+    background: #242932;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player .head .buttonBlock .button_two {
+    width: 165px;
+}
+
+.player .head .buttonBlock .button:hover {
+    color: #1B76FF;
+}
+
+.player .stats {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.player .stats .block_s {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.player .stats .block_s h1 {
+    font-weight: 700;
+    font-size: 14px;
+    color: #585D68;
+    margin: 0;
+    padding: 0;
+}
+
+.player .stats .generalInfo {
+    width: 500px;
+    height: 224px;
+}
+
+.player .stats .generalInfo .column {
+    width: 470px;
+    height: 162px;
+    background-color: #242932;
+    background-image: url(../img/generalInfo_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
+    padding: 17px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.player .stats .generalInfo .column .line {
+    width: 100%;
+    height: 15px;
+    font-size: 12px;
+    color: #585D68;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player .stats .generalInfo .column .line b {
+    font-weight: 500;
+    font-size: 12px;
+    color: #E9E9E9;
+}
+
+.player .stats .generalInfo .column .line b.active {
+    color: #1B76FF;
+}
+
+.player .stats .finance {
+    width: 400px;
+    height: 224px;
+}
+
+.player .stats .finance .w_block {
+    width: 400px;
+    height: 196px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.player .stats .finance .w_block .cash {
+    width: 125px;
+    height: 61px;
+    background: #242932;
+    border-radius: 3px;
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.player .stats .finance .w_block .cash .ico {
+    background-image: url(../img/cash.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+    height: 19px;
+    font-size: 14px;
+    font-family: 400;
+    color: #585D68;
+    text-align: center;
+}
+
+.player .stats .finance .w_block .cash .text {
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1B76FF;
+    text-align: center;
+}
+
+.player .stats .finance .w_block .bank {
+    width: 149px;
+    height: 61px;
+    background: #242932;
+    border-radius: 3px;
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.player .stats .finance .w_block .bank .ico {
+    background-image: url(../img/card.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 100%;
+    height: 19px;
+    font-size: 14px;
+    font-family: 400;
+    color: #585D68;
+    text-align: right;
+}
+
+.player .stats .finance .w_block .bank .text {
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1B76FF;
+    text-align: left;
+}
+
+.player .stats .finance .w_block .docs {
+    width: 59px;
+    height: 59px;
+    background: #242932;
+    background-image: url(../img/pass.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.player .stats .finance .w_block .registration {
+    width: 333px;
+    height: 59px;
+    background: linear-gradient(90.08deg, rgba(45, 104, 193, 0.3) 2.01%, rgba(21, 23, 27, 0.3) 99.93%);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.player .stats .finance .w_block .registration img {
+    width: 24px;
+    margin-left: 24px;
+    margin-right: 17px;
+}
+
+.player .stats .finance .w_block span {
+    align-self: flex-end;
+    width: 100%;
+    height: 34px;
+    font-weight: 300;
+    font-size: 14px;
+    color: #2E3440;
+}
+
+.player .stats .statistics {
+    align-self: flex-end;
+    width: 941px;
+    height: 371px;
+}
+
+.player .stats .statistics .w_block {
+    width: 909px;
+    height: 330px;
+    background: #242932;
+    border-radius: 3px;
+    padding: 6px 5px 6px 16px;
+}
+
+.player .stats .statistics .w_block .content {
+    width: 98%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    padding-right: 11px;
+}
+
+.player .stats .statistics .w_block .line {
+    width: 422px;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #585D68;
+    margin: 2px 0;
+}
+
+.player .stats .statistics .w_block .line b {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+
+/* полоса прокрутки (скроллбар) */
+
+::-webkit-scrollbar {
+    width: 2px;
+    /* ширина для вертикального скролла */
+    background-color: #2E343E;
+}
+
+
+/* ползунок скроллбара */
+
+::-webkit-scrollbar-thumb {
+    background-color: #3F6AD3;
+    border-radius: 9em;
+}

@@ -6,8 +6,8 @@ import Draggable from '../Draggable';
 import MicrophoneOff from '../img/mic-off.svg'
 import MicrophoneOn from '../img/mic_on.svg'
 
-import HungerIcon from '../img/hunger_icon.svg';
-import ThirstIcon from '../img/thirst_icon.svg';
+// import HungerIcon from '../img/hunger_icon.svg';
+// import ThirstIcon from '../img/thirst_icon.svg';
 
 const { EventManager: em } = window;
 

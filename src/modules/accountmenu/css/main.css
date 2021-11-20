@@ -1,9 +1,218 @@
-.accountmenu {
-    width : 1200px;
-    height: 650px;
+@import url(../../../fonts/fontSFProDisplay.css);
+.window {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    position : absolute;
-    top      : 50%;
-    left     : 50%;
-    transform: translate(-50%, -50%);
+.mainMenu {
+    font-family: 'SF Pro Display';
+    position: relative;
+    width: 1039px;
+    height: 730px;
+    background: linear-gradient(246.85deg, rgba(0, 0, 0, 0.2) 0%, rgba(52, 82, 126, 0.146635) 43.23%, rgba(0, 0, 0, 0.106) 100%), #17181B;
+    border-radius: 3px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navBar {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.menuBlock {
+    background: #242932;
+    border-radius: 3px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainNav {
+    width: 80px;
+    height: 200px;
+    margin-top: -280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 17px 0;
+    z-index: 0;
+}
+
+.navButton {
+    height: 50px;
+    width: 100%;
+}
+
+#b_player {
+    position: relative;
+    background: url(../img/player.svg) no-repeat;
+    background-position: center;
+}
+
+#b_player:hover,
+#b_player.active {
+    background: url(../img/player_h.svg) no-repeat;
+    background-position: center;
+}
+
+#b_player:hover::after {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    content: 'Статистика';
+    width: 119px;
+    height: 33px;
+    background: linear-gradient(269.37deg, rgba(23, 27, 33, 0.9) 40.03%, rgba(23, 27, 33, 0) 97.26%);
+    backdrop-filter: blur(4px);
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 12px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#b_property {
+    position: relative;
+    background: url(../img/property.svg) no-repeat;
+    background-position: center;
+}
+
+#b_property:hover,
+#b_property.active {
+    background: url(../img/property_h.svg) no-repeat;
+    background-position: center;
+}
+
+#b_property:hover::after {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    content: 'Имущество';
+    width: 119px;
+    height: 33px;
+    background: linear-gradient(269.37deg, rgba(23, 27, 33, 0.9) 40.03%, rgba(23, 27, 33, 0) 97.26%);
+    backdrop-filter: blur(4px);
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 12px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#b_reports {
+    position: relative;
+    background: url(../img/reports.svg) no-repeat;
+    background-position: center;
+}
+
+#b_reports:hover,
+#b_reports.active {
+    background: url(../img/reports_h.svg) no-repeat;
+    background-position: center;
+}
+
+#b_reports:hover::after {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    content: 'Обращения';
+    width: 119px;
+    height: 33px;
+    background: linear-gradient(269.37deg, rgba(23, 27, 33, 0.9) 40.03%, rgba(23, 27, 33, 0) 97.26%);
+    backdrop-filter: blur(4px);
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 12px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#b_mission {
+    position: relative;
+    background: url(../img/mission.svg) no-repeat;
+    background-position: center;
+}
+
+#b_mission:hover,
+#b_mission.active {
+    background: url(../img/mission_h.svg) no-repeat;
+    background-position: center;
+}
+
+#b_mission:hover::after {
+    position: absolute;
+    top: 7px;
+    left: 12px;
+    content: 'Квесты';
+    width: 104px;
+    height: 33px;
+    background: linear-gradient(269.37deg, rgba(23, 27, 33, 0.9) 40.03%, rgba(23, 27, 33, 0) 97.26%);
+    backdrop-filter: blur(4px);
+    border-radius: 7px;
+    font-weight: 400;
+    font-size: 12px;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+.settings {
+    content: url(../img/settings.svg);
+    width: 30px;
+    height: 30px;
+    padding: 25px;
+}
+
+.settings:hover,
+.settings.active {
+    content: url(../img/settings_h.svg);
+}
+
+.pages {
+    width: 941px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.close {
+    content: url(../img/close.svg);
+    top: 59px;
+    right: 37px;
+    position: absolute;
+    height: 29px;
+    width: 29px;
+    transition: all .5s;
+}
+
+.close:hover {
+    transform: scale(1.1);
 }
