@@ -51,7 +51,7 @@ const playerStats = () => {
                     <h1>Статистика</h1>
                     <div className="w_block">
                         <div className="content">
-                            <div className="line">Репутация:<b>Положительная</b></div>
+                            <div className="line">Репутация:<b>Положительная </b></div>
                             <div className="line">Репутация:<b>Положительная</b></div>
                             <div className="line">Репутация:<b>Положительная</b></div>
                             <div className="line">Репутация:<b>Положительная</b></div>
