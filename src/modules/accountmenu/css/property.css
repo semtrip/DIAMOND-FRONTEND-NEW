@@ -1,0 +1,517 @@
+.property {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.property .nav {
+    width: 363px;
+    height: 80px;
+    background: #242932;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.property .nav .navButton {
+    height: 100%;
+    width: 50px;
+    color: #373F4C;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.property .nav .navButton#b_cars {
+    width: 110px;
+    background: url(../img/car.svg) no-repeat;
+    background-position: left;
+}
+
+.property .nav .navButton#b_cars:hover {
+    background: url(../img/car_h.svg) no-repeat;
+    background-position: left;
+    color: #0085FF;
+}
+
+.property .nav .navButton#b_cars.active {
+    background: url(../img/car_h.svg) no-repeat;
+    background-position: left;
+    color: #0085FF;
+}
+
+.property .nav .navButton#b_bussines {
+    width: 118px;
+    background: url(../img/bussines.svg) no-repeat;
+    background-position: left;
+}
+
+.property .nav .navButton#b_bussines:hover {
+    background: url(../img/bussines_h.svg) no-repeat;
+    background-position: left;
+    color: #0085FF;
+}
+
+.property .nav .navButton#b_bussines.active {
+    background: url(../img/bussines_h.svg) no-repeat;
+    background-position: left;
+    color: #0085FF;
+}
+
+.property .nav .navButton#b_home {
+    width: 65px;
+    background: url(../img/home.svg) no-repeat;
+    background-position: left;
+}
+
+.property .nav .navButton#b_home:hover {
+    background: url(../img/home_h.svg) no-repeat;
+    background-position: left;
+    color: #0085FF;
+}
+
+.property .nav .navButton#b_home.active {
+    background: url(../img/home_h.svg) no-repeat;
+    background-position: left;
+    color: #0085FF;
+}
+
+.property .content {
+    width: 100%;
+    height: 620px;
+}
+
+.cars {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding-right: 20px;
+}
+
+.cars .nullBlock {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+}
+
+.cars .item_block {
+    position: relative;
+    background: rgba(36, 41, 50, 0.3);
+    background-position: center;
+    width: 427.86px;
+    height: 383.31px;
+    border: 2px solid #242932;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.cars .item_block::after {
+    height: 111px;
+    width: 228px;
+    position: absolute;
+    top: 137px;
+    left: 99.86px;
+    content: 'Cвободный слот транспорта';
+    background-image: url(../img/car.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 35%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: #373F4E;
+}
+
+.cars .item_block.car {
+    border: none;
+    background: #242932;
+}
+
+.cars .item_block.car::after {
+    display: none;
+}
+
+.cars .item_block.car {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.cars .item_block.car .imgBlock {
+    margin-top: 20px;
+    height: 174px;
+    width: 368px;
+    position: relative;
+    display: inline-block;
+}
+
+.cars .item_block.car .imgBlock img {
+    width: 100%;
+}
+
+.cars .item_block.car .imgBlock::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(94.58deg, rgba(56, 109, 245, 0.28) -62.12%, rgba(56, 109, 245, 0) 98.93%);
+}
+
+.cars .item_block.car .option {
+    width: 363.93px;
+    height: 158.93px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #585D68;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.cars .item_block.car .option span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.cars .item_block.car .option span b {
+    color: #E9E9E9;
+}
+
+.cars .item_block.car .option span b.active {
+    color: #0085FF;
+}
+
+.bussines {
+    width: 100%;
+    height: 100%;
+    background: #242932;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.bussines .name {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #596375;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bussines .imgBlock {
+    position: relative;
+    width: 899px;
+    height: 423.09px;
+}
+
+.bussines .imgBlock img {
+    width: 100%;
+    height: 100%;
+}
+
+.bussines .imgBlock::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(94.58deg, rgba(56, 109, 245, 0.28) -62.12%, rgba(56, 109, 245, 0) 98.93%);
+}
+
+.bussines .info {
+    width: 896px;
+    height: 63px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.bussines .info span {
+    width: 100%;
+    font-size: 14px;
+    color: #757C8D;
+}
+
+.bussines .info span {
+    width: 100%;
+    font-size: 14px;
+    color: #757C8D;
+}
+
+.bussines .info span.infoItem {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bussines .info span.infoItem b {
+    font-size: 12px;
+    color: #E9E9E9;
+}
+
+.bussines .info span.infoItem b.active {
+    color: #386DF5;
+}
+
+.bussines .button {
+    width: 896px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bussines .button .sell {
+    display: flex;
+    align-items: center;
+}
+
+.bussines .button .sell .sell_b {
+    width: 115px;
+    height: 41px;
+    background: #C93939;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.bussines .button .sell .sell_b:hover {
+    background: #c95555;
+}
+
+.bussines .button .sell .price {
+    position: relative;
+    width: 88px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #757C8D;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.bussines .button .sell .price::after {
+    content: url(../img/dollar.svg);
+    height: 12px;
+    width: 16.5px;
+    left: 8px;
+    top: 0;
+    position: absolute;
+}
+
+.bussines .button .sell .price span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #386DF5;
+}
+
+.bussines .button .rent {
+    width: 152px;
+    height: 100%;
+    background: #386DF5;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.bussines .button .rent:hover {
+    background: #587edd;
+}
+
+.house {
+    width: 100%;
+    height: 100%;
+    background: #242932;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.house .name {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 14px;
+    color: #596375;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.house .imgBlock {
+    position: relative;
+    width: 899px;
+    height: 364.1px;
+}
+
+.house .imgBlock img {
+    width: 100%;
+    height: 100%;
+}
+
+.house .imgBlock::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(94.58deg, rgba(56, 109, 245, 0.28) -62.12%, rgba(56, 109, 245, 0) 98.93%);
+}
+
+.house .info {
+    width: 896px;
+    height: 126px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.house .info span {
+    width: 100%;
+    font-size: 14px;
+    color: #757C8D;
+}
+
+.house .info span {
+    width: 100%;
+    font-size: 14px;
+    color: #757C8D;
+}
+
+.house .info span.infoItem {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.house .info span.infoItem b {
+    font-size: 12px;
+    color: #E9E9E9;
+}
+
+.house .info span.infoItem b.active {
+    color: #386DF5;
+}
+
+.house .button {
+    width: 896px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.house .button .sell {
+    display: flex;
+    align-items: center;
+}
+
+.house .button .sell .sell_b {
+    width: 115px;
+    height: 41px;
+    background: #C93939;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.house .button .sell .sell_b:hover {
+    background: #c95555;
+}
+
+.house .button .sell .price {
+    position: relative;
+    width: 88px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #757C8D;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.house .button .sell .price::after {
+    content: url(../img/dollar.svg);
+    height: 12px;
+    width: 16.5px;
+    left: 8px;
+    top: 0;
+    position: absolute;
+}
+
+.house .button .sell .price span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #386DF5;
+}
+
+.house .button .rent {
+    width: 152px;
+    height: 100%;
+    background: #386DF5;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.house .button .rent:hover {
+    background: #587edd;
+}

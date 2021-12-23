@@ -1,0 +1,371 @@
+.reports {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.reports .head {
+    width: 863px;
+    height: 77px;
+    border-bottom: solid 1px #2D343F;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.reports .head h1 {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.reports .head span {
+    font-size: 14px;
+    color: #3A424E;
+    margin-bottom: 6px;
+}
+
+.reports .container {
+    width: 863px;
+    height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reports .container .history {
+    width: 192px;
+    height: 100%;
+    padding-right: 18px;
+}
+
+.reports .container .history span {
+    font-size: 14px;
+    color: #373F4C;
+    margin-bottom: 6px;
+}
+
+.reports .container .history .tiket {
+    position: relative;
+    width: 186px;
+    height: 38px;
+    background: #242932;
+    border-radius: 3px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reports .container .history .tiket.closed::after {
+    content: url(../img/closed.svg);
+    position: absolute;
+    right: 11px;
+    top: 11px;
+}
+
+.reports .container .history .tiket.active {
+    background: linear-gradient(90deg, #1B76FF -56.71%, #242932 100%);
+}
+
+.reports .container .history .tiket span {
+    margin: 0;
+    font-size: 12px;
+    color: #FFFFFF;
+    pointer-events: none;
+}
+
+.reports .container .history .tiket::before {
+    content: url(../img/tiket.svg);
+    position: absolute;
+    left: 8px;
+    top: 11px;
+}
+
+.reports .container .history .tiket.new::after {
+    content: url(../img/oko.svg);
+    position: absolute;
+    right: 11px;
+    top: 13px;
+}
+
+.reports .container .dialog {
+    width: 620px;
+    height: 610px;
+}
+
+.reports .container .dialog span {
+    position: relative;
+    width: 115px;
+    height: 21px;
+    font-size: 14px;
+    color: #3E4653;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.reports .container .dialog span::before {
+    content: url(../img/tiket.svg);
+    position: absolute;
+    left: 0;
+    top: 3px;
+    opacity: 0.2;
+}
+
+.reports .container .dialog b {
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.reports .container .dialog .messagePole {
+    margin-top: 3px;
+    height: 500px;
+    width: 620px;
+    background: #242932;
+    border-radius: 3px 3px 0 0;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.reports .container .dialog .messageInput {
+    position: relative;
+    width: 620px;
+    background: rgba(36, 41, 50, 0.3);
+    border: 1px solid #363C46;
+    box-sizing: border-box;
+    border-radius: 3px 0px 0px 3px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 16px 0 20px;
+    margin-top: -2px;
+}
+
+.reports .container .dialog .messageInput textarea {
+    height: 17px;
+    width: 85%;
+    color: #FFFFFF;
+    background: none;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'SF Pro Display';
+}
+
+.reports .container .dialog .messageInput textarea::placeholder {
+    color: #383F4D;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'SF Pro Display';
+}
+
+.reports .container .dialog .messageInput .send {
+    height: 30px;
+    width: 30px;
+    background: #1B76FF;
+    border-radius: 6px;
+    background-image: url(../img/mail.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.reports .container .dialog .messageInput .send {
+    height: 30px;
+    width: 30px;
+    background: #1B76FF;
+    border-radius: 6px;
+    background-image: url(../img/mail.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.reports .container .dialog .messageInput .send:hover {
+    animation-duration: 1s;
+    animation-name: send;
+}
+
+.reports .container .dialog #test {
+    opacity: 0;
+    bottom: -100vh;
+    left: 15px;
+    position: absolute;
+    width: 85%;
+    background: #3A424E;
+    font-size: 1em;
+    word-wrap: break-word;
+}
+
+
+/* Анимация кнопки SEND*/
+
+@keyframes send {
+    0% {
+        background-position: center;
+    }
+    30% {
+        background-position: 50px;
+    }
+    60% {
+        background-position: -50px;
+        background-image: none;
+    }
+    80% {
+        background-image: url(../img/mail.svg);
+        background-position: center;
+    }
+    100% {
+        background-image: url(../img/mail.svg);
+        background-position: center;
+    }
+}
+
+.reports .container .dialog .rep_close {
+    position: relative;
+    width: 500px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.reports .container .dialog .rep_close b {
+    color: rgb(250, 46, 46);
+    font-size: 18px;
+    padding: 10px;
+}
+
+.reports .container .dialog .rep_close span {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.reports .container .dialog .rep_close span::before {
+    content: '';
+}
+
+.reports .container .dialog .messagePole .adminMsg {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 13px 11px;
+    width: 95%;
+}
+
+.reports .container .dialog .messagePole .playerMsg {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 13px 11px;
+    width: 95%;
+}
+
+.reports .container .dialog .messagePole .message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    min-width: 252px;
+    margin-bottom: 5px;
+}
+
+.reports .container .dialog .messagePole .message span::before {
+    content: '';
+}
+
+.reports .container .dialog .messagePole .message .tag {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-bottom: 7px;
+}
+
+.reports .container .dialog .messagePole .playerMsg .message .tag {
+    justify-content: flex-end;
+}
+
+.reports .container .dialog .messagePole .message .tag b {
+    height: 18px;
+    width: 91px;
+    background: #1B76FF;
+    border-radius: 11.5px;
+    font-weight: 500;
+    font-size: 10px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.reports .container .dialog .messagePole .message .tag i {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #3E4653;
+    margin-left: 5px;
+}
+
+.reports .container .dialog .messagePole .playerMsg .message .tag b {
+    background: #373F4C;
+    width: 30px;
+    margin-left: 5px;
+}
+
+.reports .container .dialog .messagePole .playerMsg .message .tag i {
+    margin-right: 5px;
+}
+
+.reports .container .dialog .messagePole .message .tag b .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 35px;
+    transform: skewX(-45deg);
+    left: -150%;
+    background: linear-gradient(90deg, rgba(77, 121, 241, 0.1), rgba(91, 164, 248, 0.4));
+    animation: flareAnimation 5s infinite linear;
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+.reports .container .dialog .messagePole .message .text {
+    max-width: 275px;
+    background: #373F4C;
+    border-radius: 12px;
+    padding: 12px 13px;
+}

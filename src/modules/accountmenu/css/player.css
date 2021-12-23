@@ -276,12 +276,11 @@
 
 .player .stats .statistics .w_block .content {
     width: 98%;
-    height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-right: 11px;
 }
 

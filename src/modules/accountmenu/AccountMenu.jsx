@@ -17,14 +17,17 @@ import mission from "./components/mission/mission";
 import settings from "./components/settings/settings";
 
 
-const { EventManager: em } = window;
 
+
+const { EventManager: em } = window;
 export default class AccountMenu extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             show: false,
-            path: '/player'
+            path: '/player',
+            property_path: 'cars',
+
         }
     }
 
@@ -33,10 +36,16 @@ export default class AccountMenu extends React.Component {
     }    
 
     componentDidMount() {
-        
+        em.addHandler('accountMenu', value => {
+            if (value.type === 'show') {
+                this.setState({show: true})
+            } else if (value.type === 'hide') {
+                this.setState({show: false})
+            } else return;
+        })
     }
     componentWillUnmount() {
-        em.removeHandler('accmain');
+        em.removeHandler('accountMenu');
     }
     closeMenu = () => {
         this.setState({show: false})
@@ -54,7 +63,7 @@ export default class AccountMenu extends React.Component {
                                 <div className="logo menuBlock"><img src={logo} alt="" /></div>
                                 <div className="mainNav menuBlock">
                                     <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_player' to='/player'/>
-                                    <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_property' to='/property'/>
+                                    <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_property' to={{pathname: '/property',}} />
                                     <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_reports' to='/reports'/>
                                     <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_mission' to='/mission'/>
                                 </div>
@@ -63,10 +72,10 @@ export default class AccountMenu extends React.Component {
                             <div className="pages">
                                     <Route exact path='/player' component={playerStats}/>
                                     <Route exact path='/property' component={property}/>
-                                    <Route exact path='/reports' component={reports}/>
-                                    <Route exact path="/mission" component={mission}/>
-                                    <Route exact path='/settings' component={settings}/>
-                                    <Redirect to='/player'/>
+                                    <Route path='/reports' component={reports}/>
+                                    <Route path="/mission" component={mission}/>
+                                    <Route path='/settings' component={settings}/>
+                                    <Redirect to={this.state.path} state={this.state.property_path}/>
                             </div>
                             <div className="close" onClick={this.closeMenu}></div>
                         </div>

@@ -7,7 +7,7 @@ class Watch extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            show: true,
+            show: false,
             time: '00:00',
             date: '01.01.1990',
             temp: '12°С',

@@ -1,0 +1,179 @@
+.mission {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mission .head {
+    width: 863px;
+    height: 77px;
+    border-bottom: solid 1px #2D343F;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.mission .head h1 {
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+}
+
+.mission .head span {
+    font-size: 14px;
+    color: #3A424E;
+    margin-bottom: 6px;
+}
+
+.mission .head span b {
+    font-weight: 500;
+    font-size: 14px;
+    color: #386DF5;
+}
+
+.mission .container {
+    width: 863px;
+    height: 620px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.mission .container .task {
+    min-height: 265px;
+    width: 196px;
+    border-radius: 13px;
+    background: #242932;
+    margin-right: 21px;
+    margin-bottom: 28px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mission .container .task.active {
+    cursor: pointer;
+}
+
+.mission .container .task .content {
+    pointer-events: none;
+}
+
+.mission .container .task .image {
+    height: 76px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.mission .container .task .image img {
+    border-radius: 11px;
+}
+
+.mission .container .task .image .line {
+    width: 181px;
+    height: 1px;
+    background: #2E3542;
+    border-radius: 7px;
+}
+
+.mission .container .task .text {
+    width: 165px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mission .container .task .text .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    color: #1B76FF;
+}
+
+.mission .container .task .text .descriptor {
+    font-style: normal;
+    font-weight: 400;
+    font-weight: normal;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+.mission .container .task .text .count {
+    margin-top: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #485262;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mission .container .task .text .count span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #485262;
+}
+
+.mission .container .task .text .count span b {
+    font-weight: 500;
+    font-size: 12px;
+    color: #386DF5;
+    margin-right: 2px;
+}
+
+.mission .container .task .text .price {
+    margin-top: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    color: #485262;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.mission .container .task .text .price span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.mission .container .task .text .price span b {
+    color: #009BF2;
+}
+
+.mission .container .task .text .price span::before {
+    content: url(../img/money_mission.svg);
+    margin-right: 3px;
+}
+
+.mission .container .task .btn {
+    width: 155px;
+    height: 38px;
+    background: #386DF5;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mission .container .task .btn:hover {
+    background: rgb(86, 132, 247);
+}

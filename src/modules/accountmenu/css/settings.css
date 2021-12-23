@@ -1,0 +1,393 @@
+.setting {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.setting .nav {
+    height: 80px;
+    width: 850px;
+    background: #242932;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.setting .nav .navButton {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #373F4C;
+}
+
+.setting .nav .navButton:hover {
+    color: #1B76FF;
+}
+
+.setting .nav .navButton.active {
+    color: #1B76FF;
+}
+
+.setting .nav .navButton#b_main {
+    width: 103px;
+}
+
+.setting .nav .navButton#b_main::before {
+    content: url(../img/s_home.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_main:hover::before {
+    content: url(../img/s_home_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_main.active::before {
+    content: url(../img/s_home_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_interface {
+    width: 106px;
+}
+
+.setting .nav .navButton#b_interface::before {
+    content: url(../img/s_interface.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_interface:hover::before {
+    content: url(../img/s_interface_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_interface.active::before {
+    content: url(../img/s_interface_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_voice {
+    width: 131px;
+}
+
+.setting .nav .navButton#b_voice::before {
+    content: url(../img/s_voice.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_voice:hover::before {
+    content: url(../img/s_voice_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_voice.active::before {
+    content: url(../img/s_voice_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_chat {
+    width: 129px;
+}
+
+.setting .nav .navButton#b_chat::before {
+    content: url(../img/s_chat.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_chat:hover::before {
+    content: url(../img/s_chat_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_chat.active::before {
+    content: url(../img/s_chat_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_button {
+    width: 167px;
+}
+
+.setting .nav .navButton#b_button::before {
+    content: url(../img/s_button.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_button:hover::before {
+    content: url(../img/s_button_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_button.active::before {
+    content: url(../img/s_button_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_map {
+    width: 67px;
+}
+
+.setting .nav .navButton#b_map::before {
+    content: url(../img/s_map.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_map:hover::before {
+    content: url(../img/s_map_h.svg);
+    margin-right: 5px;
+}
+
+.setting .nav .navButton#b_map.active::before {
+    content: url(../img/s_map_h.svg);
+    margin-right: 5px;
+}
+
+.setting .content {
+    width: 850px;
+    height: 622px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.setting .content .main-settings {
+    width: 96.8%;
+    height: 621px;
+    padding-right: 27px;
+    overflow-y: auto;
+}
+
+.setting .content .voice-settings {
+    width: 96.8%;
+    height: 621px;
+    padding-right: 27px;
+    overflow-y: auto;
+}
+
+.setting .content .chat-settings {
+    width: 96.8%;
+    height: 621px;
+    padding-right: 27px;
+    overflow-y: auto;
+}
+
+.setting .content .button-settings {
+    width: 96.8%;
+    height: 621px;
+    padding-right: 27px;
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.setting .content .map-settings {
+    width: 96.8%;
+    height: 621px;
+    padding-right: 27px;
+    overflow-y: auto;
+}
+
+.setting .content .item {
+    width: 770px;
+    height: 60px;
+    background: #242932;
+    border-radius: 3px;
+    margin-bottom: 6px;
+    padding: 0 29px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.setting .content .item span {
+    font-weight: 500;
+    font-size: 16px;
+    color: #E9E9E9;
+    margin: 0 8px;
+}
+
+.setting .content .item .btn {
+    width: 82px;
+    height: 38px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    background: #1B76FF;
+}
+
+.setting .content .item .btn:hover {
+    background: #468efa;
+}
+
+.setting .content .item .select {
+    min-width: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.setting .content .item .select span {
+    font-size: 14px;
+    margin: 0 8px;
+}
+
+.setting .content .item .select .back,
+.setting .content .item .select .next {
+    cursor: pointer;
+}
+
+.setting .content .item .checkbox {
+    position: relative;
+    width: 56px;
+    height: 29px;
+    background: #2F3642;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    margin: 0;
+}
+
+.setting .content .item .checkbox:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    background: #F9F9F9;
+    opacity: .1;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+    transition: all .5s ease-in-out;
+}
+
+.setting .content .item .checkbox.active {
+    background: #1B76FF;
+}
+
+.setting .content .item .checkbox.active:after {
+    left: 30px;
+    top: 2px;
+    opacity: 1;
+}
+
+.setting .content .interface-setting {
+    width: 96.8%;
+    height: 522px;
+    padding-right: 27px;
+    overflow-y: auto;
+}
+
+.setting .content .interface-button {
+    width: 96.8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 80px;
+}
+
+.setting .content .interface-button .text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.setting .content .interface-button .text span {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #373F4C;
+}
+
+.setting .content .interface-button .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.setting .content .interface-button .btn .apply,
+.setting .content .interface-button .btn .throw {
+    width: 111px;
+    height: 51px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.setting .content .interface-button .btn .apply {
+    background: #1B76FF;
+}
+
+.setting .content .interface-button .btn .throw {
+    background: #C93939;
+}
+
+.setting .content .interface-button .btn .apply:hover {
+    background: #468efa;
+}
+
+.setting .content .interface-button .btn .throw:hover {
+    background: #ee5555;
+}
+
+.setting .content .item-button {
+    width: 400px;
+    height: 95px;
+    background: #242932;
+    border-radius: 3px;
+    margin: 9px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.setting .content .item-button .key {
+    width: 127px;
+    height: 54px;
+    background: #404857;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #E9E9E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.setting .content .item-button .key:hover {
+    opacity: .9;
+}
+
+.setting .content .item-button .name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #E9E9E9;
+    margin-left: 25px;
+}
