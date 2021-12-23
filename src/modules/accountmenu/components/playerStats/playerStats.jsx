@@ -23,7 +23,7 @@ export default class playerStats extends React.Component {
             stats: [
                 {name: 'Репутация', data: 'Положительная', color: 'ffffff'},
                 {name: 'Репутация', data: 'Положительная', color: 'fff000'},
-                {name: 'Репутация', data: 'Положительная'}
+                {name: 'Репутация', data: 'Положительная'},
             ]
         }
     }
