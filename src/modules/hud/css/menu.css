@@ -177,13 +177,13 @@
     align-items: center;
     justify-content: space-between;
     margin-left: 10px;
+    pointer-events: none;
 }
 
 .mainMenu-block .list .items .item .info .select span {
     font-weight: 300;
     font-size: 12px;
     color: #FFFFFF;
-    pointer-events: none;
 }
 
 .mainMenu-block .list .items .item .info .select .back,
@@ -191,6 +191,7 @@
     height: 12.6px;
     width: 12px;
     cursor: pointer;
+    pointer-events: all;
 }
 
 .mainMenu-block .list .items .item .info .select .back {
