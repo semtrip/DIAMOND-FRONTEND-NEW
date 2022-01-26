@@ -6,7 +6,7 @@ class HudStore {
         makeAutoObservable(this, {}, { deep: true })
     }
     state = {
-        show: true,
+        show: false,
         showLogo: true,
         showPlayer: true,
         showGps: true,
