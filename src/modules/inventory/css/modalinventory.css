@@ -1,9 +1,11 @@
 /* body {
     background-color: #9a3f3f;
 } */
-.inv-modal{
+
+.inv-modal {
     z-index: 1;
 }
+
 .position-modal {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
@@ -41,7 +43,7 @@
 }
 
 .modal-b-title {
-    font-family: "Roboto";
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -63,7 +65,7 @@
     margin-left: 20px;
     margin-top: 10px;
     padding: 5px;
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -87,7 +89,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'HACKED';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -100,7 +102,7 @@
     display: flex;
     margin-left: 14px;
     justify-content: flex-end;
-    font-family: 'Roboto';
+    font-family: 'Montserrat';
     margin-bottom: 7px;
     font-size: 13px;
 }

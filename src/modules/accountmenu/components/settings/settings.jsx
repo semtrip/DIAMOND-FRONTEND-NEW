@@ -9,8 +9,6 @@ import Chat from "./pages/chat";
 import Button from "./pages/button";
 import Map from "./pages/map";
 
-const { EventManager: em } = window;
-
 export default class Settings extends React.Component {
     constructor(props) {
         super(props)

@@ -1,0 +1,567 @@
+.bank-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(246.85deg, rgba(163, 163, 163, 0.2) 0%, rgba(52, 82, 126, 0.2) 43.23%, rgba(245, 245, 245, 0.106) 100%, rgba(140, 142, 146, 0.106) 100%), #FFFFFF;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.bank-screen .title {
+    position: absolute;
+    top: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #636363;
+}
+
+.bank-screen .card {
+    position: absolute;
+    width: 343px;
+    height: 218px;
+    top: 103px;
+    border-radius: 16px;
+}
+
+.bank-screen#maze .card {
+    background: url(../img/bank/maze_bg.png), #B50E0E;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.bank-screen#blaine .card {
+    background: url(../img/bank/blaine_bg.png), #5252FF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen#fleeca .card {
+    background: url(../img/bank/fleeca_bg.png), #397B05;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.bank-screen#pasific .card {
+    background: url(../img/bank/pacific_bg.png), #222831;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.bank-screen .card .number {
+    position: absolute;
+    font-weight: 600;
+    font-size: 22px;
+    color: #FDFDFD;
+}
+
+.bank-screen#maze .card .number {
+    top: 125px;
+    left: 24px;
+}
+
+.bank-screen#blaine .card .number {
+    top: 139px;
+    left: 24px;
+}
+
+.bank-screen#fleeca .card .number {
+    top: 108px;
+    left: 24px;
+}
+
+.bank-screen#pasific .card .number {
+    top: 108px;
+    left: 24px;
+}
+
+.bank-screen .card .valid {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bank-screen#maze .card .valid {
+    top: 129px;
+    right: 14px;
+}
+
+.bank-screen#blaine .card .valid {
+    top: 178px;
+    right: 27px;
+}
+
+.bank-screen#fleeca .card .valid {
+    top: 176px;
+    left: 24px;
+}
+
+.bank-screen#pasific .card .valid {
+    top: 79px;
+    left: 24px;
+}
+
+.bank-screen .card .valid .text {
+    width: 22px;
+    height: 16px;
+    background: url(../img/bank/valid.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 6px;
+}
+
+.bank-screen .card .valid b {
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.bank-screen .card .name {
+    position: absolute;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.bank-screen#maze .card .name {
+    top: 176px;
+    left: 24px;
+}
+
+.bank-screen#blaine .card .name {
+    top: 177px;
+    left: 24px;
+}
+
+.bank-screen#fleeca .card .name {
+    top: 141px;
+    left: 24px;
+}
+
+.bank-screen#pasific .card .name {
+    top: 144px;
+    left: 24px;
+}
+
+.bank-screen .balance {
+    position: absolute;
+    top: 338px;
+    width: 343px;
+    height: 50px;
+    background: rgba(150, 150, 150, 0.4);
+    border: 1px solid #969696;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bank-screen .balance span {
+    font-weight: 500;
+    font-size: 14px;
+    color: #636363;
+}
+
+.bank-screen#maze .balance .cash {
+    color: #B50E0E;
+}
+
+.bank-screen#blaine .balance .cash {
+    color: #7272FF;
+}
+
+.bank-screen#fleeca .balance .cash {
+    color: #33A71F;
+}
+
+.bank-screen#pasific .balance .cash {
+    color: #31373F;
+}
+
+.bank-screen .salary {
+    position: absolute;
+    width: 343px;
+    height: 94px;
+    top: 402px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bank-screen .salary .cash {
+    width: 230px;
+    height: 67px;
+    background: rgba(150, 150, 150, 0.4);
+    border: 1px solid #969696;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.bank-screen .salary .cash span {
+    font-weight: 500;
+    font-size: 12px;
+    color: #636363;
+}
+
+.bank-screen .salary .cash .sum {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 7px;
+}
+
+.bank-screen#maze .salary .cash .sum {
+    color: #B50E0E;
+}
+
+.bank-screen#blaine .salary .cash .sum {
+    color: #7272FF;
+}
+
+.bank-screen#fleeca .salary .cash .sum {
+    color: #33A71F;
+}
+
+.bank-screen#pasific .salary .cash .sum {
+    color: #31373F;
+}
+
+.bank-screen .salary .btn {
+    width: 102px;
+    height: 94px;
+    border-radius: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bank-screen .salary .btn:hover {
+    opacity: .9;
+}
+
+.bank-screen#maze .salary .btn {
+    background: #B50E0E;
+}
+
+.bank-screen#blaine .salary .btn {
+    background: #7272FF;
+}
+
+.bank-screen#fleeca .salary .btn {
+    background: #81C245;
+}
+
+.bank-screen#pasific .salary .btn {
+    background: #41474E;
+}
+
+.bank-screen .salary .btn .ico {
+    width: 50px;
+    height: 50px;
+    left: 9px;
+    top: 0px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    pointer-events: none;
+}
+
+.bank-screen#maze .salary .btn .ico {
+    background: url(../img/bank/ico.png), #BC2626;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen#blaine .salary .btn .ico {
+    background: url(../img/bank/ico.png), #6363FF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen#fleeca .salary .btn .ico {
+    background: url(../img/bank/ico.png), #33A71F;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen#pasific .salary .btn .ico {
+    background: url(../img/bank/ico.png), #292F37;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen .salary .btn span {
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.bank-screen#maze .salary .btn span {
+    color: #FF9F9F;
+}
+
+.bank-screen#blaine .salary .btn span {
+    color: #CFCFFF;
+}
+
+.bank-screen#fleeca .salary .btn span {
+    color: #FFFFFF;
+}
+
+.bank-screen#pasific .salary .btn span {
+    color: #FDFDFD;
+}
+
+.bank-screen .history-btn {
+    position: absolute;
+    width: 343px;
+    height: 74px;
+    top: 515px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-screen .history-btn:hover {
+    opacity: .9;
+}
+
+.bank-screen#maze .history-btn {
+    background: #B50E0E;
+}
+
+.bank-screen#blaine .history-btn {
+    background: #7272FF;
+}
+
+.bank-screen#fleeca .history-btn {
+    background: #81C245;
+}
+
+.bank-screen#pasific .history-btn {
+    background: #41474E;
+}
+
+.bank-screen .history-btn span {
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.bank-screen#maze .history-btn span {
+    color: #FF9F9F;
+}
+
+.bank-screen#blaine .history-btn span {
+    color: #CFCFFF;
+}
+
+.bank-screen#fleeca .history-btn span {
+    color: #FFFFFF;
+}
+
+.bank-screen#pasific .history-btn span {
+    color: #FFFFFF;
+}
+
+.bank-screen .history-btn span::after {
+    content: '';
+    position: absolute;
+    left: -97px;
+    width: 45px;
+    height: 42px;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+.bank-screen#maze .history-btn span::after {
+    background: url(../img/bank/history.png)#BC2626;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen#blaine .history-btn span::after {
+    background: url(../img/bank/history.png)#6363FF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen#fleeca .history-btn span::after {
+    background: url(../img/bank/history.png)#33A71F;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bank-screen#pasific .history-btn span::after {
+    background: url(../img/bank/history.png)#292F37;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.history-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(246.85deg, rgba(163, 163, 163, 0.2) 0%, rgba(52, 82, 126, 0.2) 43.23%, rgba(245, 245, 245, 0.106) 100%, rgba(140, 142, 146, 0.106) 100%), #FFFFFF;
+}
+
+.history-screen .block {
+    position: absolute;
+    top: 245px;
+    right: 0;
+    bottom: 0;
+    left: -195px;
+    width: 760px;
+    height: 370px;
+    transform: rotate(90deg);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.history-screen .title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #636363;
+    margin-bottom: 10px;
+}
+
+.history-screen .content {
+    width: 100%;
+    height: 414px;
+}
+
+.history-screen .content .search {
+    width: 100%;
+    height: 33px;
+    background: rgba(150, 150, 150, 0.4);
+    border: 1px solid #969696;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    margin-bottom: 19px;
+}
+
+.history-screen .content .search input {
+    width: 100%;
+    color: #636363;
+}
+
+.history-screen .content .text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.history-screen .content .text div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: #636363;
+}
+
+.history-screen .content .text .id {
+    width: 90px;
+}
+
+.history-screen .content .text .description {
+    width: 440px;
+}
+
+.history-screen .content .text .sum {
+    width: 110px;
+}
+
+.history-screen .content .text .date {
+    width: 90px;
+}
+
+.history-screen .content .items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 266px;
+}
+
+.history-screen .content .items::-webkit-scrollbar {
+    width: 0;
+}
+
+.history-screen .content .items .item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.history-screen .content .items .item div {
+    height: 64px;
+    border-radius: 5px;
+    background: rgba(150, 150, 150, 0.4);
+    border: 1px solid #969696;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-screen .content .items .item .id {
+    width: 90px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #636363;
+}
+
+.history-screen .content .items .item .description {
+    width: 440px;
+    justify-content: flex-start;
+    padding: 0 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #31373F;
+}
+
+.history-screen .content .items .item .sum {
+    width: 110px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    color: #1B76FF;
+}
+
+.history-screen .content .items .item .date {
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.history-screen .content .items .item .date span {
+    font-weight: 400;
+    font-size: 12px;
+    color: #636363;
+}

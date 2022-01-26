@@ -1,0 +1,636 @@
+.settings-screen {
+    width: 100%;
+    height: 100%;
+    background: #1F1F1F;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.settings-screen .title {
+    position: absolute;
+    top: 40px;
+}
+
+.settings-screen .info {
+    position: absolute;
+    top: 75px;
+    width: 320px;
+    height: 50px;
+    background: #3E4043;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 14px;
+}
+
+.settings-screen .info .avatar {
+    width: 51px;
+    height: 51px;
+    background: linear-gradient(150.01deg, #A4A7BA 15.4%, #707277 77.69%);
+    border-radius: 40px;
+    margin-right: 7px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-screen .info .avatar img {
+    height: 100%;
+}
+
+.settings-screen .info .text .name {
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+.settings-screen .info .text .tag {
+    font-weight: 300;
+    font-size: 12px;
+    color: #9F9F9F;
+}
+
+.settings-screen .number {
+    position: absolute;
+    top: 182px;
+    width: 320px;
+    height: 52px;
+    background: #3E4043;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.settings-screen .number span {
+    position: relative;
+    font-size: 14px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.settings-screen .number span::before {
+    content: '';
+    width: 25.28px;
+    height: 25.28px;
+    background: url(../img/call.png), #1B76FF;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -50px;
+}
+
+.settings-screen .line {
+    position: absolute;
+    top: 250px;
+    width: 348px;
+    height: 1px;
+    background: #292D35;
+    border-radius: 1px;
+}
+
+.settings-screen .btns {
+    position: absolute;
+    top: 266px;
+    width: 348px;
+    height: 146px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.settings-screen .btns .btn {
+    width: 320px;
+    height: 62px;
+    background: #3E4043;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 0px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.settings-screen .btns .btn:hover {
+    opacity: .9;
+}
+
+.settings-screen .btn span {
+    position: relative;
+    font-size: 14px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+    pointer-events: none;
+}
+
+.settings-screen .btn span::before {
+    content: '';
+    width: 35px;
+    height: 35px;
+    border-radius: 40px;
+    position: absolute;
+    left: -50px;
+}
+
+.settings-screen .btn#wallpaper span::before {
+    background: url(../img/wallpaper.png), #1B76FF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.settings-screen .btn#ringtone span::before {
+    background: url(../img/ringtone.png), #1B76FF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wallpaper-screen {
+    width: 100%;
+    height: 100%;
+    background: #1F1F1F;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.wallpaper-screen .back {
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    width: 14px;
+    height: 24px;
+    background: url(../img/back.png);
+    cursor: pointer;
+}
+
+.wallpaper-screen .top {
+    width: 355px;
+    height: 26px;
+    position: absolute;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wallpaper-screen .top span {
+    font-weight: 500;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.wallpaper-screen .top .btn {
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 10px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.wallpaper-screen .top .btn:hover {
+    opacity: .9;
+}
+
+.wallpaper-screen .top .btn::after {
+    content: url(../img/plus.png);
+    margin-left: 7px;
+}
+
+.wallpaper-screen .content {
+    position: absolute;
+    top: 126px;
+    width: 355px;
+    max-height: 614px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.wallpaper-screen .content::-webkit-scrollbar {
+    width: 0;
+}
+
+.wallpaper-screen .content .item {
+    position: relative;
+    height: 253px;
+    width: 166px;
+    border-radius: 5px;
+    background: #292D35;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wallpaper-screen .content .item img {
+    height: 100%;
+    pointer-events: none;
+}
+
+.wallpaper-screen .content .item .mark {
+    position: absolute;
+    bottom: 10px;
+    right: 13px;
+    width: 20px;
+    height: 20px;
+    background: #171B21;
+    border-radius: 40px;
+    pointer-events: none;
+}
+
+.wallpaper-screen .content .item.active .mark {
+    background: url(../img/mark.png), #34C759;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.wallpaper-screen .apply {
+    position: absolute;
+    top: 771px;
+    width: 355px;
+    height: 50px;
+    left: 17px;
+    top: 751px;
+    background: #1B76FF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.wallpaper-screen .apply:hover {
+    opacity: .9;
+}
+
+.wallpaper-screen .modal-screen {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.wallpaper-screen .modal-screen .top-modal {
+    position: relative;
+    height: 274px;
+    width: 100%;
+}
+
+.wallpaper-screen .modal-screen .botton-modal {
+    position: relative;
+    height: 274px;
+    width: 100%;
+}
+
+.wallpaper-screen .modal {
+    width: 369px;
+    height: 292px;
+    background: rgba(62, 64, 67, 0.8);
+    border: 1px solid #3E4043;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.wallpaper-screen .modal .info-mark {
+    height: 42px;
+    width: 42px;
+    border-radius: 50px;
+    background: url(../img/i.png), #FFA800;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 33px;
+    margin-bottom: 14px;
+}
+
+.wallpaper-screen .modal span {
+    width: 309px;
+    height: 68px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #C1C1C1;
+}
+
+.wallpaper-screen .modal .input {
+    width: 334px;
+    height: 39px;
+    background: rgba(62, 64, 67, 0.7);
+    border: 1px solid #3E4043;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wallpaper-screen .modal .input input {
+    width: 90%;
+    font-weight: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.wallpaper-screen .modal .input input::placeholder {
+    font-weight: normal;
+    font-size: 12px;
+    color: #C5C5C5;
+}
+
+.wallpaper-screen .modal .btn {
+    width: 334px;
+    height: 44px;
+    background: #1B76FF;
+    border: 1px solid #1B76FF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.ringtone-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #181818 0%, rgba(123, 123, 123, 0.31) 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.ringtone-screen .top {
+    position: absolute;
+    top: 40px;
+    width: 100;
+    width: 342px;
+    height: 243px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.ringtone-screen .top .title {
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.ringtone-screen .top .info {
+    width: 100%;
+    margin-top: 11px;
+}
+
+.ringtone-screen .top .info span {
+    font-size: 10px;
+    color: #929292;
+}
+
+.ringtone-screen .top .info .installed-ringtone {
+    width: 326px;
+    height: 96px;
+    background: #3F3F3F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    margin-top: 15px;
+    margin-top: 15px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.ringtone-screen .top .info .installed-ringtone .avatar {
+    width: 130px;
+    height: 96px;
+    background: url(../img/avatar-music.png), #3B414E;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-right: 17px;
+    pointer-events: none;
+}
+
+.ringtone-screen .top .info .installed-ringtone .text {
+    position: relative;
+    width: 130px;
+    height: 45px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.ringtone-screen .top .info .installed-ringtone .text .name {
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.ringtone-screen .top .info .installed-ringtone .text .executor {
+    font-weight: 300;
+    font-size: 10px;
+    color: #929292;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.ringtone-screen .top .info .installed-ringtone .text .executor span {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.ringtone-screen .top .info .installed-ringtone .text .time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+    color: #929292;
+}
+
+.ringtone-screen .top .info .help {
+    width: 100%;
+    padding: 0 8px;
+    font-weight: 300;
+    font-size: 12px;
+    color: #929292;
+    margin-top: 5px;
+}
+
+.ringtone-screen .top .info .help span {
+    position: relative;
+    font-size: 14px;
+    margin-right: 4px;
+    margin-left: 14px;
+}
+
+.ringtone-screen .top .info .help span::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: url(../img/ico-1.png);
+    position: absolute;
+    left: -18px;
+    top: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ringtone-screen .top .info .line {
+    margin-top: 5px;
+    width: 342px;
+    height: 1px;
+    left: 24px;
+    top: 226px;
+    background: #929292;
+    border-radius: 1px;
+}
+
+.ringtone-screen .content {
+    position: absolute;
+    top: 248px;
+    width: 342px;
+    height: 580px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.ringtone-screen .content span {
+    font-size: 13px;
+    color: #929292;
+}
+
+.ringtone-screen .content .items {
+    margin-top: 12px;
+    width: 100%;
+    max-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.ringtone-screen .content .items::-webkit-scrollbar {
+    width: 0;
+}
+
+.ringtone-screen .content .items .item {
+    width: 137px;
+    height: 87px;
+    background: #3F3F3F;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    margin-bottom: 11px;
+    padding: 9px 13px;
+    cursor: pointer;
+}
+
+.ringtone-screen .content .items .item .avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 5px;
+    background: url(../img/avatar-music.png);
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.ringtone-screen .content .items .item .text {
+    position: relative;
+    width: 141px;
+    height: 43px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.ringtone-screen .content .items .item .text .name {
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.ringtone-screen .content .items .item .text .executor {
+    font-weight: 300;
+    font-size: 10px;
+    color: #929292;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.ringtone-screen .content .items .item .text .executor span {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.ringtone-screen .content .items .item .text .time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 10px;
+    color: #929292;
+}
+
+.ringtone-screen .back {
+    position: absolute;
+    top: 35px;
+    left: 24px;
+    width: 14px;
+    height: 24px;
+    background: url(../img/back.png);
+    cursor: pointer;
+    z-index: 99;
+}

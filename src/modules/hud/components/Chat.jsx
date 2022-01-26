@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import $ from 'jquery';
+import '../css/chat.css';
 
 class Chat extends React.Component {
     constructor(props) {
@@ -15,9 +16,8 @@ class Chat extends React.Component {
             bgState: 0,
             bgOpacity: 0.5,
             opacity: 1,
-            width: 30,
-            height: 30,
-            //timeoutHidden: 99999000,
+            width: 40,
+            height: 40,
             timeoutHidden: 5000000,
         }
     }
@@ -45,7 +45,6 @@ class Chat extends React.Component {
             bgOpacity: this.state.bgOpacity,
             timeoutHidden: this.state.timeoutHidden,
         };
-
         let closeTimeout = null;
 
         if (chat.bgState === 2)
@@ -154,13 +153,16 @@ class Chat extends React.Component {
                     if (enable) {
                         chat.input = $("#chat").append(`
                         <div id="chat-msg-input">
-                            <input onkeyup="chatOnKeyUp()" id="chat_msg" type="text" placeholder="Говорить..."/>
+                            <div class='inputBlock'>
+                                <input onkeyup="chatOnKeyUp()" id="chat_msg" type="text" placeholder="Say..."/>
+                                <div class="sendBtn" id='send' onClick='sendClick()'></div>
+                            </div>
                             <div id="button-input">
-                            <span class="active in_button" onClick="chatButtonClick(this.id)" id="RP">PR</span>
-                            <span class="in_button" onClick="chatButtonClick(this.id)" id="OOC">OOC</span>
-                            <span class="in_button" onClick="chatButtonClick(this.id)" id="DO">/do</span>
-                            <span class="in_button" onClick="chatButtonClick(this.id)" id="ME">/me</span>
-                            <span class="in_button" onClick="chatButtonClick(this.id)" id="REPORT">Репорт</span>
+                                <span class="active in_button" onClick="chatButtonClick(this.id)" id="RP">PR</span>
+                                <span class="in_button" onClick="chatButtonClick(this.id)" id="OOC">OOC</span>
+                                <span class="in_button" onClick="chatButtonClick(this.id)" id="DO">/do</span>
+                                <span class="in_button" onClick="chatButtonClick(this.id)" id="ME">/me</span>
+                                <span class="in_button" onClick="chatButtonClick(this.id)" id="REPORT">Репорт</span>
                             </div>
                         </div>
                         `).children(":last");
@@ -191,8 +193,6 @@ class Chat extends React.Component {
                 console.log(e);
             }
         }
-
-
         var chatAPI =
         {
             push: (text) => {
@@ -304,13 +304,11 @@ class Chat extends React.Component {
                 return entityMap[s];
             });
         }
-
         $(document).ready(function () {
             chat.container = $("#chat ul#chat_messages");
 
             $(".ui_element").show();
-            chatAPI.push("Вы подключились к Diamond Roleplay! Приятной игры.");
-
+            chatAPI.push("You have connected to Diamond Roleplay! Have a nice game.");
             $("body").keydown(function (event) {
                 if (event.which === 84 && chat.input === null
                     && chat.active === true) {
@@ -318,7 +316,7 @@ class Chat extends React.Component {
                     event.preventDefault();
                 }
                 else if (event.which === 13 && chat.input != null) {
-                    var value = chat.input.children("input").val();
+                    var value = $('#chat_msg').val();
 
                     if (value.length > 0) {
                         if (value[0] === "/") {
@@ -347,6 +345,7 @@ class Chat extends React.Component {
                 }
             });
         });
+
     }
 
     render() {
@@ -374,3 +373,4 @@ class Chat extends React.Component {
 }
 
 export default Chat;
+

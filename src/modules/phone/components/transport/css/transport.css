@@ -1,0 +1,239 @@
+.transport-screen {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(246.85deg, rgba(0, 0, 0, 0.2) 0%, rgba(52, 82, 126, 0.146635) 43.23%, rgba(0, 0, 0, 0.106) 100%), #17181B;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.transport-screen .title {
+    position: absolute;
+    top: 50px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+}
+
+.transport-screen .content {
+    position: absolute;
+    top: 82px;
+    max-height: 740px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.transport-screen .content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.transport-screen .car {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.transport-screen .car .item {
+    width: 337px;
+    height: 56px;
+    left: 18px;
+    top: 66px;
+    background: #292D35;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 9px;
+    padding: 15px 9px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.transport-screen .car .item img {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+    margin-right: 8px;
+    pointer-events: none;
+}
+
+.transport-screen .car .item .info {
+    pointer-events: none;
+}
+
+.transport-screen .car .item .info .modelName {
+    display: flex;
+    align-items: center;
+}
+
+.transport-screen .car .item .info .modelName .name {
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-right: 4px;
+}
+
+.transport-screen .car .item .info .modelName .model {
+    font-weight: 300;
+    font-size: 10px;
+    color: #565D6C;
+}
+
+.transport-screen .car .item span {
+    font-weight: 300;
+    font-size: 12px;
+    color: #565D6C;
+}
+
+.transport-screen .car .item .number {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.transport-screen .car .item .price {
+    position: absolute;
+    right: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.transport-screen .car .item .price span {
+    position: relative;
+    font-weight: 300;
+    font-size: 12px;
+    color: #565D6C;
+}
+
+.transport-screen .car .item .price span::before {
+    content: '';
+    height: 12px;
+    width: 16.5px;
+    position: absolute;
+    left: -22px;
+    background: url(../img/cash.png);
+}
+
+.transport-screen .car .price .cash {
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.transport-screen .car .item .price .cash b {
+    color: #1B76FF;
+}
+
+.transport-screen .car .btns {
+    position: absolute;
+    top: 0;
+    width: 355px;
+    z-index: 0;
+    height: 0;
+    transition: all .2s;
+    margin-bottom: 12px;
+}
+
+.transport-screen .car.active .btns {
+    position: relative;
+    height: 105px;
+}
+
+.transport-screen .car .btn {
+    width: 337px;
+    height: 30px;
+    background: #292D35;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-bottom: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.transport-screen .car .btn span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    pointer-events: none;
+}
+
+.transport-screen .car .btn#truck {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.transport-screen .car .btn#gps {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.transport-screen .car.active .btn#truck {
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.transport-screen .car.active .btn#gps {
+    top: 57px;
+    left: 0;
+    position: absolute;
+}
+
+.transport-screen .car .btn#truck span::before {
+    content: url(../img/truck.png);
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+.transport-screen .car .btn#gps span::before {
+    content: url(../img/gps.png);
+    margin-right: 10px;
+    pointer-events: none;
+}
+
+.transport-screen .car .btn#truck .price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.transport-screen .car .btn#truck .price span::before {
+    content: '';
+}
+
+.transport-screen .car .btn#truck .price span {
+    font-weight: normal;
+    font-size: 12px;
+    color: #565D6C;
+}
+
+.transport-screen .car .btn#truck .price .cash {
+    font-weight: normal;
+    font-size: 14px;
+    color: #E8E8E8;
+}
+
+.transport-screen .car .btn#truck .price .cash b {
+    color: #1B76FF;
+}

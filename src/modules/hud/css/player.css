@@ -1,0 +1,177 @@
+.player-block {
+    position: absolute;
+    left: 317px;
+    bottom: 65px;
+}
+
+.player-block .eat {
+    width: 132px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 13px;
+}
+
+.player-block .eat .line {
+    width: 106px;
+    height: 9px;
+    left: 343px;
+    top: 905px;
+    background: rgba(21, 21, 21, 0.34);
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-block .eat .line::after {
+    content: '';
+    background: url(../img/eat.png) no-repeat center;
+    height: 13px;
+    width: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.player-block .eat .line .progres {
+    height: 9px;
+    background: #96D942;
+    border-radius: 28px;
+}
+
+.player-block .drink {
+    width: 132px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.player-block .drink .line {
+    width: 106px;
+    height: 9px;
+    left: 343px;
+    top: 905px;
+    background: rgba(21, 21, 21, 0.34);
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.player-block .drink .line::after {
+    content: '';
+    background: url(../img/water.png) no-repeat center;
+    height: 17px;
+    width: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.player-block .drink .line .progres {
+    height: 9px;
+    background: #3F90EF;
+    border-radius: 28px;
+}
+
+.player-block .cash {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.player-block .cash span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.player-block .cash span::before {
+    content: '';
+    background: url(../img/cash.png) no-repeat center;
+    width: 14px;
+    height: 13.73px;
+    margin-right: 12px;
+}
+
+.player-block .bank {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.player-block .bank span {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.player-block .bank span::before {
+    content: '';
+    background: url(../img/bank.png) no-repeat center;
+    width: 14px;
+    height: 12.83px;
+    margin-right: 12px;
+}
+
+.player-block .micro {
+    width: 94px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+}
+
+.player-block .micro .text {
+    width: 73px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 10px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.player-block .micro .text span {
+    font-weight: 500;
+    font-size: 10px;
+    color: #B3B3B3;
+}
+
+.player-block .micro::before {
+    content: url(../img/micro.png);
+    width: 14px;
+    height: 21px;
+    margin-right: 10px;
+}
+
+.player-block .micro.active .text span {
+    font-weight: 500;
+    font-size: 10px;
+    color: #96D942;
+}
+
+.player-block .micro.active::before {
+    content: url(../img/micro_active.png);
+    width: 14px;
+    height: 21px;
+    margin-right: 10px;
+}

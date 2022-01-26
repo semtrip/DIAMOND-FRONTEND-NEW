@@ -53,6 +53,26 @@ let SpeedData = {
     color: '#48B9F2',
     background: 0.5,
 }
+let radarData = {
+    type: 'updateRadarValues',
+    showRadar: true,
+    radarRearSpeed: '1',
+    radarRearSpeedMax: '2',
+    radarFrontSpeed: '3',
+    radarFrontSpeedMax: '4',
+    radarPatrolSpeed: '5',
+}
+let hintsData = {
+    showHints: false,
+    type: 'updateValues',
+    hints: [
+        { key: 'M', text: 'Главное меню', ico: 1 },
+        { key: 'F2', text: 'Курсор', ico: 1 },
+        { key: 'O', text: 'Телефон', ico: 1 },
+        { key: 'i', text: 'Инвентарь', ico: 1 },
+        { key: '~', text: 'Предметы рядом' },
+    ]
+}
 const hudmData = {
     type: ''
 }
@@ -176,6 +196,22 @@ const setActiveMainMenu = active => {
     }
     window.trigger('hudm', hudmData)
 }
+const setActiveRadar = active => {
+    if (active) {
+        radarData.showRadar = true
+    } else {
+        radarData.showRadar = false
+    }
+    window.trigger('hudc', radarData)
+}
+const setActiveHints = active => {
+    if (active) {
+        hintsData.type = 'show'
+    } else {
+        hintsData.type = 'hide'
+    }
+    window.trigger('hudk', hintsData)
+}
 window.test.hud = {
     setActive,
     setActiveSpeedometer,
@@ -185,4 +221,6 @@ window.test.hud = {
     pushTestMessageInChat,
     testSpeedometer,
     setActiveMainMenu,
+    setActiveRadar,
+    setActiveHints
 }

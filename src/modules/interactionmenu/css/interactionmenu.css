@@ -1,3 +1,4 @@
+@import url(../../../fonts/stylesheet.css);
 .inter-menu {
     background: rgba(13, 13, 14, 0.8);
     box-sizing: border-box;
@@ -14,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Gotham Pro Regular";
+    font-family: 'Montserrat';
     font-size: 16px;
     color: #fff;
     box-sizing: border-box;

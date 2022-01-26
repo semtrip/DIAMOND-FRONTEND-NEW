@@ -6,7 +6,7 @@ import Background                     from '../bg'
 import TestModal                      from '../test-modal'
 import Walkietalkie                   from '../walkietalkie/Walkietalkie';
 import AuthMain                       from '../authorization/AuthMain'
-import Hud                            from '../hud/Hud'
+import Hud                            from '../hud/Hud';
 import Inventory                      from '../inventory/Inventory'  
 import AccountMenu                    from '../accountmenu/AccountMenu'
 // import GovMenu                        from '../govmenu/GovMenu'

@@ -1,0 +1,65 @@
+#app_message {
+    background: url(../img/ico/msg.png), linear-gradient(180deg, #64FA7E 0%, #0CBA29 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_music {
+    background: url(../img/ico/music.png), #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_phone {
+    background: url(../img/ico/phone.png), linear-gradient(180deg, #64FA7E 0%, #0CBA29 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_settings {
+    background: url(../img/ico/settings.png), linear-gradient(180deg, #DADCDE 4.63%, #C5C7CA 37.91%, #898B91 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_gps {
+    background: url(../img/ico/gps.png), #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_transport {
+    background: url(../img/ico/transport.png), linear-gradient(221.13deg, #1B76FF 5.28%, #1A3B70 110.34%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_news {
+    background: url(../img/ico/news.png), linear-gradient(224.58deg, #D82550 6.25%, #6E2139 119.59%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_MazeBank {
+    background: url(../img/ico/maze.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_FleecaBank {
+    background: url(../img/ico/fleeca.png), #FAFAFA;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_PasificBank {
+    background: url(../img/ico/pasific.png), #0F1D45;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app_BlaineCounte {
+    background: url(../img/ico/blaine.png), #E0E0E0;
+    background-repeat: no-repeat;
+    background-position: center;
+}

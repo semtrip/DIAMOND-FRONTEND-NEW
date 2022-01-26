@@ -1,176 +1,175 @@
 /*Position*/
+
 .notifi-position-leftTop {
     justify-content: flex-start;
-    align-items    : flex-start;
+    align-items: flex-start;
 }
 
 .notifi-position-left {
     justify-content: flex-start;
-    align-items    : center;
+    align-items: center;
 }
 
 .notifi-position-leftBottom {
     justify-content: flex-start;
-    align-items    : flex-end;
+    align-items: flex-end;
 }
 
 .notifi-position-centerTop {
     justify-content: center;
-    align-items    : flex-start;
+    align-items: flex-start;
 }
 
 .notifi-position-center {
     justify-content: center;
-    align-items    : center;
+    align-items: center;
 }
 
 .notifi-position-centerBottom {
     justify-content: center;
-    align-items    : flex-end;
+    align-items: flex-end;
 }
 
 .notifi-position-rightTop {
     justify-content: flex-end;
-    align-items    : flex-start;
+    align-items: flex-start;
 }
 
 .notifi-position-right {
     justify-content: flex-end;
-    align-items    : center;
+    align-items: center;
 }
 
 .notifi-position-rightBottom {
     justify-content: flex-end;
-    align-items    : flex-end;
+    align-items: flex-end;
 }
 
 .notifi-type {
-    display : flex;
-    width   : -webkit-fill-available;
-    height  : -webkit-fill-available;
+    display: flex;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
     position: absolute;
 }
 
 .notifi-first-box {
-    width         : 45%;
-    max-height    : 800px;
-    display       : flex;
+    width: 45%;
+    max-height: 800px;
+    display: flex;
     flex-direction: column;
-    position      : relative;
+    position: relative;
 }
 
 .notifi-f-main {
-    background    : rgba(18, 18, 20, 0.9) !important;
-    box-sizing    : border-box;
-    border-radius : 2px;
-    height        : auto;
-    padding       : 4%;
-    max-height    : 700px;
-    display       : flex;
+    background: rgba(18, 18, 20, 0.9) !important;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: auto;
+    padding: 4%;
+    max-height: 700px;
+    display: flex;
     flex-direction: column;
-    position      : relative;
+    position: relative;
 }
 
 .notifi-close {
     background: url(../img/close.svg) no-repeat;
-    width     : 17px;
-    height    : 17px;
-    cursor    : pointer;
-    position  : absolute;
-    left      : 94%;
-    top       : 10%;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    position: absolute;
+    left: 94%;
+    top: 10%;
 }
 
 .notifi-text-box {
-    width          : calc(100% - 24px);
-    height         : calc(79% - 24px);
-    overflow       : scroll;
-    margin-top     : 3%;
-    display        : flex;
-    align-items    : center;
+    width: calc(100% - 24px);
+    height: calc(79% - 24px);
+    overflow: scroll;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    font-family    : 'Montserrat';
-    font-weight    : 500;
-    line-height    : 1.5;
-    font-size      : 1.2rem;
-    letter-spacing : 0.05rem;
-    font-size      : 16px;
-    color          : #fff;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    font-size: 16px;
+    color: #fff;
 }
 
 .notifi-text-box-z {
-    width          : calc(100% - 24px);
-    height         : calc(79% - 24px);
-    overflow       : scroll;
-    display        : flex;
-    align-items    : center;
+    width: calc(100% - 24px);
+    height: calc(79% - 24px);
+    overflow: scroll;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    font-family    : 'Montserrat';
-    font-weight    : 500;
-    line-height    : 1.5;
-    font-size      : 1.2rem;
-    letter-spacing : 0.05rem;
-    font-size      : 16px;
-    color          : #fff;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    font-size: 16px;
+    color: #fff;
 }
 
 .notifi-btn {
-    width          : 100%;
-    display        : flex;
+    width: 100%;
+    display: flex;
     justify-content: flex-start;
-    flex-direction : row-reverse;
-    align-items    : center;
-    font-family    : "Montserrat";
-    color          : rgb(0, 0, 0);
-    font-size      : 14px;
-
+    flex-direction: row-reverse;
+    align-items: center;
+    font-family: "Montserrat";
+    color: rgb(0, 0, 0);
+    font-size: 14px;
 }
 
 .n-btn-box {
-    background     : #151618;
-    border-radius  : 2px;
-    width          : 16%;
-    height         : auto;
-    cursor         : pointer;
-    margin-top     : -3.1rem;
-    z-index        : 10;
-    padding-top    : 1.5%;
-    padding-bottom : 1.5%;
-    display        : flex;
+    background: #151618;
+    border-radius: 2px;
+    width: 16%;
+    height: auto;
+    cursor: pointer;
+    margin-top: -3.1rem;
+    z-index: 10;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    display: flex;
     justify-content: center;
-    align-items    : center;
-    font-family    : 'Montserrat';
-    color          : #fff;
-    transition     : .5s ease;
+    align-items: center;
+    font-family: 'Montserrat';
+    color: #fff;
+    transition: .5s ease;
 }
 
 .n-btn-box:hover {
-    background: #FD0023;
+    background: #1B76FF;
 }
 
 .n-btn-box:last-child {
     margin-left: 0px;
 }
 
-
 .notifi-head {
-    display   : flex;
+    display: flex;
     margin-top: 8px;
 }
 
 .notifi-title {
-    width          : auto;
-    height         : 24px;
-    display        : flex;
+    width: auto;
+    height: 24px;
+    display: flex;
     justify-content: center;
-    align-items    : center;
-    font-family    : 'Montserrat';
-    font-weight    : bold;
-    color          : #fff;
-    font-size      : 2.5rem;
-    font-weight    : 500;
-    padding-right  : 8px;
-    max-width      : 90%;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-right: 8px;
+    max-width: 90%;
 }
 
 .notifi-head .notifi-close {
@@ -178,85 +177,86 @@
 }
 
 .notifi-linear-left {
-    position  : absolute;
-    width     : 6px;
-    height    : 120px;
+    position: absolute;
+    width: 6px;
+    height: 120px;
     background: rgb(72, 185, 242);
-    left      : -4px;
-    top       : 5px;
-    z-index   : 1;
+    left: -4px;
+    top: 5px;
+    z-index: 1;
 }
 
 .notifi-linear-rightbottom {
-    position  : absolute;
-    width     : 6px;
-    height    : 120px;
+    position: absolute;
+    width: 6px;
+    height: 120px;
     background: rgb(72, 185, 242);
-    right     : -4px;
-    bottom    : 0px;
-    z-index   : 1;
+    right: -4px;
+    bottom: 0px;
+    z-index: 1;
 }
 
 .notifi-linear-left-two {
-    position  : absolute;
-    width     : 6px;
-    height    : 120px;
+    position: absolute;
+    width: 6px;
+    height: 120px;
     background: rgb(72, 185, 242);
-    left      : -4px;
-    bottom    : 11px;
+    left: -4px;
+    bottom: 11px;
 }
 
 .notifi-linear-bottom {
-    position  : absolute;
-    width     : 108px;
-    height    : 6px;
+    position: absolute;
+    width: 108px;
+    height: 6px;
     background: rgb(72, 185, 242);
-    left      : 10px;
-    bottom    : -4px;
+    left: 10px;
+    bottom: -4px;
 }
 
 .notifi-linear-bottom-littel {
-    position  : absolute;
-    width     : 6px;
-    height    : 6px;
+    position: absolute;
+    width: 6px;
+    height: 6px;
     background: rgb(72, 185, 242);
-    left      : 123px;
-    bottom    : -4px;
+    left: 123px;
+    bottom: -4px;
 }
 
 .notifi-title-text {
-    width          : auto;
-    height         : 24px;
-    display        : flex;
+    width: auto;
+    height: 24px;
+    display: flex;
     justify-content: center;
-    align-items    : center;
-    font-family    : 'Montserrat';
-    font-weight    : bold;
-    color          : #fff;
-    font-size      : 2.5rem;
-    font-weight    : 500;
-    padding-right  : 8px;
-    max-width      : 90%;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-right: 8px;
+    max-width: 90%;
 }
 
 .notifi-text-box-last {
-    margin-top    : 0px;
-    height        : 61%;
-    overflow      : scroll;
-    display       : flex;
-    margin-top    : 3%;
-    font-family   : 'Montserrat';
-    line-height   : 25px;
+    margin-top: 0px;
+    height: 61%;
+    overflow: scroll;
+    display: flex;
+    margin-top: 3%;
+    font-family: 'Montserrat';
+    line-height: 25px;
     letter-spacing: 0.05rem;
-    font-size     : 1.2rem;
-    color         : #fff;
+    font-size: 1.2rem;
+    color: #fff;
 }
 
 .notifi-icons {
-    width        : 20px;
-    height       : 20px;
-    margin       : 0;
+    width: 20px;
+    height: 20px;
+    margin: 0;
     padding-right: 5px;
 }
+
 
 /*Пример*/

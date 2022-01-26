@@ -253,9 +253,7 @@ class Inventory extends React.Component {
                     { slot: "outf-bracelet", equipped: false, type: 'bracelet', icon: OutfitBracelet, iconName: 'outfit-bracelet' },
                     { slot: "outf-boot", equipped: false, type: 'boot', icon: OutfitShoes, iconName: 'outfit-shoes' },
                     { slot: "outf-bag", equipped: false, type: 'bag', icon: OutfitBag, iconName: 'outfit-case' },
-                    { slot: "outf-gloves", equipped: false, type: 'gloves', icon: OutfitGloves, iconName: 'outfit-gloves' },
-                    { slot: "outf-shoulder", equipped: false, type: 'shoulder', icon: OutfitGloves, iconName: 'outfit-shoulder' },
-                    { slot: "outf-somethnk", equipped: false, type: 'somethnk', icon: OutfitGloves, iconName: 'outfit-somethnk' },
+                    { slot: "outf-gloves", equipped: false, type: 'gloves', icon: OutfitGloves, iconName: 'outfit-gloves' }
                 ],
                 [
                     { slot: "outf-armour", equipped: false, type: 'armour', icon: OutfitArmour, iconName: 'outfit-armour' },

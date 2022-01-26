@@ -1,0 +1,99 @@
+.hints-block {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+}
+
+.hints-block .items {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.hints-block .items .item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.hints-block .items .item .text {
+    height: 40px;
+    background: rgba(0, 0, 0, 0.31);
+    backdrop-filter: blur(6px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 9px 0 0 9px;
+    transform: skew(-12deg);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.hints-block .items .item .text span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    transform: skew(12deg);
+}
+
+.hints-block .items .item .key {
+    height: 40px;
+    padding: 0 13px;
+    background: rgba(27, 118, 255, 0.87);
+    box-shadow: 0px 0px 8px rgba(30, 109, 228, 0.46);
+    border-radius: 0 9px 9px 0;
+    transform: skew(-12deg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -2px;
+}
+
+.hints-block .items .item .key span {
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    transform: skew(12deg);
+}
+
+.hints-block .items .item .key .ico.micro {
+    height: 15.000055313110352px;
+    width: 9px;
+    background: url(../img/ico/micro.png) no-repeat center;
+    margin-left: 10px;
+    transform: skew(12deg);
+}
+
+.hints-block .items .item .key .ico.engine {
+    width: 17px;
+    height: 10.96px;
+    background: url(../img/ico/engine.png) no-repeat center;
+    margin-left: 10px;
+    transform: skew(12deg);
+}
+
+.hints-block .items .item .key .ico.bug {
+    height: 14.166666030883789px;
+    width: 11.333333015441895px;
+    background: url(../img/ico/bug.png) no-repeat center;
+    margin-left: 10px;
+    transform: skew(12deg);
+}
+
+.hints-block .items .item .key .ico.panel {
+    height: 12.000000953674316px;
+    width: 12px;
+    background: url(../img/ico/panel.png) no-repeat center;
+    margin-left: 10px;
+    transform: skew(12deg);
+}
+
+.hints-block .items .item .key .ico.game {
+    height: 16px;
+    width: 16px;
+    background: url(../img/ico/game.png) no-repeat center;
+    margin-left: 10px;
+    transform: skew(12deg);
+}

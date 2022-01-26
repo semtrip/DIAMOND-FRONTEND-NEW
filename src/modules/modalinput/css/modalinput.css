@@ -81,8 +81,9 @@
     background: #151618;
     text-transform: uppercase;
     transition: .5s ease;
+    cursor: pointer;
 }
 
 .modal-btn:hover {
-    background: #FD0023;
+    background: #1B76FF;
 }

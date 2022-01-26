@@ -60,15 +60,15 @@
 }
 
 .hmenu__gunshop__catalog__item__name {
-    font-family: 'Gotham Pro Medium';
+    font-family: 'Montserrat';
     font-size: 2rem;
 }
 
 .hmenu__gunshop__catalog::-webkit-scrollbar {
-   width: 0.3rem;
- }
-   
- .hmenu__gunshop__catalog::-webkit-scrollbar-thumb {
+    width: 0.3rem;
+}
+
+.hmenu__gunshop__catalog::-webkit-scrollbar-thumb {
     background: #FD0023;
     border-radius: 2px;
 }
@@ -87,18 +87,18 @@
 }
 
 .hmenu__gunshop__catalog__item__price {
-    font-family: 'Gotham Pro Medium';
+    font-family: 'Montserrat';
     font-size: 2.2rem;
 }
 
 .hmenu__gunshop__catalog__item__calibr__text {
-    font-family: 'Gotham Pro Regular';
+    font-family: 'Montserrat';
     font-size: 1.1rem;
     letter-spacing: 0.05rem;
 }
 
 .hmenu__gunshop__catalog__item__calibr__name {
-    font-family: 'Gotham Pro Medium';
+    font-family: 'Montserrat';
     font-size: 1.3rem;
 }
 
@@ -111,18 +111,16 @@
 }
 
 .hmenu__gunshop__catalog__item__sale {
-
     position: relative;
     padding: 6px;
     /*right: 50%;*/
     bottom: 34px;
-
     /*padding-top: 3%;
     padding-bottom: 3%;
     padding-left: 1.3rem;
     padding-right: 1.3rem;*/
     border-radius: 0.4rem;
-    font-family: 'Gotham Pro Regular';
+    font-family: 'Montserrat';
     background: linear-gradient(105.63deg, rgba(255, 64, 57, 0) -80.94%, rgba(255, 64, 57, 0.45) 275.52%);
     border: 0.5px solid #FF4039;
     border-radius: 5px;

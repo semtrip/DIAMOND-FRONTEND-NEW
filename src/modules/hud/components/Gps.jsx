@@ -1,112 +1,30 @@
-import React from 'react';
+import React from "react";
+import { observer } from "mobx-react-lite";
 
-import Draggable from '../Draggable'
-import Pointer from '../img/pointer.svg';
+import '../css/gps.css'
 
-const { EventManager: em } = window;
+import store from "../Hud-store";
 
-class Gps extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            show: true,
-            showGreen: true,
-            showYellow: false,
-            district: 'Del Pero...',
-            street: 'Загрузка...',
-            showGang: false,
-            showMafia: false,
-            att: 0,
-            def: 0,
-            tre: 0,
-            timer: 0,
-            color: '#FFC107',
-            background: 0.5,
-        }
-    }
 
-    componentDidCatch(error, errorInfo) {
-        mp.trigger('client:ui:debug', 'Gps.jsx', error, errorInfo); // eslint-disable-line
-    }
+const Gps = observer(() => {
 
-    componentDidMount() {
-        em.addHandler('hudg', value => {
-            if (value.type === 'show') {
-                this.setState({ show: true })
-            } else if (value.type === 'hide') {
-                this.setState({ show: false })
-            } else if (value.type === 'updateValues') {
-                this.setState({ show: value.isShow });
-                this.setState({ district: value.district });
-                this.setState({ street: value.street });
-                this.setState({ background: value.background });
-                this.setState({ showGreen: value.showGreen });
-                this.setState({ showYellow: value.showYellow });
-                this.setState({ background: value.background });
+const state = store.state
+return state.showGps ? (
+    <React.Fragment>
+        <div className="gps-block">
+            <div className="text">
+                {state.district}
+                <span>{state.street}</span>
+            </div>
+            {
+                state.distance !== '' ?
+                <div className="distance">
+                    <span>{state.distance} M</span>
+                </div> :null
             }
-            else if (value.type === 'updateGangInfo') {
-                this.setState({ att: value.top1 });
-                this.setState({ def: value.top2 });
-                this.setState({ timer: value.timerCounter });
-            }
-            else if (value.type === 'showGangInfo') {
-                this.setState({ showGang: true });
-            }
-            else if (value.type === 'hideGangInfo') {
-                this.setState({ showGang: false });
-            }
-            else if (value.type === 'updateMafiaInfo') {
-                this.setState({ att: value.top1 });
-                this.setState({ def: value.top2 });
-                this.setState({ tre: value.top3 });
-                this.setState({ timer: value.timerCounter });
-            }
-            else if (value.type === 'showMafiaInfo') {
-                this.setState({ showMafia: true });
-            }
-            else if (value.type === 'hideMafiaInfo') {
-                this.setState({ showMafia: false });
-            }
-            else return;
-        })
-    }
 
-    componentWillUnmount() {
-        em.removeHandler('hudg');
-    }
-
-    render() {
-        if (!this.state.show) {
-            return null;
-        }
-        return (
-            <React.Fragment>
-
-                <Draggable id="gps" className="gps-main">
-                    <div className="gps-text">
-                        <div className="gps-title"><span className={this.state.showGreen ? 'green' : null ?? this.state.showYellow ? 'yellow' : null}>{this.state.district}</span></div>
-                        <div className="gps-txt"><img src={Pointer} alt="" />{this.state.street}</div>
-                    </div>
-                </Draggable>
-
-                <Draggable id="gang" className={this.state.showGang ? 'gang-war-info' : 'hide'} style={{ backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')' }}>
-                    <div className="war-att" style={this.state}>Война за территорию</div>
-                    <div className="war-att">Атака: {this.state.att}</div>
-                    <div className="war-def">Оборона: {this.state.def}</div>
-                    <div className="war-timer">Таймер: {this.state.timer} сек</div>
-                </Draggable>
-
-                <Draggable id="mafia" className={this.state.showMafia ? 'gang-war-info' : 'hide'} style={{ backgroundColor: 'rgba(0, 0, 0, ' + this.state.background + ')' }}>
-                    <div className="war-att" style={this.state}>Война за территорию</div>
-                    <div className="war-att">Cosa Nostra: {this.state.att}</div>
-                    <div className="war-def">Russian Mafia: {this.state.def}</div>
-                    <div className="war-def">Yakuza: {this.state.tre}</div>
-                    <div className="war-timer">Таймер: {this.state.timer} сек</div>
-                </Draggable>
-
-            </React.Fragment>
-        )
-    }
-}
-
-export default Gps;
+        </div>
+    </React.Fragment>
+):null
+})
+export default Gps

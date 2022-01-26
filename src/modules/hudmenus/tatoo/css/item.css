@@ -27,8 +27,8 @@
     border-radius: 0.4rem;
     font-size: 1rem;
     font-family: 'Montserrat';
-    background: linear-gradient(105.63deg, rgba(255, 64, 57, 0) -80.94%, rgba(255, 64, 57, 0.45) 275.52%);
-    border: 0.5px solid #FF4039;
+    background: rgba(0, 0, 0, 0.31);
+    border: 0.5px solid #4990fc;
     border-radius: 5px;
 }
 
@@ -47,8 +47,8 @@
 }
 
 .tatoo__content__list__item:hover,
-.tatoo__content__list__item__active{
-    background-color: #FD0023;
+.tatoo__content__list__item__active {
+    background-color: #1B76FF;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

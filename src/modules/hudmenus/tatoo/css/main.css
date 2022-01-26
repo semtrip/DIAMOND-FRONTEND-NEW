@@ -1,75 +1,74 @@
 .tatoo__container {
-    width         : 100%;
-    height        : 100%;
-    display       : flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: row;
 }
 
 .tatoo__content {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    width         : 28%;
-    margin        : 2%;
-    background    : #121214;
-    border-radius : 2px;
+    width: 28%;
+    margin: 2%;
+    background: linear-gradient(246.85deg, rgba(0, 0, 0, 0.2) 0%, rgba(52, 82, 126, 0.146635) 43.23%, rgba(0, 0, 0, 0.106) 100%), #17181B;
+    border-radius: 2px;
 }
 
 .tatoo__content__exitbtn {
-    font-family   : 'Montserrat';
-    font-size     : 1.2rem;
-    font-weight   : 600;
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: 600;
     letter-spacing: 0.05rem;
-    padding       : 2rem 4rem 2rem 4rem;
-    margin-top    : 5%;
-    margin-bottom : 5%;
-    background    : #1F2023;
-    border-radius : 2px;
-    cursor        : pointer;
-    transition    : .5s ease;
+    padding: 2rem 4rem 2rem 4rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: #1F2023;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .5s ease;
 }
 
 .tatoo__content__exitbtn:hover {
-    background: #FD0023;
-    box-shadow: 0px 0px 6px #FD0023;
+    background: #1B76FF;
+    box-shadow: 0px 0px 6px #1B76FF;
 }
 
 .tatoo__content__exitbtn__container {
-    display        : flex;
-    flex-direction : row;
-    align-items    : center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    margin-top     : auto;
+    margin-top: auto;
 }
 
 .tatoo__content__list {
-    display       : flex;
+    display: flex;
     flex-direction: column;
-    max-height    : 60%;
-    overflow-y    : auto;
+    max-height: 60%;
+    overflow-y: auto;
 }
-
 
 .tatoo__content__list::-webkit-scrollbar {
     width: 0.3rem;
 }
 
 .tatoo__content__list::-webkit-scrollbar-thumb {
-    background   : #FF0B0B;
+    background: #1B76FF;
     border-radius: 2px;
 }
 
 .tatoo__payment {
-    margin-left   : auto;
-    margin-top    : auto;
-    padding       : 5%;
-    display       : flex;
+    margin-left: auto;
+    margin-top: auto;
+    padding: 5%;
+    display: flex;
     flex-direction: column;
 }
 
 .tatoo__payment__price {
-    font-size    : 2.5rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
-    font-family  : 'Montserrat';
-    font-weight  : 600;
-    margin-right : 4rem;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    margin-right: 4rem;
 }

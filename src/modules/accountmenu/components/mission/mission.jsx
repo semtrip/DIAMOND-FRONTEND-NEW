@@ -1,5 +1,4 @@
 import React from "react";
-import { matchPath } from "react-router";
 import '../../css/mission.css'
 
 import img from '../../img/mission_exsaple.png'

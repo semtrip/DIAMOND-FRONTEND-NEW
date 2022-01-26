@@ -1,0 +1,112 @@
+#chat {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .4px;
+    line-height: 26px;
+    margin-left: 0px;
+    text-shadow: 1px 1px 0 #333, -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+    z-index: 0;
+}
+
+#chat ul#chat_messages {
+    list-style-type: none;
+    overflow-y: auto;
+    padding: 10px 20px;
+    transform: rotate(180deg);
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+#chat ul#chat_messages>li {
+    transform: rotate(-180deg);
+    margin-bottom: 6px;
+}
+
+#chat::-webkit-scrollbar {
+    width: 5px
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .3);
+    border-radius: 0px
+}
+
+#chat::-webkit-scrollbar-thumb:hover {
+    background: #555
+}
+
+#chat-msg-input {
+    margin-left: 16px;
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(248, 248, 248, 0.72);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#chat-msg-input .inputBlock {
+    background: rgba(0, 0, 0, .5);
+    font-size: 13px;
+    line-height: 35px;
+    padding: 0 20px;
+    width: 100%;
+    height: 52.03px;
+    background: rgba(0, 0, 0, 0.44);
+    backdrop-filter: blur(11px);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#chat input#chat_msg {
+    outline: 0;
+    border: none;
+    color: #fff;
+    width: 85%;
+}
+
+#chat .sendBtn {
+    width: 38.15px;
+    height: 37.53px;
+    background: url(../img/ico/send.png), #1B76FF;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#button-input {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    margin-top: 5px;
+}
+
+#button-input span {
+    min-width: 52.03px;
+    height: 34.68px;
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(6px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+#button-input span:hover {
+    background: #1B76FF;
+}
+
+#button-input .active {
+    background: #1B76FF;
+}

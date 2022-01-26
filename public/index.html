@@ -103,6 +103,32 @@
             console.log(e);
         }
     }
+
+    function sendClick() {
+        console.log('Press key')
+        var value = document.getElementById('chat_msg').value
+        if (value.length > 0) {
+            if (value[0] === "/") {
+                value = value.substr(1);
+
+                if (value.length > 0) {
+                    try {
+                        mp.invoke("command", value); // eslint-disable-line
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }
+            } else {
+                try {
+                    mp.invoke("chatMessage", value); // eslint-disable-line
+                } catch (e) {
+                    console.log(e);
+                }
+            }
+            var input = document.getElementById('chat_msg')
+            input.value = ''
+        }
+    }
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.spatial.min.js"></script>

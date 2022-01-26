@@ -1,7 +1,5 @@
 import React from 'react'
-import './css/main.css'
-import Header from './components/Header';
-import Car from './components/Car';
+import './css/style.css'
 
 const { EventManager: em } = window;
 
@@ -107,30 +105,71 @@ class CarRent extends React.Component {
             return null;
         }
         return (
-            <div className="carrent__container">
-                <div className="carrent__content">
-                    <Header
-                        bgcolor={this.state.bgcolor}
-                        banner={this.state.banner}
-                        title={this.state.title}
-                        setHide={this.setHide}
-                    />
-                    <div className="carrent__content__list__container">
-                        <div className="carrent__content__list">
-                        {this.state.cars.map((item, index) => (
-                            <Car
-                                price={item.price}
-                                name={item.name}
-                                params={item.params}
-                                type={item.type}
-                                key={`carrent__content__list__item-${index}`}
-                                btnbg="#000"
-                                sale={item.sale}
-                            />
-                        ))}
+            <div className="rentBlock">
+                <div className="rentCar">
+                    <div className="head">
+                        <div className="title">
+                            <span>{this.state.title}</span>
                         </div>
+                        <div className="exit" onClick={this.setHide}>Close</div>
                     </div>
-
+                    <div className="content">
+                    {
+                        this.state.cars.map((item, i) => (
+                            <div className="item">
+                                <div className="img">
+                                    <img src={`https://gta-5.ru/server/client/images/carsv/1080/${item.name.toLowerCase()}.jpg`} alt="img car" />
+                                    {
+                                        item.sale > 0 ?
+                                        <div className="sale">-{item.sale}%</div>
+                                        :null 
+                                    }
+                                </div>
+                                <div className="info">
+                                    <div className="text">
+                                        <div className="name">{item.name}</div>
+                                        <div className="price">Price {item.price}$</div>
+                                    </div>
+                                    <div className="btns">
+                                    {
+                                        item.sale > 0 ?
+                                        <>
+                                            <span className='card' onClick={() => {
+                                                    try {
+                                                        mp.trigger('client:carRent:buyCard', item.name, JSON.stringify(item.params)); // eslint-disable-line
+                                                    } catch (e) {
+                                                        console.log(e);
+                                                    }
+                                                }}>
+                                                    Card
+                                            </span>
+                                            <span className='cash' onClick={() => {
+                                                    try {
+                                                        mp.trigger('client:carRent:buyCash', item.name, JSON.stringify(item.params)); // eslint-disable-line
+                                                    } catch (e) {
+                                                        console.log(e);
+                                                    }
+                                                }}>
+                                                    Cash
+                                            </span>
+                                        </>
+                                        :
+                                        <span className='cash' onClick={() => {
+                                                try {
+                                                    mp.trigger('client:carRent:takeCar', item.name, JSON.stringify(item.params)); // eslint-disable-line
+                                                } catch (e) {
+                                                    console.log(e);
+                                                }
+                                            }}>
+                                                Rent
+                                        </span>
+                                    }
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                    </div>
                 </div>
             </div>
         )
