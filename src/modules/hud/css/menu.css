@@ -183,6 +183,7 @@
     font-weight: 300;
     font-size: 12px;
     color: #FFFFFF;
+    pointer-events: none;
 }
 
 .mainMenu-block .list .items .item .info .select .back,
