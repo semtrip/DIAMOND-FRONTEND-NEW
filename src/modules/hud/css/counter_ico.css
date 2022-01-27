@@ -1,0 +1,29 @@
+.counter-block div {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.counter-block .ico {
+    position: absolute;
+    left: 20px;
+    height: 48px;
+    width: 48px;
+    transform: skew(-24deg);
+}
+
+.counter-block div.ballas {
+    background: linear-gradient(268.41deg, rgba(28, 30, 36, 0) 58.36%, rgba(133, 30, 145, 0.6) 119.41%), #17181B;
+}
+
+.counter-block div.ballas .ico {
+    background: url(../img/fraction/ballas.png);
+}
+
+.counter-block div.vagos {
+    background: linear-gradient(268.41deg, rgba(28, 30, 36, 0) 58.36%, rgba(178, 158, 37, 0.6) 117.32%), #17181B;
+}
+
+.counter-block div.vagos .ico {
+    background: url(../img/fraction/vagos.png);
+}
