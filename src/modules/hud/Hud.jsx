@@ -14,6 +14,7 @@ import Hints from "./components/hints";
 import MainMenu from "./components/mainMenu";
 import Chat from "./components/chat";
 import Notification from "./components/Notification/Notification";
+import Counter from "./components/сounter";
 
 
 const Hud = observer(() => {
@@ -181,6 +182,7 @@ return state.show ? (
                 <Car/>
                 <Hints/>
             </div>
+            <Counter/>
             <Notification/>
         </div>
     </React.Fragment>

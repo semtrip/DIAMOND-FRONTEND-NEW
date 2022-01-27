@@ -6,7 +6,7 @@ class HudStore {
         makeAutoObservable(this, {}, { deep: true })
     }
     state = {
-        show: false,
+        show: true,
         showLogo: true,
         showPlayer: true,
         showGps: true,
@@ -24,7 +24,7 @@ class HudStore {
         status: 'admin',
         max_player: '1000',
         id: '13 (#4383)',
-        microphone: true,
+        microphone: false,
         drink: 90,
         eat: 50,
         wallet: "12.400.000$",
@@ -34,7 +34,7 @@ class HudStore {
         district: 'Del Pero...',
         street: 'Загрузка...',
         distance: '500',
-        showGang: false,
+        showGang: true,
         showMafia: false,
         att: 0,
         def: 0,
