@@ -13,10 +13,10 @@ return state.showGang ? (
     <React.Fragment>
         <div className="counter-block">
             <div className="counter-att">
-
+                
             </div>
             <div className="counter-timer">
-                    {state.timer}
+                {state.timer}
             </div>
             <div className="counter-def">
 

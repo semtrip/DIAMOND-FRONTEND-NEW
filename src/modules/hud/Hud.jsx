@@ -6,13 +6,13 @@ import store from "./Hud-store";
 
 import './css/hud.css'
 
-import Logo from "./components/logo";
-import Player from "./components/player";
-import Gps from "./components/gps";
-import Car from "./components/car";
-import Hints from "./components/hints";
-import MainMenu from "./components/mainMenu";
-import Chat from "./components/chat";
+import Logo from "./components/Logo";
+import Player from "./components/Player";
+import Gps from "./components/Gps";
+import Car from "./components/Car";
+import Hints from "./components/Hints";
+import MainMenu from "./components/MainMenu";
+import Chat from "./components/Chat";
 import Notification from "./components/Notification/Notification";
 import Counter from "./components/сounter";
 
@@ -182,7 +182,9 @@ return state.show ? (
                 <Car/>
                 <Hints/>
             </div>
-            <Counter/>
+            <div className="counter">
+                <Counter/>
+            </div>
             <Notification/>
         </div>
     </React.Fragment>

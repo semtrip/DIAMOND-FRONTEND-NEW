@@ -8,33 +8,42 @@
     font-family: 'Montserrat';
 }
 
-.leftop {
+.hud-main .leftop {
     position: absolute;
     left: 0;
     top: 0;
 }
 
-.righttop {
+.hud-main .righttop {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.leftbottom {
+.hud-main .leftbottom {
     position: absolute;
     left: 0;
     bottom: 0;
 }
 
-.rightbottom {
+.hud-main .rightbottom {
     position: absolute;
     right: 0;
     bottom: 0;
 }
 
-.chat-block {
+.hud-main .chat-block {
     margin-top: 13px;
     margin-left: 27px;
     height: 600px;
     width: 1000px;
+}
+
+.hud-main .counter {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
