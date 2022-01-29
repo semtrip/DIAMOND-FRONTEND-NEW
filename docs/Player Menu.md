@@ -1,7 +1,7 @@
 # Documentation Player Menu
 
 ### Тригеры на вход ###
- ** trigger: accountMenu **
+ **trigger: accountMenu**
 
 1. PlayerStats
     > type: updatePlayer 
