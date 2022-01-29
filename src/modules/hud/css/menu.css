@@ -147,6 +147,16 @@
     pointer-events: none;
 }
 
+.mainMenu-block .list .items .item .info .text-rl {
+    position: absolute;
+    right: 11px;
+    max-width: 321px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    pointer-events: none;
+}
+
 .mainMenu-block .list .items .item .info .text-img {
     max-width: 278px;
 }

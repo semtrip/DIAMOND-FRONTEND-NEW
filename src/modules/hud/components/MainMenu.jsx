@@ -83,7 +83,11 @@ return state.showMenu ? (
                                     : 
                                     <span className="text" dangerouslySetInnerHTML={{__html: parseText(item.title)}}/>
                                 }
-
+                                {
+                                    item.rl !== undefined ? 
+                                    <span className="text-rl" dangerouslySetInnerHTML={{__html: parseText(item.rl)}}/>
+                                    :null
+                                }
                                 {   
                                     item.items !== undefined ?
                                     item.items.length > 0 ? 
