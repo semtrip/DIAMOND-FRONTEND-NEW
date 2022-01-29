@@ -40,12 +40,16 @@
 }
 
 .gps-block .distance {
+    height: 30px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     color: #FFFFFF;
     display: flex;
     align-items: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .gps-block .distance::before {

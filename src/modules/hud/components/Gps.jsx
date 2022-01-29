@@ -17,7 +17,7 @@ return state.showGps ? (
                 <span>{state.street}</span>
             </div>
             {
-                state.distance !== '' || state.distance !== undefined ?
+                state.distance !== '0' || state.distance !== undefined ?
                 <div className="distance">
                     <span>{state.distance} M</span>
                 </div> :null
