@@ -290,6 +290,7 @@ class HudStore {
     }
     closeMenu = () => {
         this.state.showMenu = false
+        mp.trigger('client:menuList:onClose'); // eslint-disable-line
     }
     clickMenuBtn = (e) => {
         let data = e.target.dataset.name
