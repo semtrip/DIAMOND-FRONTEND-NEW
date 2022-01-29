@@ -4,6 +4,7 @@
     position: relative;
     margin-top: 150px;
     margin-right: 18px;
+    z-index: 99999;
 }
 
 .mainMenu-block .head {
