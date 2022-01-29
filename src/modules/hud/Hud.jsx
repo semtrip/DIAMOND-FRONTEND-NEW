@@ -87,7 +87,7 @@ const Hud = observer(() => {
                 state.background = value.background 
                 state.showGreen = value.showGreen 
                 state.showYellow = value.showYellow
-                state.distance = value.distance  
+                state.distance = value.distance 
             }
             else if (value.type === 'updateGangInfo') {
                 state.att = value.top1 
