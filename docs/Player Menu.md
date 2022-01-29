@@ -3,9 +3,9 @@
 ### Тригеры на вход ###
 
 1. PlayerStats
-    > trigger: accountMenu
-    > type: updatePlayer
-    ><
+    <trigger: accountMenu>
+    <type: updatePlayer> 
+    <
     data: {
                     name: value.name, //'Maneskin Harding'
                     id: value.id, //490
