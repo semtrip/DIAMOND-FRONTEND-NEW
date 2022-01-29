@@ -69,7 +69,7 @@
     }
     ```
     *House*
-    > type: updateCars
+    > type: updateHouse
     ```js
     data: {
             id: '371',
@@ -82,7 +82,7 @@
     }
     ```
     *Bussines*
-    > type: updateCars
+    > type: updateBussines
     ```js
     data: {
             id: '471',
