@@ -42,6 +42,7 @@ const Hud = observer(() => {
                 state.ammoCount = true
                 state.ammoMode = value.ammoMode
                 state.background = value.background
+                state.status = value.status
             } else if (value.type === 'updateQuest') {
                 state.showQuest = value.showQuest
                 state.questTitle = value.questTitle
