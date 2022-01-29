@@ -19,7 +19,7 @@
                     cash: value.cash, //'100.100.100'
                     bank: value.bank, //'100.100.100'
                     stats: value.stats // [{name: 'Репутация', data: 'Положительная', color: 'ffffff'}]
-}
+    }
     ``` 
 2. Mission
     > type: updateMission
