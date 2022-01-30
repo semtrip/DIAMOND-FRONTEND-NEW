@@ -14,7 +14,7 @@ const playerStats = observer(()=>{
         <div className="player">
             <div className="head">
                 <div className="playerName">
-                    <div className="icon"><img src={ico} alt="" /></div>
+                    <div className="icon" />
                     <span><b>{state.name}</b>#{state.id}</span>
                 </div>
                 <div className="buttonBlock">
@@ -31,7 +31,7 @@ const playerStats = observer(()=>{
                         <div className="line">Пол:<b>{state.sex}</b></div>
                         <div className="line">Дата рождения:<b>{state.birth}</b></div>
                         <div className="line">Супруг(а):<b className="active">{state.spouse}</b></div>
-                        <div className="line">Часов в игре:<b>{state.playTime.hourse}ч {state.playTime.mines} мин</b></div>
+                        <div className="line">Минут в игре:<b>{state.playTime} мин</b></div>
                         <div className="line">Последний вход:<b>{state.lastLogin}</b></div>
                         <div className="line">Дата регистрации:<b>{state.dateRegistation}</b></div>
                     </div>
@@ -48,7 +48,7 @@ const playerStats = observer(()=>{
                             <div className="text">${state.bank}</div>
                         </div>
                         <div className="docs"></div>
-                        <div className="registration"><img src={ico} alt="" />Временная регистрация</div>
+                        <div className="registration">{state.reg}</div>
                         <span>Чтобы получить официальное гражданство, пройдитев “Мэрию” и заполните ряд документов!</span>
                     </div>
                 </div>

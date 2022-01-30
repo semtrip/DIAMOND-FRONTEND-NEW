@@ -44,6 +44,7 @@ const AccountMenu = observer(() => {
                 state.fraction = value.fraction
                 state.sex = value.sex
                 state.birth = value.birth
+                state.reg = value.reg
                 state.spouse = value.spouse
                 state.playTime = value.playTime
                 state.lastLogin = value.lastLogin
@@ -107,6 +108,11 @@ const AccountMenu = observer(() => {
         em.addHandler('accountMenu', value => {
             if (value.type === 'updateSettingMain') {
                 stateSettings.main.item = value.item
+            }
+        })
+        em.addHandler('accountMenu', value => {
+            if (value.type === 'updateSettingMap') {
+                stateSettings.map.item = value.item
             }
         })
         if(state.path === '/reports') {

@@ -12,6 +12,7 @@
                     fraction: value.fraction, //'Los-Santos Police'
                     sex: value.sex, //'Мужской'
                     birth: value.birth, //'13.12.1997'
+                    reg: value.reg, // гражданство
                     spouse: value.spouse, //'Gr0zvill Harding'
                     playTime: value.playTime, //{hourse: '12', mines: '30'}
                     lastLogin: value.lastLogin, //'13.12.2021'
