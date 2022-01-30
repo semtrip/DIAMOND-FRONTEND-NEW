@@ -1,42 +1,30 @@
 import React from "react";
+import { observer } from "mobx-react-lite";
+
 import '../../css/property.css'
 
 import Home from "./pages/house";
 import Cars from "./pages/cars";
 import Bussines from "./pages/bussines";
 
+import store from "../../store_AccountMenu";
 
-export default class Property extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            page: 'cars'
-        }
-    }
-    editState = (e) =>{
-        e.preventDefault()
-        let data = document.querySelectorAll('.property .navButton')
-        this.setState({page: e.target.id.slice(2, e.target.id.length)})
-        for (let index = 0; index < data.length; index++) {
-            data[index].classList.remove('active')        
-        }
-        console.log(data)
-        e.target.classList.add('active')
-    }
-    render() {
-        return(
-            <div className="property">
-                <div className="nav">
-                    <div className={this.state.page === 'cars' ? 'navButton active': 'navButton'} id='b_cars' onClick={this.editState}>Транспорт</div>
-                    <div className={this.state.page === 'bussines' ? 'navButton active': 'navButton'} id='b_bussines' onClick={this.editState}>Бизнес и др.</div>
-                    <div className={this.state.page === 'home' ? 'navButton active': 'navButton'} id='b_home' onClick={this.editState}>Дом</div>
-                </div>
-                <div className="content">
-                    {this.state.page === 'cars' ? <Cars />: null}
-                    {this.state.page === 'bussines' ? <Bussines />: null}
-                    {this.state.page === 'home' ? <Home />: null}
-                </div>
+const Property = observer(()=>{
+    const state = store.state
+    return(
+        <div className="property">
+            <div className="nav">
+                <div className={state.pageProperty === 'cars' ? 'navButton active': 'navButton'} id='b_cars' onClick={store.setPageProperty}>Транспорт</div>
+                <div className={state.pageProperty === 'bussines' ? 'navButton active': 'navButton'} id='b_bussines' onClick={store.setPageProperty}>Бизнес и др.</div>
+                <div className={state.pageProperty === 'home' ? 'navButton active': 'navButton'} id='b_home' onClick={store.setPageProperty}>Дом</div>
             </div>
-        )
-    }
-}
+            <div className="content">
+                {state.pageProperty === 'cars' ? <Cars />: null}
+                {state.pageProperty === 'bussines' ? <Bussines />: null}
+                {state.pageProperty === 'home' ? <Home />: null}
+            </div>
+        </div>
+    )
+})
+
+export default Property
