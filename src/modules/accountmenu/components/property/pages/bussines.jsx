@@ -1,7 +1,7 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 
-import bussines_img from '../../../img/bussines_example.png'
+//import bussines_img from 'img/bussines_example.png'
 
 import store from "../../../store_AccountMenu";
 
@@ -15,7 +15,7 @@ const Bussines = observer(()=>{
                 <>
                     <span className="name">Бизнес #{state.id}</span>
                     <div className="imgBlock">
-                        <img src={bussines_img} alt="" />
+                        <img src="img/bussines_example.png" alt="" />
                     </div> 
                     <div className="info">
                         <span>Информация о бизнес:</span>

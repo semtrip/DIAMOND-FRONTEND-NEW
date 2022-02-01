@@ -1,0 +1,43 @@
+.navbar-button {
+  display        : flex;
+  flex-direction : row;
+  justify-content: center;
+  align-items    : center;
+
+  cursor: pointer;
+}
+
+.navbar-button.active .title,
+.navbar-button:hover .title{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  
+  color: #D7D7D7;
+  transition: .5s ease;
+}
+
+.navbar-button:hover .icon .icon-svg path,
+.navbar-button .icon .icon-svg:hover,
+.navbar-button.active .icon .icon-svg path{
+  fill: #D7D7D7;
+  transition: .5s ease;
+}
+
+.navbar-button .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  transition: .5s ease;
+}
+
+.navbar-button .title {
+  font-style : normal;
+  font-weight: normal;
+  font-size  : 16px;
+  line-height: 19px;
+
+  color: #434D60;
+  transition: .5s ease;
+}

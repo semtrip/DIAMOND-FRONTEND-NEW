@@ -121,23 +121,14 @@ class AccountMenuStore {
         ]
     }
     stateHouse = {
-        id: '371',
-        address: 'Бульвар Алгонквин',
-        tax: '4.500',
-        places: '0',
-        garage: 'Есть',
-        rent: '5',
-        price: '13.000.000',
+        id: '',
     }
     stateCars = {
         cars: [{name: 'Mercedes-Benz', model: 'F700',  tax: '1.238', fine: 'Нет', fuel: 'Есть', number: 'U0OUGV7F'}],
         slots: 2,
     }
     stateBussines = {
-        id: '471',
-        address: 'Бульвар Алгонквин',
-        tax: '4.500',
-        price: '13.000.000',
+        id: ''
     }
     stateReports = {
         reports: [

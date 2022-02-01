@@ -2,7 +2,7 @@ import React from "react";
 
 import { observer } from "mobx-react-lite";
 
-import car_img from '../../../img/car_example.png'
+//import car_img from 'img/car_example.png'
 
 import store from "../../../store_AccountMenu";
 
@@ -28,13 +28,13 @@ const Cars = observer(()=>{
             (
                 <div className="item_block car" key={i}>
                     <div className="imgBlock">
-                        <img src={car_img} alt="" />
+                        <img src="img/car_example.png" alt="" />
                     </div> 
                     <div className="option">
                         <b>Информация о транспорте:</b>
-                        <span>Марка:<b>{item.name}</b></span>
-                        <span>Модель:<b>{item.model}</b></span>
-                        <span>Налог:<b className='active'>{item.tax}$</b></span>
+                        <span>Модель:<b>{item.name}</b></span>
+                        <span>Класс:<b>{item.model}</b></span>
+                        <span>Налог:<b className='active'>{item.tax}</b></span>
                         <span>Штраф:<b>{item.fine}</b></span>
                         <span>Топливо:<b>{item.fuel}</b></span>
                         <span>Номер:<b className='active'>{item.number}</b></span>

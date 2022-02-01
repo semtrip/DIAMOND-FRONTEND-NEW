@@ -14,7 +14,7 @@ import Alert                          from '../alert/Alert'
 import Bank                           from '../bank/Bank'
 import CarShop                        from '../carshop/CarShop'
 import Certificate                    from '../certificate/Certificate'
-import Donate                         from '../donate/Donate'
+import DonateMenu                     from '../donate/DonateMenu'
 import EditorMain                     from '../editorplayer/EditorMain';
 import GunShop                        from '../hudmenus/gunshop/GunShop';
 import CarRent                        from '../hudmenus/carrent/CarRent';
@@ -55,7 +55,7 @@ export default function App () {
         <Bank />
         <CarShop />
         <Certificate />
-        <Donate />
+        <DonateMenu />
         <GunShop />
         <CarRent />
         <Dialog />
