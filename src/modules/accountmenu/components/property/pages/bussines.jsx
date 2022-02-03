@@ -18,19 +18,17 @@ const Bussines = observer(()=>{
                         <img src="img/bussines_example.png" alt="" />
                     </div> 
                     <div className="info">
-                        <span>Информация о бизнес:</span>
-                        <span className='infoItem'>Адрес<b>{state.address}</b></span>
+                        <span>Информация о бизнесе:</span>
+                        <span className='infoItem'>Название<b>{state.address}</b></span>
                         <span className='infoItem'>Налог<b className="active">{state.tax}$</b></span>
                     </div>
                     <div className="button">
                         <div className="sell">
-                            <div className="sell_b">Продать</div>
                             <div className="price">
                                 Гос.цена:
                                 <span>{state.price}$</span>
                             </div>
                         </div>
-                        <div className="rent">Продлить срок аренды</div>
                     </div>
                 </>
             ):<>

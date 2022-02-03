@@ -23,13 +23,11 @@ const House = observer(()=>{
                 </div>
                 <div className="button">
                     <div className="sell">
-                        <div className="sell_b">Продать</div>
                         <div className="price">
                             Гос.цена:
                             <span>{state.price}$</span>
                         </div>
                     </div>
-                    <div className="rent">Продлить срок аренды</div>
                 </div>
         </div>
     )
