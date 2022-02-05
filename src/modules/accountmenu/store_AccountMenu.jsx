@@ -200,7 +200,7 @@ class AccountMenuStore {
         },
         chat: {
             item: [
-                {name: 'Походка1', type: 'btn',  data: 'Применить'},
+                {name: 'Походка1', type: 'btn',  data: 'Применить', params: 'clear'},
                 {name: 'Стиль стрельбы', type: 'btn', data: 'Применить'},
                 {name: 'Стиль стрельбы', type: 'select', data: ['Вариант Вариант 1', 'Вариант 2', 'Вариант 3', 'Вариант 4'], index: 0},
                 {name: 'Показывать ID игроков', type: 'checkbox', data: false},
@@ -363,17 +363,17 @@ class AccountMenuStore {
             state[id].data = ''
             this.stateSettings.button.item = state
             try {
-                mp.trigger('changeKeySetting', id) // eslint-disable-line
+                mp.trigger('changeKeySetting', this.stateSettings.button.item[id.params]) // eslint-disable-line
             } catch (error) {
-                console.log('changeKeySetting', id)
+                console.log('changeKeySetting', this.stateSettings.button.item[id.params])
             }
         }
     }
     clickBtnChat = (e) => {
         try {
-            mp.trigger('clickBtnChatSetting', this.stateSettings.chat.item[e.target.id].data) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:btn', this.stateSettings.chat.item[e.target.id].params) // eslint-disable-line
         } catch (error) {
-            console.log('clickBtnChatSetting', this.stateSettings.chat.item[e.target.id].data)
+            console.log('client:mainMenu:settings:btn', this.stateSettings.chat.item[e.target.id].params)
         }
     }
     clickSelectChat = (e) => {
@@ -408,9 +408,9 @@ class AccountMenuStore {
                 
         }
         try {
-            mp.trigger('editChatSettings', this.stateSettings.chat.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:select', this.stateReports.chat.item[id].params, this.stateSettings.chat.item[id].index) // eslint-disable-line
         } catch (error) {
-            console.log('editChatSettings', this.stateSettings.chat.item)
+            console.log('client:mainMenu:settings:select', this.stateReports.chat.item[id].params, this.stateSettings.chat.item[id].index)
         }
     }
     clickCheckboxChat = (e) => {
@@ -429,16 +429,16 @@ class AccountMenuStore {
             this.stateSettings.chat.item = state
         }
         try {
-            mp.trigger('editChatSettings', this.stateSettings.chat.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:checkBox', this.stateSettings.chat.item[id].params, this.stateSettings.chat.item[id].data) // eslint-disable-line
         } catch (error) {
-            console.log('editChatSettings', this.stateSettings.chat.item)
+            console.log('client:mainMenu:settings:checkBox', this.stateSettings.chat.item[id].params, this.stateSettings.chat.item[id].data)
         }
     }
     clickBtnInterface = (e) => {
         try {
-            mp.trigger('clickBtnInterfaceSetting', this.stateSettings.interface.item[e.target.id].data) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:btn', this.stateSettings.interface.item[e.target.id].params) // eslint-disable-line
         } catch (error) {
-            console.log('clickBtnInterfaceSetting', this.stateSettings.interface.item[e.target.id].data)
+            console.log('client:mainMenu:settings:btn', this.stateSettings.interface.item[e.target.id].params)
         }
     }
     clickSelectInterface = (e) => {
@@ -473,9 +473,9 @@ class AccountMenuStore {
                 
         }
         try {
-            mp.trigger('editInterfaceSettings', this.stateSettings.interface.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:select', this.stateSettings.interface.item[id].params, this.stateSettings.interface.item[id].index) // eslint-disable-line
         } catch (error) {
-            console.log('editInterfaceSettings', this.stateSettings.interface.item)
+            console.log('client:mainMenu:settings:select',this.stateSettings.interface.item[id].params, this.stateSettings.interface.item[id].index)
         }
     }
     clickCheckboxInterface = (e) => {
@@ -494,9 +494,9 @@ class AccountMenuStore {
             this.stateSettings.interface.item = state
         }
         try {
-            mp.trigger('editInterfaceSettings', this.stateSettings.interface.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:checkBox', this.stateSettings.interface.item[id].params, this.stateSettings.interface.item[id].data) // eslint-disable-line
         } catch (error) {
-            console.log('editInterfaceSettings', this.stateSettings.interface.item)
+            console.log('client:mainMenu:settings:checkBox',this.stateSettings.interface.item[id].params, this.stateSettings.interface.item[id].data)
         }
     }
     clickApplyInterface = () => {
@@ -515,9 +515,9 @@ class AccountMenuStore {
     }
     clickBtnMain = (e) => {
         try {
-            mp.trigger('clickBtnMainSetting', this.stateSettings.main.item[e.target.id].data) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:btn', this.stateSettings.main.item[e.target.id].params) // eslint-disable-line
         } catch (error) {
-            console.log('clickBtnMainSetting', this.stateSettings.main.item[e.target.id].data)
+            console.log('client:mainMenu:settings:btn', this.stateSettings.main.item[e.target.id].params)
         }
     }
     clickSelectMain = (e) => {
@@ -552,9 +552,9 @@ class AccountMenuStore {
                 
         }
         try {
-            mp.trigger('editMainSettings', this.stateSettings.main.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:select', this.stateReports.main.item[id].params, this.stateSettings.main.item[id].index) // eslint-disable-line
         } catch (error) {
-            console.log('editMainSettings', this.stateSettings.main.item)
+            console.log('client:mainMenu:settings:select',this.stateReports.main.item[id].params, this.stateSettings.main.item[id].index)
         }
     }
     clickCheckboxMain = (e) => {
@@ -573,16 +573,16 @@ class AccountMenuStore {
             this.stateSettings.main.item = state
         }
         try {
-            mp.trigger('editMainSettings', this.stateSettings.main.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:checkBox', this.stateSettings.main.item[id].params, this.stateSettings.main.item[id].data) // eslint-disable-line
         } catch (error) {
-            console.log('editMainSettings', this.stateSettings.main.item)
+            console.log('client:mainMenu:settings:checkBox', this.stateSettings.main.item[id].params, this.stateSettings.main.item[id].data)
         }
     }
     clickBtnMap = (e) => {
         try {
-            mp.trigger('clickBtnMapSetting', this.stateSettings.map.item[e.target.id].data) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:btn', this.stateSettings.map.item[e.target.id].params) // eslint-disable-line
         } catch (error) {
-            console.log('clickBtnMapSetting', this.stateSettings.map.item[e.target.id].data)
+            console.log('client:mainMenu:settings:btn', this.stateSettings.map.item[e.target.id].params)
         }
     }
     clickSelectMap = (e) => {
@@ -617,9 +617,9 @@ class AccountMenuStore {
                 
         }
         try {
-            mp.trigger('editMapSettings', this.stateSettings.map.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:select', this.stateReports.map.item[id].params, this.stateSettings.map.item[id].index) // eslint-disable-line
         } catch (error) {
-            console.log('editMapSettings', this.stateSettings.map.item)
+            console.log('client:mainMenu:settings:select', this.stateReports.map.item[id].params, this.stateSettings.map.item[id].index)
         }
     }
     clickCheckboxMap = (e) => {
@@ -638,16 +638,16 @@ class AccountMenuStore {
             this.stateSettings.map.item = state
         }
         try {
-            mp.trigger('editMapSettings', this.stateSettings.map.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:checkBox', this.stateSettings.map.item[id].params, this.stateSettings.map.item[id].data) // eslint-disable-line
         } catch (error) {
-            console.log('editMapSettings', this.stateSettings.map.item)
+            console.log('client:mainMenu:settings:checkBox', this.stateSettings.map.item[id].params, this.stateSettings.map.item[id].data)
         }
     }
     clickBtnVoice = (e) => {
         try {
-            mp.trigger('clickBtnVoiceSetting', this.stateSettings.voice.item[e.target.id].data) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:btn', this.stateSettings.voice.item[e.target.id].params) // eslint-disable-line
         } catch (error) {
-            console.log('clickBtnVoiceSetting', this.stateSettings.voice.item[e.target.id].data)
+            console.log('client:mainMenu:settings:btn', this.stateSettings.voice.item[e.target.id].params)
         }
     }
     clickSelectVoice = (e) => {
@@ -682,9 +682,9 @@ class AccountMenuStore {
                 
         }
         try {
-            mp.trigger('editVoiceSettings', this.stateSettings.voice.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:select', this.stateReports.voice.item[id].params, this.stateSettings.voice.item[id].index) // eslint-disable-line
         } catch (error) {
-            console.log('editVoiceSettings', this.stateSettings.voice.item)
+            console.log('client:mainMenu:settings:select', this.stateReports.voice.item[id].params, this.stateSettings.voice.item[id].index)
         }
     }
     clickCheckboxVoice = (e) => {
@@ -703,9 +703,9 @@ class AccountMenuStore {
             this.stateSettings.voice.item = state
         }
         try {
-            mp.trigger('editVoiceSettings', this.stateSettings.voice.item) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:checkBox', this.stateSettings.voice.item[id].params, this.stateSettings.voice.item[id].data) // eslint-disable-line
         } catch (error) {
-            console.log('editVoiceSettings', this.stateSettings.voice.item)
+            console.log('client:mainMenu:settings:checkBox', this.stateSettings.voice.item[id].params, this.stateSettings.voice.item[id].data)
         }
     }
 }
