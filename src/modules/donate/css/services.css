@@ -1,0 +1,71 @@
+.services-container {
+  height: 100%;
+
+  margin-left: 40px;
+
+  margin-right: 15px;
+
+  overflow-y: auto;
+}
+
+.services-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.services-container::-webkit-scrollbar-track {
+  background   : #1E232D;
+  border-radius: 17px;
+}
+
+.services-container::-webkit-scrollbar-thumb {
+
+  background   : #0085FF;
+  border-radius: 17px;
+}
+
+.services-container .service-item {
+  width : 99%;
+  height: 75px;
+
+  display        : flex;
+  flex-direction : row;
+  justify-content: space-between;
+  align-items    : center;
+
+  background   : #242932;
+  border-radius: 8px;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.services-container .service-item:hover {
+  background: #0085FF;
+}
+
+.services-container .service-item .title {
+  text-transform: none;
+
+  margin-left: 20px;
+  font-style : normal;
+  font-weight: 600;
+  font-size  : 18px;
+  line-height: 22px;
+  color      : #fff;
+}
+
+.services-container .service-item .price-container {
+  margin-right  : 40px;
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
+}
+
+.services-container .service-item .price-container .price {
+  font-style  : normal;
+  font-weight : 600;
+  font-size   : 18px;
+  line-height : 22px;
+  margin-right: 10px;
+}

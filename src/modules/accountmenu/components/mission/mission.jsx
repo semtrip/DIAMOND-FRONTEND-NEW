@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite";
 
 import '../../css/mission.css'
 
-import img from '../../img/mission_exsaple.png'
+//import img from 'img/mission_exsaple.png'
 
 import store from "../../store_AccountMenu";
 
@@ -21,7 +21,7 @@ const Mission = observer(() => {
                 <div className={item.attachments !== undefined ? 'task active': 'task'} key={i} id={i} onClick={store.clickTask}>
                     <div className="content">
                         <div className="image">
-                            <img src={img} alt="" />
+                            <img src="img/mission_exsaple.png" alt="" />
                             <div className="line"></div>
                         </div>
                         <div className="text">

@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
-import house_img from '../../../img/house_example.png'
+//import house_img from 'img/house_example.png'
 
 import store from "../../../store_AccountMenu";
 
@@ -11,7 +11,7 @@ const House = observer(()=>{
         <div className='house'>
                 <span className="name">Дом #{state.id}</span>
                 <div className="imgBlock">
-                    <img src={house_img} alt="" />
+                    <img src="img/house_example.png" alt="" />
                 </div> 
                 <div className="info">
                     <span>Информация о доме:</span>
@@ -23,13 +23,11 @@ const House = observer(()=>{
                 </div>
                 <div className="button">
                     <div className="sell">
-                        <div className="sell_b">Продать</div>
                         <div className="price">
                             Гос.цена:
                             <span>{state.price}$</span>
                         </div>
                     </div>
-                    <div className="rent">Продлить срок аренды</div>
                 </div>
         </div>
     )
