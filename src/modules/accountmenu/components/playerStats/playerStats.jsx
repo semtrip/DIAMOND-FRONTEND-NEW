@@ -3,8 +3,6 @@ import { observer } from "mobx-react-lite";
 
 import '../../css/player.css'
 
-import ico from '../../img/player_ico.svg'
-
 import store from "../../store_AccountMenu";
 
 

@@ -11,7 +11,7 @@ const IncomingCall = observer(()=>{
     return (
         <React.Fragment >
             <div className="incomingCall">
-                <span className="number">+7 (800) 255 35 35</span>
+                <span className="number">{state.number}</span>
                 <div className="btns">
                     
                 </div>

@@ -2,7 +2,6 @@ import { observer } from "mobx-react-lite";
 import React from "react";
 
 import store from "../../phone-store";
-import Msg from "../msg/msg";
 
 import '../news/css/news.css'
 

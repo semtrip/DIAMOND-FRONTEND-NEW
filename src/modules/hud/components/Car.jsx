@@ -106,10 +106,12 @@ const Car = observer(() => {
                 <img
                     src={state.turnLeft ? `https://gta-5.ru/server/client/images/icons/hud/arrow_left_on.svg` : `https://gta-5.ru/server/client/images/icons/hud/arrow_left_off.svg`}
                     className="hud__speedometr__arrow-left"
+                    alt="img"
                 />
                 <img
                     src={state.turnRight ? `https://gta-5.ru/server/client/images/icons/hud/arrow_right_on.svg` : `https://gta-5.ru/server/client/images/icons/hud/arrow_right_off.svg`}
                     className="hud__speedometr__arrow-right"
+                    alt="img"
                 />
                 <div className="hud__speedometr__fuel">
                     <img
@@ -117,6 +119,7 @@ const Car = observer(() => {
                         className="hud__speedometr__info__fuel"
                         width="14"
                         style={{ filter: ((state.max_fuel / 10 <= state.fuel) && state.fuelType !== '%') ? 'invert(57%) sepia(78%) saturate(6251%) hue-rotate(337deg) brightness(133%) contrast(113%)' : 'none' }}
+                        alt="img"
                     />
                     <span className="hud__speedometr__info__fuel__text">{`${state.fuel}L/${state.max_fuel}L`}</span>
                 </div>

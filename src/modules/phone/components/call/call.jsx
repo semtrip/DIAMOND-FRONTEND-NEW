@@ -90,7 +90,7 @@ const Call = observer(() => {
                         </div>
                         <div className="contacts">
                             {
-                                state.appCall.contacts.slice().sort((a, b)=>{let name = a.name.toLowerCase(), number = b.name.toLowerCase(); if(name < number) return -1; if(name > number) return 1;}).map((item, i) => (
+                                state.appCall.contacts.slice().sort((a, b)=>{let name = a.name.toLowerCase(), number = b.name.toLowerCase(); if(name < number) return -1; if(name > number) return 1}).map((item, i) => (
                                     item.name.toLowerCase().includes(state.appCall.contactSearchData) ?
                                     <div className="item" key={i} id={i} onClick={store.contactClick} data-name={item.number}>
                                         {item.name}

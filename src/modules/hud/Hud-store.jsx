@@ -294,7 +294,7 @@ class HudStore {
     }
     clickMenuBtn = (e) => {
         let data = e.target.dataset.name
-        if (this.state.menuList[data].items === undefined || this.state.menuList[data].items.length === 0 && this.state.menuList[data].checked === undefined) {
+        if (this.state.menuList[data].items === undefined || (this.state.menuList[data].items.length === 0 && this.state.menuList[data].checked === undefined)) {
             try {
                 mp.trigger('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params)); // eslint-disable-line
             }
