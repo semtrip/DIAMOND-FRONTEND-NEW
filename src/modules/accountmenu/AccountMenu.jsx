@@ -111,6 +111,11 @@ const AccountMenu = observer(() => {
             }
         })
         em.addHandler('accountMenu', value => {
+            if (value.type === 'updateSettingVoice') {
+                stateSettings.voice.item = value.item
+            }
+        })
+        em.addHandler('accountMenu', value => {
             if (value.type === 'updateSettingMap') {
                 stateSettings.map.item = value.item
             }
