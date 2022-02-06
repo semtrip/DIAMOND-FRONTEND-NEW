@@ -6,7 +6,7 @@ class AccountMenuStore {
         makeAutoObservable(this, {}, { deep: true })
     }
     state = {
-        show: true,
+        show: false,
         path: '/player',
         property_path: 'cars',
         name: 'Maneskin Harding',
