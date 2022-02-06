@@ -6,7 +6,7 @@ class AccountMenuStore {
         makeAutoObservable(this, {}, { deep: true })
     }
     state = {
-        show: false,
+        show: true,
         path: '/player',
         property_path: 'cars',
         name: 'Maneskin Harding',
@@ -171,22 +171,22 @@ class AccountMenuStore {
         page: 'main',
         button: {
             item: [
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
-                {name: 'Походка',  data: 'Q'},
+                {name: 'Походка',  data: 'Q', params:'param1'},
+                {name: 'Походка',  data: 'Q', params:'param2'},
+                {name: 'Походка',  data: 'Q', params:'param3'},
+                {name: 'Походка',  data: 'Q', params:'param4'},
+                {name: 'Походка',  data: 'Q', params:'param5'},
+                {name: 'Походка',  data: 'Q', params:'param6'},
+                {name: 'Походка',  data: 'Q', params:'param7'},
+                {name: 'Походка',  data: 'Q', params:'param8'},
+                {name: 'Походка',  data: 'Q', params:'param9'},
+                {name: 'Походка',  data: 'Q', params:'param10'},
+                {name: 'Походка',  data: 'Q', params:'param11'},
+                {name: 'Походка',  data: 'Q', params:'param12'},
+                {name: 'Походка',  data: 'Q', params:'param13'},
+                {name: 'Походка',  data: 'Q', params:'param14'},
+                {name: 'Походка',  data: 'Q', params:'param15'},
+                {name: 'Походка',  data: 'Q', params:'param16'},
             ]
         },
         chat: {
@@ -354,9 +354,9 @@ class AccountMenuStore {
             state[id].data = ''
             this.stateSettings.button.item = state
             try {
-                mp.trigger('changeKeySetting', this.stateSettings.button.item[id.params]) // eslint-disable-line
+                mp.trigger('client:mainMenu:settings:btn', this.stateSettings.button.item[id].params) // eslint-disable-line
             } catch (error) {
-                console.log('changeKeySetting', this.stateSettings.button.item[id.params])
+                console.log('client:mainMenu:settings:btn', this.stateSettings.button.item[id].params)
             }
         }
     }
@@ -506,10 +506,11 @@ class AccountMenuStore {
         }
     }
     clickBtnMain = (e) => {
+        let id = e.target.id
         try {
-            mp.trigger('client:mainMenu:settings:btn', this.stateSettings.main.item[e.target.id].params) // eslint-disable-line
+            mp.trigger('client:mainMenu:settings:btn', this.stateSettings.main.item[id].params) // eslint-disable-line
         } catch (error) {
-            console.log('client:mainMenu:settings:btn', this.stateSettings.main.item[e.target.id].params)
+            console.log('client:mainMenu:settings:btn', this.stateSettings.main.item[id].params)
         }
     }
     clickSelectMain = (e) => {
