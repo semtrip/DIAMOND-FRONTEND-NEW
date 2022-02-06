@@ -5,7 +5,9 @@ import '../../css/animate.css'
 import Background                     from '../bg'
 import TestModal                      from '../test-modal'
 import Walkietalkie                   from '../walkietalkie/Walkietalkie';
-import AuthMain                       from '../authorization/AuthMain'
+import AuthMain                       from '../authorization/AuthMain';
+import CreatePlayer                   from '../createPlayer/old/CreatePlayer';
+import CharacterSelection             from '../characterSelection/characterSelection';  
 import Hud                            from '../hud/Hud';
 import Inventory                      from '../inventory/Inventory'  
 import AccountMenu                    from '../accountmenu/AccountMenu'
@@ -46,6 +48,8 @@ export default function App () {
       <Notifications />
       <div className="box" id="box">
         <AuthMain />
+        <CreatePlayer/>
+        <CharacterSelection/>
         <Hud />
         <Inventory />
         {/* TODO  // Дописать тесты*/}

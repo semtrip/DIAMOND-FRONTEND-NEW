@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../uikit/Title';
+import Title from './uikit/Title';
 import ChangePlayer from './Content/ChangePlayer';
 
 class CreatePlayer extends React.Component {
@@ -13,7 +13,7 @@ class CreatePlayer extends React.Component {
     }
 
     render() {
-        return (
+        return 1 < 0 ? (
             <React.Fragment>
                 <div className="reg-main">
                     <div className="create-content">
@@ -25,7 +25,7 @@ class CreatePlayer extends React.Component {
                     </div>
                 </div>
             </React.Fragment>
-        )
+        ) :null
     }
 }
 
