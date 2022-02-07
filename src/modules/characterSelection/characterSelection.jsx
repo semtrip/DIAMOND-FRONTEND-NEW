@@ -26,6 +26,7 @@ const characterSelection = observer(()=> {
                 store.state.info_player = value.players
             }
         })
+        
         document.onkeydown = function(e) {
             if (e.keyCode === 37) {
                 if(id === 0) {
@@ -35,6 +36,12 @@ const characterSelection = observer(()=> {
                     id = id - 1
                     setIdPage(id)
                 }
+                try {
+                    mp.trigger('client:events:currentPlayer', id); // eslint-disable-line
+                }
+                catch (e) {
+                    console.log('client:events:currentPlayer', id) 
+                }
             }
             if (e.keyCode === 39) {
                 if(id === 2) {
@@ -43,6 +50,12 @@ const characterSelection = observer(()=> {
                 } else {
                     id = id + 1
                     setIdPage(id)
+                }
+                try {
+                    mp.trigger('client:events:currentPlayer', id); // eslint-disable-line
+                }
+                catch (e) {
+                    console.log('client:events:currentPlayer', id) 
                 }
             }  
         };

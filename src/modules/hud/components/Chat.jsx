@@ -154,11 +154,11 @@ class Chat extends React.Component {
                         chat.input = $("#chat").append(`
                         <div id="chat-msg-input">
                             <div class='inputBlock'>
-                                <input onkeyup="chatOnKeyUp()" id="chat_msg" type="text" placeholder="Say..."/>
+                                <input onkeyup="chatOnKeyUp()" id="chat_msg" type="text" placeholder="Say..." autoFocus/>
                                 <div class="sendBtn" id='send' onClick='sendClick()'></div>
                             </div>
                             <div id="button-input">
-                                <span class="active in_button" onClick="chatButtonClick(this.id)" id="RP">PR</span>
+                                <span class="active in_button" onClick="chatButtonClick(this.id)" id="RP">RP</span>
                                 <span class="in_button" onClick="chatButtonClick(this.id)" id="OOC">OOC</span>
                                 <span class="in_button" onClick="chatButtonClick(this.id)" id="DO">/do</span>
                                 <span class="in_button" onClick="chatButtonClick(this.id)" id="ME">/me</span>

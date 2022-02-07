@@ -212,7 +212,7 @@ const AuthMain = () => {
                         <input type="password" placeholder="Input..." onChange={setPassword_confirm.bind(this)}/>
                     </div>
                     <div className="btn" onClick={registration}>Continue registration</div>
-                    <div className="link">No account? <b onClick={()=>{Anim()}}>Register</b></div>
+                    <div className="link" onClick={()=>{Anim()}}>Go back</div>
                     <div className="error">
                         {globalError}
                     </div>
