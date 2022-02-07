@@ -6,7 +6,7 @@ class HudStore {
         makeAutoObservable(this, {}, { deep: true })
     }
     state = {
-        show: false,
+        show: true,
         showLogo: true,
         showPlayer: true,
         showGps: true,
@@ -69,7 +69,7 @@ class HudStore {
             {key: 'i', text: 'Инвентарь', ico: 1},
             {key: '~', text: 'Предметы рядом'},
         ],
-        showMenu: false,
+        showMenu: true,
         headerMenu: true,
         headerText: 'Test',
         headerDesc: '~r~HELL~g~O WO~b~RLD',
@@ -319,10 +319,13 @@ class HudStore {
             this.state.menuList[data].index = 0
         } else {this.state.menuList[data].index++}
         try {
-            mp.trigger('client:menuList:callBack:select', this.state.menuName, selected); // eslint-disable-line
+            mp.trigger('client:menuList:callBack:select', this.state.menuName, data); // eslint-disable-line
+            mp.trigger('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params)); // eslint-disable-line
+
         }
         catch (e) {
-            console.log(e)
+            console.log('client:menuList:callBack:select', this.state.menuName, data);
+            console.log('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params));
         }
     }
     changeMenuSelectBack = (e) => {
@@ -331,11 +334,13 @@ class HudStore {
             this.state.menuList[data].index = this.state.menuList[data].items.length - 1
         } else {this.state.menuList[data].index--}
         try {
-            mp.trigger('client:menuList:callBack:list', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params), this.state.menuList[data].index); // eslint-disable-line 
             mp.trigger('client:menuList:callBack:select', this.state.menuName, data); // eslint-disable-line
+            mp.trigger('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params)); // eslint-disable-line
+
         }
         catch (e) {
-            console.log(e)
+            console.log('client:menuList:callBack:select', this.state.menuName, data);
+            console.log('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params));
         }
     }
 }
