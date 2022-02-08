@@ -62,7 +62,7 @@ return state.showMenu ? (
                 {
                     state.menuList.map((item, i) => (
                         <div className={item.subtitle !== undefined ? 'item _hint' : 'item'} key={i}>
-                            <div className={item.icon !== undefined ? 'info img' : 'info'} data-name={i} onClick={store.clickMenuBtn}>
+                            <div className={item.icon !== undefined ? 'info img' : 'info'} data-name={i} onClick={(i)=>{item.items !== undefined && item.items.length > 0 ? console.log('click') : store.clickMenuBtn(i)} }>
                                 {
                                     item.icon !== undefined ? 
                                     <div className="img">
@@ -93,7 +93,7 @@ return state.showMenu ? (
                                     item.items.length > 0 ? 
                                     <div className="select">
                                         <div className="back" data-name={i} onClick={store.changeMenuSelectBack}/>
-                                        <span dangerouslySetInnerHTML={{__html: parseText(item.items[item.index])}} />
+                                        <span className="selected" dangerouslySetInnerHTML={{__html: parseText(item.items[item.index])}} data-name={i} onClick={()=> {store.sendMenuSelect(i)}}/>
                                         <div className="next" data-name={i} onClick={store.changeMenuSelectNext}/>
                                     </div>:null :null
                                 }

@@ -6,7 +6,7 @@ class HudStore {
         makeAutoObservable(this, {}, { deep: true })
     }
     state = {
-        show: true,
+        show: false,
         showLogo: true,
         showPlayer: true,
         showGps: true,
@@ -69,7 +69,7 @@ class HudStore {
             {key: 'i', text: 'Инвентарь', ico: 1},
             {key: '~', text: 'Предметы рядом'},
         ],
-        showMenu: true,
+        showMenu: false,
         headerMenu: true,
         headerText: 'Test',
         headerDesc: '~r~HELL~g~O WO~b~RLD',
@@ -343,5 +343,15 @@ class HudStore {
             console.log('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params));
         }
     }
+    sendMenuSelect = (id) => {
+        try {
+            mp.trigger('client:menuList:callBack:list', this.state.menuName, id, JSON.stringify(this.state.menuList[id].params), this.state.menuList[id].index); // eslint-disable-line
+    
+        } catch (e) {
+            console.log('client:menuList:callBack:list', this.state.menuName, id, JSON.stringify(this.state.menuList[id].params), this.state.menuList[id].index)
+        }
+    }
+
+
 }
 export default new HudStore()

@@ -189,12 +189,14 @@
     justify-content: space-between;
     margin-left: 10px;
     pointer-events: none;
+    cursor: default;
 }
 
-.mainMenu-block .list .items .item .info .select span {
+.mainMenu-block .list .items .item .info .select .selected {
     font-weight: 300;
     font-size: 12px;
     color: #FFFFFF;
+    pointer-events: all;
 }
 
 .mainMenu-block .list .items .item .info .select .back,
