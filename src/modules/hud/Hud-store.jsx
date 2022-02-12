@@ -320,12 +320,12 @@ class HudStore {
         } else {this.state.menuList[data].index++}
         try {
             mp.trigger('client:menuList:callBack:select', this.state.menuName, data); // eslint-disable-line
-            mp.trigger('client:menuList:callBack:list', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params), this.state.menuList[data].index); // eslint-disable-line
+            mp.trigger('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params)); // eslint-disable-line
 
         }
         catch (e) {
             console.log('client:menuList:callBack:select', this.state.menuName, data);
-            console.log('client:menuList:callBack:list', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params), this.state.menuList[data].index);
+            console.log('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params));
         }
     }
     changeMenuSelectBack = (e) => {
@@ -335,21 +335,20 @@ class HudStore {
         } else {this.state.menuList[data].index--}
         try {
             mp.trigger('client:menuList:callBack:select', this.state.menuName, data); // eslint-disable-line
-            mp.trigger('client:menuList:callBack:list', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params), this.state.menuList[data].index); // eslint-disable-line
+            mp.trigger('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params)); // eslint-disable-line
 
         }
         catch (e) {
             console.log('client:menuList:callBack:select', this.state.menuName, data);
-            console.log('client:menuList:callBack:list', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params), this.state.menuList[data].index);
+            console.log('client:menuList:callBack:btn', this.state.menuName, data, JSON.stringify(this.state.menuList[data].params));
         }
     }
     sendMenuSelect = (id) => {
         try {
-            mp.trigger('client:menuList:callBack:btn', this.state.menuName, id, JSON.stringify(this.state.menuList[id].params)); // eslint-disable-line
-
+            mp.trigger('client:menuList:callBack:list', this.state.menuName, id, JSON.stringify(this.state.menuList[id].params), this.state.menuList[id].index); // eslint-disable-line
     
         } catch (e) {
-            console.log('client:menuList:callBack:btn', this.state.menuName, id, JSON.stringify(this.state.menuList[id].params))
+            console.log('client:menuList:callBack:list', this.state.menuName, id, JSON.stringify(this.state.menuList[id].params), this.state.menuList[id].index)
         }
     }
 
