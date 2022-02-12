@@ -23,7 +23,8 @@ input[type="checkbox"] {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="number"] {
     background: none;
     border: none;
     outline: none;

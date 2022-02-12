@@ -1,0 +1,267 @@
+.title {
+    font-weight: normal;
+    font-size: 16px;
+    color: #595F68;
+}
+
+.selection {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .father,
+    .mother {
+        width: 256px;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        img {
+            height: 220px;
+            margin-bottom: -40px;
+        }
+        &.father {
+            background: linear-gradient(360deg, #1882FF -68.89%, rgba(24, 130, 255, 0) 100%);
+        }
+        &.mother {
+            background: linear-gradient(359.41deg, #D76FFC -80.13%, rgba(215, 111, 252, 0) 99.54%);
+        }
+    }
+}
+
+.select {
+    width: 100%;
+    background: rgba(47, 53, 65);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+        width: 45px;
+        height: 45px;
+        left: 1296px;
+        top: 435px;
+        background: #2F3541;
+        cursor: pointer;
+        box-shadow: 7px 0px 4px rgba(0, 0, 0, 0.25);
+        background: url(../img/arrow.png) no-repeat center;
+        &.back {}
+        &.next {
+            background: url(../img/arrow.png) no-repeat center;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.range {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 40px;
+    input[type="range"] {
+        margin-top: 17px;
+        width: 100%;
+        background: none;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 6px;
+        background: #242932;
+        border-radius: 6px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 14px;
+        height: 14px;
+        background: #CACACA;
+        border-radius: 14px;
+        border: 2px solid #E0E0E0;
+        margin-top: -4px;
+    }
+    .text {
+        margin-top: 13px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        font-size: 14px;
+        color: #EDEDED;
+    }
+}
+
+.color-box {
+    margin-top: 30px;
+    width: 100%;
+    .title {
+        margin-bottom: 15px;
+    }
+    .color {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .item {
+            width: 25px;
+            height: 25px;
+            margin-right: 6.51px;
+            margin-bottom: 6.51px;
+            // box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.02);
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.content {
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    padding-right: 20px;
+    box-sizing: border-box;
+    & .range:first-child {
+        margin: 0;
+    }
+    & .select-box:first-child {
+        margin: 0;
+    }
+    & .color-box:first-child {
+        margin: 0;
+    }
+    /* полоса прокрутки (скроллбар) */
+    &::-webkit-scrollbar {
+        width: 6px;
+        /* ширина для вертикального скролла */
+        background-color: #191D22;
+        border-radius: 4px;
+    }
+    /* ползунок скроллбара */
+    &::-webkit-scrollbar-thumb {
+        background-color: #1B76FF;
+        border-radius: 4px;
+    }
+}
+
+.select-box {
+    width: 100%;
+    margin-top: 30px;
+    .title {
+        margin-bottom: 15px;
+    }
+}
+
+.face-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    .nav-box {
+        position: absolute;
+        top: -136px;
+        left: -24px;
+        height: 80px;
+        width: 330px;
+        background: #242932;
+        border-radius: 3px;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .link-box {
+            position: relative;
+            width: 66px;
+            height: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            span {
+                position: absolute;
+                bottom: 15px;
+                font-weight: 600;
+                font-size: 10px;
+                color: #373F4C;
+            }
+            &.nose::after {
+                margin-top: -15px;
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../img/ico/nose.png) no-repeat center;
+            }
+            &.eyebrows::after {
+                margin-top: -15px;
+                content: '';
+                display: block;
+                width: 29px;
+                height: 14px;
+                background: url(../img/ico/eyebrows.png) no-repeat center;
+            }
+            &.eyes::after {
+                margin-top: -15px;
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../img/ico/eyes.png) no-repeat center;
+            }
+            &.lips::after {
+                margin-top: -15px;
+                content: '';
+                display: block;
+                width: 27px;
+                height: 16px;
+                background: url(../img/ico/lips.png) no-repeat center;
+            }
+            &.chin::after {
+                margin-top: -15px;
+                content: '';
+                display: block;
+                width: 27px;
+                height: 27px;
+                background: url(../img/ico/chin.png) no-repeat center;
+            }
+            &:hover,
+            &.active {
+                span {
+                    color: #1B76FF;
+                }
+                &.nose::after {
+                    background: url(../img/ico/nose_h.png) no-repeat center;
+                }
+                &.eyebrows::after {
+                    background: url(../img/ico/eyebrows_h.png) no-repeat center;
+                }
+                &.eyes::after {
+                    background: url(../img/ico/eyes_h.png) no-repeat center;
+                }
+                &.lips::after {
+                    background: url(../img/ico/lips_h.png) no-repeat center;
+                }
+                &.chin::after {
+                    background: url(../img/ico/chin_h.png) no-repeat center;
+                }
+            }
+        }
+    }
+}
+
+.hair-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}

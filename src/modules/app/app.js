@@ -6,8 +6,8 @@ import Background                     from '../bg'
 import TestModal                      from '../test-modal'
 import Walkietalkie                   from '../walkietalkie/Walkietalkie';
 import AuthMain                       from '../authorization/AuthMain';
-import CreatePlayer                   from '../createPlayer/old/CreatePlayer';
-import CharacterSelection             from '../characterSelection/characterSelection';  
+import CharacterSelection             from '../characterSelection/characterSelection';
+import CharacterEditor                from '../characterEditor/characterEditor';  
 import Hud                            from '../hud/Hud';
 import Inventory                      from '../inventory/Inventory'  
 import AccountMenu                    from '../accountmenu/AccountMenu'
@@ -17,7 +17,6 @@ import Bank                           from '../bank/Bank'
 import CarShop                        from '../carshop/CarShop'
 import Certificate                    from '../certificate/Certificate'
 import DonateMenu                     from '../donate/DonateMenu'
-import EditorMain                     from '../editorplayer/EditorMain';
 import GunShop                        from '../hudmenus/gunshop/GunShop';
 import CarRent                        from '../hudmenus/carrent/CarRent';
 import Dialog                         from '../hudmenus/dialog/Dialog';
@@ -43,13 +42,12 @@ export default function App () {
   return (
     <>
       {devModules}
-      <EditorMain />
       <Walkietalkie />
       <Notifications />
       <div className="box" id="box">
         <AuthMain />
-        <CreatePlayer/>
         <CharacterSelection/>
+        <CharacterEditor/>
         <Hud />
         <Inventory />
         {/* TODO  // Дописать тесты*/}

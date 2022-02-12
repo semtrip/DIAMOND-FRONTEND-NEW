@@ -1,0 +1,152 @@
+.characterInfoBox {
+    width: 558px;
+    height: 641px;
+    background: linear-gradient(246.85deg, rgba(0, 0, 0, 0.2) 0%, rgba(52, 82, 126, 0.146635) 43.23%, rgba(0, 0, 0, 0.106) 100%), #17181B;
+    border-radius: 5px;
+    padding: 39px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 35px;
+    .logo {
+        width: 181px;
+        height: 40px;
+        background: url(../img/logo.png);
+    }
+    .inputs {
+        width: 481px;
+        height: 495.87px;
+        .title {
+            font-weight: 600;
+            font-size: 18px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            &::before {
+                content: '';
+                display: block;
+                width: 67px;
+                height: 2px;
+                background: linear-gradient(270deg, #3A89FF 0%, rgba(21, 24, 33, 0) 102.3%);
+                margin-right: 7px;
+            }
+        }
+        .gender {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            div {
+                width: 187px;
+                height: 103.38px;
+                left: 0px;
+                top: 0px;
+                background: #242932;
+                border-radius: 6px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background: #0085FF;
+                    &.man::after {
+                        opacity: 1;
+                    }
+                    &.wooman::after {
+                        opacity: 1;
+                    }
+                }
+                &.active {
+                    background: #0085FF;
+                    &.man::after {
+                        opacity: 1;
+                    }
+                    &.wooman::after {
+                        opacity: 1;
+                    }
+                }
+                &.man::after {
+                    content: '';
+                    width: 48px;
+                    height: 48px;
+                    display: block;
+                    background: url(../img/man.png);
+                    opacity: .5;
+                }
+                &.wooman::after {
+                    content: '';
+                    width: 48px;
+                    height: 48px;
+                    display: block;
+                    background: url(../img/wooman.png);
+                    opacity: .5;
+                }
+            }
+        }
+        .input {
+            position: relative;
+            width: 100%;
+            height: 66.46px;
+            border: 2px solid #838D9D;
+            box-sizing: border-box;
+            border-radius: 3px;
+            padding: 0 22px;
+            margin-bottom: 32px;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            &.error {
+                border: 2px solid #E50B0B;
+                i {
+                    content: '';
+                    width: 100%;
+                    height: 15px;
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                    font-size: 12px;
+                    text-align: right;
+                    color: #E50B0B;
+                }
+                span {
+                    color: #E50B0B;
+                }
+                *::placeholder {
+                    color: #E50B0B;
+                }
+            }
+            span {
+                position: absolute;
+                top: -11px;
+                left: 10px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                color: #838D9D;
+                background: #171A1F;
+                padding: 0 5px;
+            }
+            input {
+                width: 100%;
+                height: 100%;
+                font-family: 'Montserrat';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                color: #fff;
+                text-transform: capitalize;
+                &::placeholder {
+                    color: #838D9D;
+                }
+            }
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+@import url(../../../fonts/stylesheet.css);
+.editorBox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    padding-top: 142px;
+    box-sizing: border-box;
+    .editor {
+        position: relative;
+        width: 572px;
+        height: 602px;
+        background: linear-gradient(246.85deg, rgba(0, 0, 0, 0.2) 0%, rgba(52, 82, 126, 0.146635) 43.23%, rgba(0, 0, 0, 0.106) 100%), #17181B;
+        margin-right: 35px;
+        padding: 38px 24px;
+        box-sizing: border-box;
+        .nav {
+            width: 80px;
+            background: #242932;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: -100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            .link {
+                width: 100%;
+                height: 46.8px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.parents::after {
+                    display: block;
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background: url(../img/ico/parents.png) no-repeat center;
+                }
+                &.face::after {
+                    display: block;
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background: url(../img/ico/face.png) no-repeat center;
+                }
+                &.make::after {
+                    display: block;
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background: url(../img/ico/make.png) no-repeat center;
+                }
+                &.clothes::after {
+                    display: block;
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background: url(../img/ico/clothes.png) no-repeat center;
+                }
+                &.haris::after {
+                    display: block;
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background: url(../img/ico/haris.png) no-repeat center;
+                }
+                &:hover {
+                    &.parents::after {
+                        background: url(../img/ico/parents_h.png) no-repeat center;
+                    }
+                    &.face::after {
+                        background: url(../img/ico/face_h.png) no-repeat center;
+                    }
+                    &.make::after {
+                        background: url(../img/ico/make_h.png) no-repeat center;
+                    }
+                    &.clothes::after {
+                        background: url(../img/ico/clothes_h.png) no-repeat center;
+                    }
+                    &.haris::after {
+                        background: url(../img/ico/haris_h.png) no-repeat center;
+                    }
+                }
+                &.active {
+                    &.parents::after {
+                        background: url(../img/ico/parents_h.png) no-repeat center;
+                    }
+                    &.face::after {
+                        background: url(../img/ico/face_h.png) no-repeat center;
+                    }
+                    &.make::after {
+                        background: url(../img/ico/make_h.png) no-repeat center;
+                    }
+                    &.clothes::after {
+                        background: url(../img/ico/clothes_h.png) no-repeat center;
+                    }
+                    &.haris::after {
+                        background: url(../img/ico/haris_h.png) no-repeat center;
+                    }
+                }
+            }
+        }
+        .btns {
+            position: absolute;
+            left: 0;
+            bottom: -79px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 79px;
+            .btn {
+                cursor: pointer;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.random {
+                    width: 80px;
+                    background: linear-gradient(232.03deg, #F06F27 -8.8%, #FF8642 143.47%);
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 46px;
+                        height: 46px;
+                        background: url(../img/random.png) no-repeat center;
+                    }
+                }
+                &.create {
+                    width: 412px;
+                    background: #1B76FF;
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                    &::after {
+                        content: 'Create';
+                        display: block;
+                    }
+                }
+                &.exit {
+                    width: 80px;
+                    background: linear-gradient(225.72deg, #FE4545 0%, #B71F1F 100%);
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 38px;
+                        height: 38px;
+                        background: url(../img/exit.png) no-repeat center;
+                    }
+                }
+            }
+        }
+    }
+}
