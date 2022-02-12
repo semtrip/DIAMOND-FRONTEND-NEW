@@ -5,7 +5,7 @@ class CharacterEditorStore {
     constructor() {
         makeAutoObservable(this, {}, { deep: true })
     }
-    show = false
+    show = true
     state = {
         input_editor_face: [
             {value: 0 }, //Eyebrow height
@@ -116,7 +116,7 @@ class CharacterEditorStore {
                 mp.trigger('client:events:custom:set' // eslint-disable-line
                     , JSON.stringify(this.state.input_editor_face), JSON.stringify(this.state.input_editor_nose)
                     , JSON.stringify(this.state.input_editor_eyes_lips), JSON.stringify(this.state.input_editor_face_last), this.state.cheked_sex
-                    , this.state.slider[0].index_help, this.state.slider[1].index_help, this.state.slider[2].index_help, this.state.slider[3].index_help, true)
+                    , this.state.slider[0].index_help, this.state.slider[1].index_help, this.state.slider[2].index_help, this.state.slider[3].index_help, true,  this.state.info_character)
     
                 mp.trigger('client:events:custom:save', // eslint-disable-line
                     this.state.stats.endurance, this.state.stats.driving, this.state.stats.flying, this.state.stats.psychics, this.state.stats.shooting, this.state.stats.stealth, this.state.stats.strength);
@@ -124,7 +124,7 @@ class CharacterEditorStore {
                 mp.trigger('client:events:custom:choiceRole', // eslint-disable-line
                     0)
             } catch (e) {
-                console.log(e);
+                console.log('save', e);
             }
         }
     }
@@ -133,9 +133,9 @@ class CharacterEditorStore {
             mp.trigger('client:events:custom:set' // eslint-disable-line
                 , JSON.stringify(this.state.input_editor_face), JSON.stringify(this.state.input_editor_nose)
                 , JSON.stringify(this.state.input_editor_eyes_lips), JSON.stringify(this.state.input_editor_face_last), this.state.cheked_sex
-                , this.state.slider[0].index_help, this.state.slider[1].index_help, this.state.slider[2].index_help, this.state.slider[3].index_help, false, this.state.info_character)
+                , this.state.slider[0].index_help, this.state.slider[1].index_help, this.state.slider[2].index_help, this.state.slider[3].index_help, false)
         } catch (e) {
-            console.log(e);
+            console.log('set',e);
         }
     }
     setSex() {
@@ -143,7 +143,7 @@ class CharacterEditorStore {
             mp.trigger('client:events:custom:setSex' // eslint-disable-line
                 , this.state.cheked_sex)
         } catch (e) {
-            console.log(e);
+            console.log('set sex',e);
         }
     }
     getRandomArbitrary(min, max) {
