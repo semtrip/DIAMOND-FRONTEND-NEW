@@ -5,7 +5,7 @@ class CharacterEditorStore {
     constructor() {
         makeAutoObservable(this, {}, { deep: true })
     }
-    show = true
+    show = false
     state = {
         input_editor_face: [
             {value: 0 }, //Eyebrow height

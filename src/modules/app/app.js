@@ -7,8 +7,8 @@ import TestModal                      from '../test-modal'
 import Walkietalkie                   from '../walkietalkie/Walkietalkie';
 import AuthMain                       from '../authorization/AuthMain';
 import CharacterSelection             from '../characterSelection/characterSelection';
-// import CharacterEditor                from '../characterEditor/characterEditor';  
-import EditorPlayer                   from '../editorplayer/EditorPlayer';
+import CharacterEditor                from '../characterEditor/characterEditor';  
+//import EditorPlayer                   from '../editorplayer/EditorPlayer';
 import Hud                            from '../hud/Hud';
 import Inventory                      from '../inventory/Inventory'  
 import AccountMenu                    from '../accountmenu/AccountMenu'
@@ -48,8 +48,8 @@ export default function App () {
       <div className="box" id="box">
         <AuthMain />
         <CharacterSelection/>
-        {/* <CharacterEditor/> */}
-        <EditorPlayer/>
+        <CharacterEditor/>
+        {/* <EditorPlayer/> */}
         <Hud />
         <Inventory />
         {/* TODO  // Дописать тесты*/}

@@ -24,7 +24,7 @@ const AuthMain = () => {
         })
     }, []);
 
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     const [acceptRules, setAcceptRules] = useState(true);
 

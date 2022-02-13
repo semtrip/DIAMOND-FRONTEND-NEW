@@ -91,12 +91,12 @@ const CharacterInfo = observer(()=>{
                 <div className={errorName.length === 0 ? 'input' : 'input error'}>
                     <i>{errorName}</i>
                     <span>Name</span>
-                    <input type="text" placeholder="Input..." maxLength='15' data-name="name" onChange={validText}/>
+                    <input type="text" placeholder="Input..." maxLength='15' data-name="name"/>
                 </div>
                 <div className={errorSurname.length === 0 ? 'input' : 'input error'}>
                     <i>{errorSurname}</i>
                     <span>Surname</span>
-                    <input type="text" placeholder="Input..." maxLength='15' data-name="surname" onChange={validText}/>
+                    <input type="text" placeholder="Input..." maxLength='15' data-name="surname"/>
                 </div>
                 <div className={errorAge.length === 0 ? 'input' : 'input error'}>
                     <i>{errorAge}</i>
