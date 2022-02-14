@@ -15,12 +15,6 @@ const CharacterInfo = observer(()=>{
     const [errorSurname, setErrorSurname] = useState('');
     const [errorAge, setErrorAge] = useState('');
 
-    let valid = {
-        name: false,
-        surname: false,
-        age: false
-    }
-
 
     const validText = (e)=>{
         let data = e.target.value
@@ -30,34 +24,28 @@ const CharacterInfo = observer(()=>{
             setName(data)
             if (data === '') {
                 setErrorName('')
-                valid.name = false
-                state.validInfo = valid
+                state.validInfo.name = false
             } else if(!reg.test(data)) {
                     setErrorName('The name must contain only Latin letters')
-                    valid.name = false
-                    state.validInfo = valid
+                    state.validInfo.name = false
             } else {
                 setErrorName('')
-                valid.name = true
                 state.info_character.first_name = data
-                state.validInfo = valid
+                state.validInfo.name = true
             } 
         }
         if(id === 'surname') {
             setSurname(data)
             if (data === '') {
                 setErrorSurname('')
-                valid.surname = false
-                state.validInfo = valid
+                state.validInfo.surname = false
             } else if(!reg.test(data)) {
                 setErrorSurname('The surname must contain only Latin letters')
-                valid.surname = false
-                state.validInfo = valid
+                state.validInfo.surname = false
             } else {
                 setErrorSurname('')
-                valid.surname = true
                 state.info_character.last_name = data
-                state.validInfo = valid
+                state.validInfo.surname = true
             }
         }
     }
@@ -65,17 +53,22 @@ const CharacterInfo = observer(()=>{
         let data = e.target.value
         if (data === '') {
             setErrorAge('')
-            valid.age = false
-            state.validInfo = valid
+            state.validInfo.age = false
         } else if(data >= 18 && data <= 90) {
             setErrorAge('')
-            valid.age = true
             state.info_character.age = data
-            state.validInfo = valid
+            state.validInfo.age = true
         } else {
             setErrorAge('The age must be between 18 and 90')
-            valid.age = false
-            state.validInfo = valid
+            state.validInfo.age = false
+        }
+    }
+    const setSex = () => {
+        try {
+            mp.trigger('client:events:custom:setSex', state.cheked_sex) // eslint-disable-line
+        } catch (e) {
+            console.log('Func set sex', e)
+            console.log('set sex', state.cheked_sex);
         }
     }
     return (
@@ -84,19 +77,19 @@ const CharacterInfo = observer(()=>{
             <div className="inputs">
                 <div className="title">Gender selection</div>
                 <div className="gender">
-                    <div className={gender ? 'man' : 'man active'} onClick={()=>{{setGender(false)}; {state.cheked_sex = false}; {storeCharacterEditor.setSex()}}}/>
-                    <div className={!gender ? 'wooman' : 'wooman active'} onClick={()=>{{setGender(true)}; {state.cheked_sex = true}; {storeCharacterEditor.setSex()}}}/>
+                    <div className={gender ? 'man' : 'man active'} onClick={()=>{setGender(false); setSex()}}/>
+                    <div className={!gender ? 'wooman' : 'wooman active'} onClick={()=>{setGender(true); setSex()}}/>
                 </div>
                 <div className="title">Personal data</div>
                 <div className={errorName.length === 0 ? 'input' : 'input error'}>
                     <i>{errorName}</i>
                     <span>Name</span>
-                    <input type="text" placeholder="Input..." maxLength='15' data-name="name"/>
+                    <input type="text" placeholder="Input..." maxLength='15' data-name="name" onChange={validText}/>
                 </div>
                 <div className={errorSurname.length === 0 ? 'input' : 'input error'}>
                     <i>{errorSurname}</i>
                     <span>Surname</span>
-                    <input type="text" placeholder="Input..." maxLength='15' data-name="surname"/>
+                    <input type="text" placeholder="Input..." maxLength='15' data-name="surname" onChange={validText}/>
                 </div>
                 <div className={errorAge.length === 0 ? 'input' : 'input error'}>
                     <i>{errorAge}</i>

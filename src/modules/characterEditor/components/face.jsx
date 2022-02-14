@@ -1,5 +1,7 @@
 import { observer } from "mobx-react-lite";
+import { action } from "mobx";
 import React, {useState} from "react";
+import InputRange from 'react-input-range';
 
 import '../css/module.scss'
 import storeCharacterEditor from "../store.characterEditor";
@@ -16,8 +18,8 @@ const maxTypeFreckles = 17
 const Face = observer(()=>{
     const state = storeCharacterEditor.state
     const [path, setPath] = useState('nose');
-    const [eyebrowsId, setEyebrowsId] = useState(0);
-    const [frecklesId, setFrecklesId] = useState(0);
+    const [eyebrowsId, setEyebrowsId] = useState(state.input_editor_face_last[4].index_help);
+    const [frecklesId, setFrecklesId] = useState(state.input_editor_face_last[7].index_help);
 
     const setEyebrows = (type) => {
         let id = 0
@@ -27,12 +29,10 @@ const Face = observer(()=>{
                     id = maxTypeEyebrows
                     setEyebrowsId(id)
                     state.input_editor_face_last[4].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = eyebrowsId - 1
                     setEyebrowsId(id)
                     state.input_editor_face_last[4].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             case 'next':
@@ -40,17 +40,16 @@ const Face = observer(()=>{
                     id = 0
                     setEyebrowsId(id)
                     state.input_editor_face_last[4].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = eyebrowsId + 1
                     setEyebrowsId(id)
                     state.input_editor_face_last[4].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             default:
                 break;
         }
+        storeCharacterEditor.setCustomization()
     }
     const setFreckles = (type) => {
         let id = 0
@@ -60,12 +59,10 @@ const Face = observer(()=>{
                     id = maxTypeFreckles
                     setFrecklesId(id)
                     state.input_editor_face_last[7].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = frecklesId - 1
                     setFrecklesId(id)
                     state.input_editor_face_last[7].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             case 'next':
@@ -73,17 +70,16 @@ const Face = observer(()=>{
                     id = 0
                     setFrecklesId(id)
                     state.input_editor_face_last[7].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = frecklesId + 1
                     setFrecklesId(id)
                     state.input_editor_face_last[7].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             default:
                 break;
         }
+        storeCharacterEditor.setCustomization()
     }
 
     return (
@@ -101,7 +97,12 @@ const Face = observer(()=>{
                 <>
                     <div className="range">
                         <div className="title">Nose width</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_nose[0].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}
+                        defaultValue={state.input_editor_nose[0].value} 
+                        onChange={action(e => {
+                            state.input_editor_nose[0].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -109,7 +110,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Nose height</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_nose[1].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100}  max={100}    
+                        defaultValue={state.input_editor_nose[1].value}
+                        onChange={action(e => {
+                            state.input_editor_nose[1].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -117,7 +123,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Nose tip length</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_nose[2].value = e.target.value};{storeCharacterEditor.setCustomization()}}} />
+                        <input type="range" step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_nose[2].value}
+                        onChange={action(e => {
+                            state.input_editor_nose[2].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -125,7 +136,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Nose tip height</div>
-                        <input type="range"  step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_nose[3].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_nose[3].value}
+                        onChange={action(e => {
+                            state.input_editor_nose[3].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Below</span>
                             <span>Higher</span>
@@ -133,7 +149,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Nose Bridge depth</div>
-                        <input type="range"  step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_nose[4].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_nose[4].value}
+                        onChange={action(e => {
+                            state.input_editor_nose[4].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -141,7 +162,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Broken nose</div>
-                        <input type="range"  step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_nose[5].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_nose[5].value}
+                        onChange={action(e => {
+                            state.input_editor_nose[5].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -164,14 +190,24 @@ const Face = observer(()=>{
                         <div className="color">
                         {   
                             colorHair.map((item, i)=>(
-                                <div className="item" style={{background: item, 'box-shadow': '0px 0px 3px' + item}} onClick={()=>{{state.input_editor_face_last[5].index_help = i}; {storeCharacterEditor.setCustomization()}}}/>
+                                <div className="item" key={i} 
+                                style={{background: item, 'boxShadow': '0px 0px 3px' + item}} 
+                                onClick={action(()=>{
+                                    state.input_editor_face_last[5].index_help = i
+                                    storeCharacterEditor.setCustomization()
+                                    })}/>
                             ))
                         }
                         </div>
                     </div>
                     <div className="range">
                         <div className="title">Eyebrow height</div>
-                        <input type="range"  step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[0].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100}  max={100} 
+                        defaultValue={state.input_editor_face[0].value} 
+                        onChange={action(e => {
+                            state.input_editor_face[0].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Below</span>
                             <span>More</span>
@@ -179,7 +215,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Eyebrow depth</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[1].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}
+                        defaultValue={state.input_editor_face[1].value}
+                        onChange={action(e => {
+                            state.input_editor_face[1].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Darker</span>
                             <span>Lighter</span>
@@ -191,7 +232,12 @@ const Face = observer(()=>{
                 <>
                     <div className="range">
                         <div className="title">Epicanthus</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_eyes_lips[0].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100}  
+                        defaultValue={state.input_editor_eyes_lips[0].value} max={100} 
+                        onChange={action(e => {
+                            state.input_editor_eyes_lips[0].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -202,7 +248,12 @@ const Face = observer(()=>{
                         <div className="color">
                         {   
                             colorsEyes.map((item, i)=>(
-                                <div className="item" style={{background: item, 'box-shadow': '0px 0px 3px' + item}} onClick={()=>{{state.input_editor_face_last[6].index_help = i}; {storeCharacterEditor.setCustomization()}}}/>
+                                <div className="item" key={i} 
+                                style={{background: item, 'boxShadow': '0px 0px 3px' + item}} 
+                                onClick={action(()=>{
+                                    state.input_editor_face_last[6].index_help = i
+                                    storeCharacterEditor.setCustomization()
+                                    })}/>
                             ))
                         }
                         </div>
@@ -213,7 +264,12 @@ const Face = observer(()=>{
                 <>
                     <div className="range">
                         <div className="title">Lip thickness</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_eyes_lips[1].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}   
+                        defaultValue={state.input_editor_eyes_lips[1].value}
+                        onChange={action(e => {
+                            state.input_editor_eyes_lips[1].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -221,7 +277,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Cheekbone height</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[2].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_face[2].value}
+                        onChange={action(e => {
+                            state.input_editor_face[2].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -229,7 +290,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Cheekbone width</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[3].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_face[3].value}
+                        onChange={action(e => {
+                            state.input_editor_face[3].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -237,7 +303,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Cheek depth</div>
-                        <input type="range"step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[4].value = e.target.value};{storeCharacterEditor.setCustomization()}}} />
+                        <input type="range"step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_face[4].value} 
+                        onChange={action(e => {
+                            state.input_editor_face[4].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -249,7 +320,12 @@ const Face = observer(()=>{
                 <>
                     <div className="range">
                         <div className="title">Jaw width</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[5].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}   
+                        defaultValue={state.input_editor_face[5].value}
+                        onChange={action(e => {
+                            state.input_editor_face[5].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -257,7 +333,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Jaw shape</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[6].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}  
+                        defaultValue={state.input_editor_face[6].value} 
+                        onChange={action(e => {
+                            state.input_editor_face[6].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -265,7 +346,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Chin height</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[7].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}   
+                        defaultValue={state.input_editor_face[7].value}
+                        onChange={action(e => {
+                            state.input_editor_face[7].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -273,7 +359,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Chin width</div>
-                        <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[8].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range" step={1} min={-100} max={100}   
+                        defaultValue={state.input_editor_face[8].value}
+                        onChange={action(e => {
+                            state.input_editor_face[8].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -281,7 +372,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Chin depth</div>
-                        <input type="range"  step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[9].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range"  step={1} min={-100} max={100}   
+                        defaultValue={state.input_editor_face[9].value}
+                        onChange={action(e => {
+                            state.input_editor_face[9].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -289,7 +385,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Chin padding</div>
-                        <input type="range"  step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[10].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range"  step={1} min={-100} max={100}   
+                        defaultValue={state.input_editor_face[10].value}
+                        onChange={action(e => {
+                            state.input_editor_face[10].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>
@@ -297,7 +398,12 @@ const Face = observer(()=>{
                     </div>
                     <div className="range">
                         <div className="title">Neck girth</div>
-                        <input type="range"  step={1} min={-100}  max={100} onChange={(e)=>{{state.input_editor_face[11].value = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                        <input type="range"  step={1} min={-100} max={100}   
+                        defaultValue={state.input_editor_face[11].value}
+                        onChange={action(e => {
+                            state.input_editor_face[11].value = e.target.value
+                            storeCharacterEditor.setCustomization()
+                        })} />
                         <div className="text">
                             <span>Less</span>
                             <span>More</span>

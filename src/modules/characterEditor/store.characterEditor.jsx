@@ -2,10 +2,6 @@ import { makeAutoObservable } from "mobx"
 
 
 class CharacterEditorStore {
-    constructor() {
-        makeAutoObservable(this, {}, { deep: true })
-    }
-    show = false
     state = {
         input_editor_face: [
             {value: 0 }, //Eyebrow height
@@ -108,107 +104,20 @@ class CharacterEditorStore {
             last_name: '',
             old: '',
         }, 
-        validInfo: {}
-    }
-    saveCustomization() {
-        if(this.state.validInfo.name && this.state.validInfo.surname && this.state.validInfo.age) {
-            try {
-                mp.trigger('client:events:custom:set' // eslint-disable-line
-                    , JSON.stringify(this.state.input_editor_face), JSON.stringify(this.state.input_editor_nose)
-                    , JSON.stringify(this.state.input_editor_eyes_lips), JSON.stringify(this.state.input_editor_face_last), this.state.cheked_sex
-                    , this.state.slider[0].index_help, this.state.slider[1].index_help, this.state.slider[2].index_help, this.state.slider[3].index_help, true,  this.state.info_character)
-    
-                mp.trigger('client:events:custom:save', // eslint-disable-line
-                    this.state.stats.endurance, this.state.stats.driving, this.state.stats.flying, this.state.stats.psychics, this.state.stats.shooting, this.state.stats.stealth, this.state.stats.strength);
-                
-                mp.trigger('client:events:custom:choiceRole', // eslint-disable-line
-                    0)
-            } catch (e) {
-                console.log('save', e);
-            }
+        validInfo: {
+            name: false,
+            surname: false,
+            age: false
         }
     }
     setCustomization() {
         try {
-            mp.trigger('client:events:custom:set' // eslint-disable-line
-                , JSON.stringify(this.state.input_editor_face), JSON.stringify(this.state.input_editor_nose)
-                , JSON.stringify(this.state.input_editor_eyes_lips), JSON.stringify(this.state.input_editor_face_last), this.state.cheked_sex
-                , this.state.slider[0].index_help, this.state.slider[1].index_help, this.state.slider[2].index_help, this.state.slider[3].index_help, false)
+            mp.trigger('client:events:custom:set' , JSON.stringify(this.state.input_editor_face), JSON.stringify(this.state.input_editor_nose), JSON.stringify(this.state.input_editor_eyes_lips), JSON.stringify(this.state.input_editor_face_last), this.state.cheked_sex, this.state.slider[0].index_help, this.state.slider[1].index_help, this.state.slider[2].index_help, this.state.slider[3].index_help, false) // eslint-disable-line
         } catch (e) {
             console.log('set',e);
         }
     }
-    setSex() {
-        try {
-            mp.trigger('client:events:custom:setSex' // eslint-disable-line
-                , this.state.cheked_sex)
-        } catch (e) {
-            console.log('set sex',e);
-        }
-    }
-    getRandomArbitrary(min, max) {
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-    randomize() {
-        for (let i = 0; i < this.state.input_editor_face.length; i++) {
-            this.state.input_editor_face[i].value = this.getRandomArbitrary(-100, 100)
-        };
-        for (let i = 0; i < this.state.input_editor_nose.length; i++) {
-            this.state.input_editor_nose[i].value = this.getRandomArbitrary(-100, 100)
-        };
-        for (let i = 0; i < this.state.input_editor_eyes_lips.length; i++) {
-            this.state.input_editor_eyes_lips[i].value = this.getRandomArbitrary(-100, 100)
-        };
-        for (let i = 0; i < this.state.input_editor_face_last.length; i++) {
-            this.state.input_editor_face_last[i].index_help = this.getRandomArbitrary(0, this.state.input_editor_face_last[i].maxVal)
-        };
-        this.state.slider[0].index_help = this.getRandomArbitrary(0, 24)
-        this.state.slider[1].index_help = this.getRandomArbitrary(0, 22)
-        this.state.slider[2].index_help = this.getRandomArbitrary(0, 20)
-        this.state.slider[3].index_help = this.getRandomArbitrary(0, 20)
-        setTimeout(() => {
-            this.setCustomization();
-        }, 40);
-    }
-    resetEditorCharacter(i) {
-        let copy;
-        switch (i) {
-            case 1:
-                copy = this.state.input_editor_face;
-                for (i = 0; i < copy.length; i++) {
-                    copy[i].value = 0
-                }
-                this.state.input_editor_face =copy
-                break;
-            case 2:
-                copy = this.state.input_editor_nose;
-                for (i = 0; i < copy.length; i++) {
-                    copy[i].value = 0
-                }
-                this.state.input_editor_nose = copy
-                copy = this.state.input_editor_eyes_lips;
-                for (i = 0; i < copy.length; i++) {
-                    copy[i].value = 0
-                }
-                this.state.input_editor_eyes_lips = copy
-                break;
-            case 3:
-                copy = this.state.input_editor_face_last;
-                for (i = 0; i < copy.length; i++) {
-                    copy[i].index_help = 0
-                }
-                this.state.input_editor_face_last = copy
-                break;
-            default:
-                break;
-        }
-        this.setCustomization();
-    }
-    resetDefaut() {
-        this.resetEditorCharacter(1)
-        this.resetEditorCharacter(2)
-        this.resetEditorCharacter(3)
-    }
+
 }
 
 export default new CharacterEditorStore()

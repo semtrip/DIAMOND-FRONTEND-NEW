@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import React, {useState} from "react";
+import { action } from "mobx";
 
 import '../css/module.scss'
 
@@ -12,10 +13,12 @@ const mother = [21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,4
 const fatherName = ['Benjamin','Daniel', 'Joshua', 'Noah', 'Andrew', 'Juan', 'Alex', 'Isaac', 'Evan', 'Ethan', 'Vincent', 'Angel', 'Diego', 'Adrian', 'Gabriel', 'Michael', 'Santiago','Kevin', 'Louis', 'Samuel', 'Anthony', 'Claude', 'Niko', 'John']
 const motherName = ['Hannah','Audrey','Jasmine','Giselle','Amelia','Isabella','Zoe','Ava','Camila','Violet','Sophia','Evelyn','Nicole','Ashley','Grace','Brianna','Natalie','Olivia','Elizabeth','Charlotte','Emma','Misty']
 
+console.log('length array 1 ', fatherName.length)
+console.log('length array 2 ', motherName.length)
 const Parents = observer(()=>{
     const state = storeCharacterEditor.state
-    const [fatherId, setFatherId] = useState(0);
-    const [motherId, setMotherId] = useState(0);
+    const [fatherId, setFatherId] = useState(state.slider[1].index_help);
+    const [motherId, setMotherId] = useState(state.slider[0].index_help);
 
     const setFather = (data) => {
         let id = 0
@@ -25,13 +28,11 @@ const Parents = observer(()=>{
                     id = father.length - 1
                     setFatherId(id)
                     state.slider[1].index_help = id
-                    storeCharacterEditor.setCustomization()
 
                 } else {
                     id = fatherId - 1
                     setFatherId(id)
                     state.slider[1].index_help = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             case 'next':
@@ -39,17 +40,17 @@ const Parents = observer(()=>{
                     id = 0
                     setFatherId(id)
                     state.slider[1].index_help = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = fatherId + 1
                     setFatherId(id)
                     state.slider[1].index_help = id
-                    storeCharacterEditor.setCustomization()
+                    
                 }
                 break;
             default:
                 break;
         }
+        storeCharacterEditor.setCustomization()
     }
     const setMother = (data) => {
         let id = 0
@@ -59,12 +60,10 @@ const Parents = observer(()=>{
                     id = mother.length - 1
                     setMotherId(id)
                     state.slider[0].index_help = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = motherId - 1
                     setMotherId(id)
                     state.slider[0].index_help = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             case 'next':
@@ -72,17 +71,16 @@ const Parents = observer(()=>{
                     id = 0
                     setMotherId(id)
                     state.slider[0].index_help = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = motherId + 1
                     setMotherId(id)
                     state.slider[0].index_help = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             default:
                 break;
         }
+        storeCharacterEditor.setCustomization()
     }
 
     return (
@@ -108,7 +106,12 @@ const Parents = observer(()=>{
             </div>
             <div className="range">
                 <div className="title">Similarity with parents</div>
-                <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.slider[2].index_help = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                <input type="range" step={1} min={0} max={20}  
+                defaultValue={state.slider[2].index_help}
+                onChange={action(e => {
+                    state.slider[2].index_help = e.target.value
+                    storeCharacterEditor.setCustomization()
+                })} />
                 <div className="text">
                     <span>Mother</span>
                     <span>Father</span>
@@ -116,7 +119,12 @@ const Parents = observer(()=>{
             </div>
             <div className="range">
                 <div className="title">Skin color</div>
-                <input type="range" step={1} min={-100}  max={100} onChange={(e)=>{{state.slider[4].index_help = e.target.value};{storeCharacterEditor.setCustomization()}}}/>
+                <input type="range" step={1} min={0} max={20}  
+                defaultValue={state.slider[3].index_help}
+                onChange={action(e => {
+                    state.slider[3].index_help = e.target.value
+                    storeCharacterEditor.setCustomization()
+                })} />
                 <div className="text">
                     <span>Darker</span>
                     <span>Lighter</span>

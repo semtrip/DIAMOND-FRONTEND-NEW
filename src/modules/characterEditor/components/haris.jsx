@@ -1,3 +1,4 @@
+import { action } from "mobx";
 import { observer } from "mobx-react-lite";
 import React, {useState} from "react";
 import storeCharacterEditor from "../store.characterEditor";
@@ -9,8 +10,8 @@ const colorHair = ['#1c1f21', '#272a2c', '#312e2c', '#35261c', '#4b321f', '#5c3b
 
 const Haris = observer(()=>{
     const state = storeCharacterEditor.state
-    const [hairstyleId, setHairstyleId] = useState(0);
-    const [hairstyleOptionId, setHairstyleOptionId] = useState(0);
+    const [hairstyleId, setHairstyleId] = useState(state.input_editor_face_last[0].index_help);
+    const [hairstyleOptionId, setHairstyleOptionId] = useState(state.input_editor_face_last[1].index_help);
     const setHairstyl = (type) => {
         let id = 0
         switch (type) {
@@ -19,12 +20,10 @@ const Haris = observer(()=>{
                     id = maxTypeHairstyl
                     setHairstyleId(id)
                     state.input_editor_face_last[0].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = hairstyleId - 1
                     setHairstyleId(id)
                     state.input_editor_face_last[0].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             case 'next':
@@ -32,17 +31,16 @@ const Haris = observer(()=>{
                     id = 0
                     setHairstyleId(id)
                     state.input_editor_face_last[0].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = hairstyleId + 1
                     setHairstyleId(id)
                     state.input_editor_face_last[0].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             default:
                 break;
         }
+        storeCharacterEditor.setCustomization()
     }
     const setHairstylOption = (type) => {
         let id = 0
@@ -52,12 +50,10 @@ const Haris = observer(()=>{
                     id = maxTypeHairstyl
                     setHairstyleOptionId(id)
                     state.input_editor_face_last[1].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = hairstyleOptionId - 1
                     setHairstyleOptionId(id)
                     state.input_editor_face_last[1].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             case 'next':
@@ -65,17 +61,16 @@ const Haris = observer(()=>{
                     id = 0
                     setHairstyleOptionId(id)
                     state.input_editor_face_last[1].value = id
-                    storeCharacterEditor.setCustomization()
                 } else {
                     id = hairstyleOptionId + 1
                     setHairstyleOptionId(id)
                     state.input_editor_face_last[1].value = id
-                    storeCharacterEditor.setCustomization()
                 }
                 break;
             default:
                 break;
         }
+        storeCharacterEditor.setCustomization()
     }
     return (
         <div className="hair-box">
@@ -101,7 +96,12 @@ const Haris = observer(()=>{
                     <div className="color">
                     {   
                         colorHair.map((item, i)=>(
-                            <div className="item" style={{background: item, 'box-shadow': '0px 0px 3px' + item}} onClick={()=>{{state.input_editor_face_last[2].index_help = i}; {storeCharacterEditor.setCustomization()}}}/>
+                            <div className="item" key={i}
+                            style={{background: item, 'boxShadow': '0px 0px 3px' + item}} 
+                            onClick={action(()=>{
+                                state.input_editor_face_last[2].index_help = i
+                                storeCharacterEditor.setCustomization()
+                                })}/>
                         ))
                     }
                     </div>
@@ -111,7 +111,12 @@ const Haris = observer(()=>{
                     <div className="color">
                     {   
                         colorHair.map((item, i)=>(
-                            <div className="item" style={{background: item, 'box-shadow': '0px 0px 3px' + item}} onClick={()=>{{state.input_editor_face_last[3].index_help = i}; {storeCharacterEditor.setCustomization()}}}/>
+                            <div className="item" key={i}
+                            style={{background: item, 'boxShadow': '0px 0px 3px' + item}} 
+                            onClick={action(()=>{
+                                state.input_editor_face_last[3].index_help = i
+                                storeCharacterEditor.setCustomization()
+                                })}/>
                         ))
                     }
                     </div>
