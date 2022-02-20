@@ -25,6 +25,8 @@ const Hud = observer(() => {
                 state.show = true
             } else if (value.type === 'hide') {
                 state.show = false
+            } else if (value.type === 'updateMapSize') {
+                state.map = value.map
             } else return;
         })
         em.addHandler('hudl', value => {
@@ -64,7 +66,7 @@ const Hud = observer(() => {
                 state.wallet = value.wallet
                 state.card = value.card
                 state.background = value.background
-            } else return;
+            }  else return;
         })
         em.addHandler('hudk', value => {
             if (value.type === 'show') {
@@ -161,7 +163,9 @@ const Hud = observer(() => {
             } else return;
         })
     });
-
+    const marginMap = {
+        'margin-left': state.map.width + state.map.left + 20 + 'px'
+    }
 return state.show ? (
     <React.Fragment>
         <div className="hud-main">
@@ -174,7 +178,7 @@ return state.show ? (
                 <Logo/>
                 <MainMenu/>
             </div>
-            <div className='leftbottom'>
+            <div className='leftbottom' style={marginMap}>
                 <Player/>
                 <Gps/>
             </div>

@@ -6,7 +6,7 @@ class HudStore {
         makeAutoObservable(this, {}, { deep: true })
     }
     state = {
-        show: false,
+        show: true,
         showLogo: true,
         showPlayer: true,
         showGps: true,
@@ -34,6 +34,7 @@ class HudStore {
         district: 'Del Pero...',
         street: 'Загрузка...',
         distance: '',
+        map: { width: 0, height: 0, bottom: 0, left: 0 },
         showGang: false,
         showMafia: false,
         att: 0,
