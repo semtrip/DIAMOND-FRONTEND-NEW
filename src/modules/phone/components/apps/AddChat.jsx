@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
-// import Button from '@material-ui/core/Button';
-import Loader from '../Iphone/Loader';
+import Button from '@material-ui/core/Button';
+import Loader from '../Android/Loader';
 
 class AddChat extends React.Component {
     constructor(props) {
@@ -103,7 +103,7 @@ class AddChat extends React.Component {
                     <div className="u-title">
                         <div className="dedbit-u-texttittle">
                             <div className="u__back__container">
-                                <img src={`https://gta-5.ru/server/client/images/icons/components/phone/img/back.svg`} alt="" className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
+                                <img src={`https://gta-5.ru/server/client/images/icons/components/phone/img/back.svg`} className="u__back" height="16" onClick={() => this.props.historyGoBack()} />
                             </div>
                             <span className="u-texttittle">Onion Messenger</span>
                         </div>
@@ -111,27 +111,27 @@ class AddChat extends React.Component {
                     <div className="messenger-addchat">
                         {!this.state.loading ? 
                         <React.Fragment>
-                        <div className="text-place-m-mes">Enter the phone number</div>
+                        <div className="text-place-m-mes">Введите номер телефона</div>
                         <div className="m-mes-txtfield">
                             <TextField id="standard-basic1" label="" value={this.state.number}
-                                placeholder="Phone number" className="text-filed"
+                                placeholder="Номер телефона" className="text-filed"
                                 onChange={(e) => this.inputNumber(e)}
                             />
                         </div>
-                        <div className="text-place-m-mes">Enter the message</div>
+                        <div className="text-place-m-mes">Введите сообщение</div>
                         <div className="m-mes-txtfield">
                             <TextField
                                 value={this.state.message}
                                 id="standard-multiline-static"
                                 label=""
-                                placeholder="Field for enter the message..."
+                                placeholder="Поле для ввода сообщения..."
                                 multiline
                                 rows="10"
                                 onChange={(e) => this.inputMessage(e)}
                             />
                         </div>
                         <div className="position-btn-addchat">
-                            <span className="ios__button" onClick={() => this.sendMessage()}>Send</span>                      
+                            <span className="ios__button" onClick={() => this.sendMessage()}>Отправить</span>                      
                         </div>
                         </React.Fragment>
                         :

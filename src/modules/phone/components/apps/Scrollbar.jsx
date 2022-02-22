@@ -76,11 +76,11 @@ class Scrollbar extends React.Component {
                             })}
                         </div>
                         <div className="u-select-input">
-                            <div className="u-btn-w" onClick={this.props.closeScrollbar}>Close</div>
+                            <div className="u-btn-w" onClick={this.props.closeScrollbar}>Закрыть</div>
                             <div className="u-btn-w" onClick={() => {
                                 this.props.closeScrollbar();
                                 this.callback('checkbox', this.state.checked, this.state.uid, this.state.params)
-                            }}>Accept
+                            }}>Принять
                             </div>
                         </div>
                     </div>

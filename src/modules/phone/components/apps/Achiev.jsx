@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Animated } from 'react-animated-css';
+import { Animated } from 'react-animated-css';
 
 class Achiev extends React.Component {
     constructor(props) {

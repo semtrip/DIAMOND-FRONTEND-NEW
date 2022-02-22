@@ -4,8 +4,7 @@ import { Animated } from 'react-animated-css';
 
 import './css/phone.css'
 import '../../css/animate.css'
-import Iphone from './components/Iphone';
-
+import Android from './components/Android';
 const { EventManager: em } = window;
 
 class Phone extends React.Component {
@@ -13,7 +12,7 @@ class Phone extends React.Component {
         super(props)
         this.state = {
             show: false,
-            visible: true,
+            visible: false,
         }
     }
 
@@ -60,8 +59,8 @@ class Phone extends React.Component {
         return (
             <React.Fragment>
                 <div className="phone-position">
-                    <Animated animationIn="slideInUp" animationOut="slideOutDown" animationInDuration={300} animationOutDuration={300} isVisible={this.state.visible}>
-                        <Iphone />
+                    <Animated animationIn="slideInUp" animationOut="slideOutDown" animationInDuration="300" animationOutDuration="300" isVisible={this.state.visible}>
+                        <Android />
                     </Animated>
                 </div>
             </React.Fragment>

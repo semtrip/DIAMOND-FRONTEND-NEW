@@ -7,7 +7,7 @@ import storeCharacterEditor from "../store.characterEditor";
 
 const CharacterInfo = observer(()=>{
     const state = storeCharacterEditor.state
-    const [gender, setGender] = useState(false);
+    const [gender, setGender] = useState(true);
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [age, setAge] = useState('');
@@ -65,10 +65,10 @@ const CharacterInfo = observer(()=>{
     }
     const setSex = () => {
         try {
-            mp.trigger('client:events:custom:setSex', state.cheked_sex) // eslint-disable-line
+            mp.trigger('client:events:custom:setSex', gender) // eslint-disable-line
         } catch (e) {
             console.log('Func set sex', e)
-            console.log('set sex', state.cheked_sex);
+            console.log('set sex', gender);
         }
     }
     return (

@@ -19,28 +19,29 @@ const Haris = observer(()=>{
                 if (hairstyleId === 0) {
                     id = maxTypeHairstyl
                     setHairstyleId(id)
-                    state.input_editor_face_last[0].value = id
+                    state.input_editor_face_last[0].index_help = id
                 } else {
                     id = hairstyleId - 1
                     setHairstyleId(id)
-                    state.input_editor_face_last[0].value = id
+                    state.input_editor_face_last[0].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             case 'next':
                 if (hairstyleId === maxTypeHairstyl) {
                     id = 0
                     setHairstyleId(id)
-                    state.input_editor_face_last[0].value = id
+                    state.input_editor_face_last[0].index_help = id
                 } else {
                     id = hairstyleId + 1
                     setHairstyleId(id)
-                    state.input_editor_face_last[0].value = id
+                    state.input_editor_face_last[0].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             default:
                 break;
         }
-        storeCharacterEditor.setCustomization()
     }
     const setHairstylOption = (type) => {
         let id = 0
@@ -49,28 +50,29 @@ const Haris = observer(()=>{
                 if (hairstyleOptionId === 0) {
                     id = maxTypeHairstyl
                     setHairstyleOptionId(id)
-                    state.input_editor_face_last[1].value = id
+                    state.input_editor_face_last[1].index_help = id
                 } else {
                     id = hairstyleOptionId - 1
                     setHairstyleOptionId(id)
-                    state.input_editor_face_last[1].value = id
+                    state.input_editor_face_last[1].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             case 'next':
                 if (hairstyleOptionId === maxTypeHairstyl) {
                     id = 0
                     setHairstyleOptionId(id)
-                    state.input_editor_face_last[1].value = id
+                    state.input_editor_face_last[1].index_help = id
                 } else {
                     id = hairstyleOptionId + 1
                     setHairstyleOptionId(id)
-                    state.input_editor_face_last[1].value = id
+                    state.input_editor_face_last[1].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             default:
                 break;
         }
-        storeCharacterEditor.setCustomization()
     }
     return (
         <div className="hair-box">
