@@ -47,7 +47,7 @@ class EditorPlayer extends React.Component {
                 { title: "Цвет глаз", maxVal: 32, index_help: 0 },
                 { title: "Веснушки", maxVal: 17, index_help: 0 },
             ],
-            cheked_sex: false,
+            cheked_sex: true,
             slider: [
                 {
                     title: "Мать",
@@ -329,7 +329,8 @@ class EditorPlayer extends React.Component {
     }
 
     chekedSexFamilyCharacter() {
-        this.setState({ cheked_sex: !this.state.cheked_sex });
+        let test = this.state.cheked_sex != this.state.cheked_sex
+        this.setState({ cheked_sex: test});
         this.setSex();
     }
 
@@ -476,8 +477,8 @@ class EditorPlayer extends React.Component {
             mp.trigger('client:events:custom:save', // eslint-disable-line
                 this.state.stats.endurance, this.state.stats.driving, this.state.stats.flying, this.state.stats.psychics, this.state.stats.shooting, this.state.stats.stealth, this.state.stats.strength);
             
-            mp.trigger('client:events:custom:choiceRole', // eslint-disable-line
-                0)
+            /*mp.trigger('client:events:custom:choiceRole', // eslint-disable-line
+                0)*/
         } catch (e) {
             console.log(e);
         }

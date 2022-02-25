@@ -1,7 +1,7 @@
 import React from 'react';
 import MaterialIcon from 'material-icons-react';
 
-// import Avatar from '@material-ui/core/Avatar';
+import Avatar from '@material-ui/core/Avatar';
 
 class Chat extends React.Component {
     constructor(props) {
@@ -132,9 +132,9 @@ class Chat extends React.Component {
         return (
             <React.Fragment>
                 <div className="dedbit-menu">
-                    <div className="u-title-chat" style={{ height: 50 + 'px' }}>
+                    <div className="u-title" style={{ height: 50 + 'px' }}>
                         <div className="dedbit-u-texttittle">
-                            <img src={`https://gta-5.ru/server/client/images/icons/components/phone/img/back.svg`} alt="" className="u__back-nabs" height="16" onClick={() => this.props.setLink("/phone/android/messenger")} />
+                            <img src={`https://gta-5.ru/server/client/images/icons/components/phone/img/back.svg`} className="u__back-nabs" height="16" onClick={() => this.props.setLink("/phone/android/messenger")} />
                             {this.state.contact === null ?
                                 null
                                 :
@@ -164,7 +164,7 @@ class Chat extends React.Component {
                                                     <div
                                                         className="hide-time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{e.time}</div>
                                                 </div>
-                                                {/* <div className="block-sms-info-time">{e.time.substr(0, 5)}</div> */}
+                                                <div className="block-sms-info-time">{e.time.substr(0, 5)}</div>
                                             </div>
                                         </div>
                                         : null}
@@ -175,13 +175,13 @@ class Chat extends React.Component {
                                                     <div
                                                         className="hide-time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{e.time}</div>
                                                 </div>
-                                                {/* <div className="block-sms-info-time">{e.time.substr(0, 5)}</div> */}
+                                                <div className="block-sms-info-time">{e.time.substr(0, 5)}</div>
                                             </div>
                                         </div>
                                         : null}
                                     {i === this.state.chat.message.length - 1 ?
                                         <div className="ded-meta-center">
-                                            <div className="dedmeta-text">{e.date} {e.time.substr(0, 5)}</div>
+                                            <div className="dedmeta-text">{e.date}</div>
                                         </div>
                                         : null}
                                     {i < this.state.chat.message.length - 1 && 
@@ -192,7 +192,7 @@ class Chat extends React.Component {
                                     this.state.chat.message[i + 1].date.substring(3, 5) +
                                     this.state.chat.message[i + 1].date.substring(0, 2) ?
                                         <div className="ded-meta-center">
-                                            <div className="dedmeta-text">{e.date} {e.time.substr(0, 5)}</div>
+                                            <div className="dedmeta-text">{e.date}</div>
                                         </div>
                                         : null}
                                 </React.Fragment>
@@ -201,7 +201,7 @@ class Chat extends React.Component {
                     </div>
                     <div className="ded-input-text">
                         <MaterialIcon icon="insert_emoticon" size={22} color="#7D8B97" />
-                        <input type="text" placeholder="Enter the message..." className="ded-text-ipn"
+                        <input type="text" placeholder="Введите сообщение..." className="ded-text-ipn"
                             value={this.state.text} onBlur={(e) => this.inputBlur(e)} onFocus={(e) => this.inputFocus(e)} onChange={(e) => this.inputChange(e)} />
                         <MaterialIcon icon="send" size={22} color="#67B1F8" onClick={() => this.sendMessage()} />
                     </div>

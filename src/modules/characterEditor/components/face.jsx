@@ -28,28 +28,29 @@ const Face = observer(()=>{
                 if (eyebrowsId === 0) {
                     id = maxTypeEyebrows
                     setEyebrowsId(id)
-                    state.input_editor_face_last[4].value = id
+                    state.input_editor_face_last[4].index_help = id
                 } else {
                     id = eyebrowsId - 1
                     setEyebrowsId(id)
-                    state.input_editor_face_last[4].value = id
+                    state.input_editor_face_last[4].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             case 'next':
                 if (eyebrowsId === maxTypeEyebrows) {
                     id = 0
                     setEyebrowsId(id)
-                    state.input_editor_face_last[4].value = id
+                    state.input_editor_face_last[4].index_help = id
                 } else {
                     id = eyebrowsId + 1
                     setEyebrowsId(id)
-                    state.input_editor_face_last[4].value = id
+                    state.input_editor_face_last[4].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             default:
                 break;
         }
-        storeCharacterEditor.setCustomization()
     }
     const setFreckles = (type) => {
         let id = 0
@@ -58,28 +59,29 @@ const Face = observer(()=>{
                 if (frecklesId === 0) {
                     id = maxTypeFreckles
                     setFrecklesId(id)
-                    state.input_editor_face_last[7].value = id
+                    state.input_editor_face_last[7].index_help = id
                 } else {
                     id = frecklesId - 1
                     setFrecklesId(id)
-                    state.input_editor_face_last[7].value = id
+                    state.input_editor_face_last[7].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             case 'next':
                 if (frecklesId === maxTypeFreckles) {
                     id = 0
                     setFrecklesId(id)
-                    state.input_editor_face_last[7].value = id
+                    state.input_editor_face_last[7].index_help = id
                 } else {
                     id = frecklesId + 1
                     setFrecklesId(id)
-                    state.input_editor_face_last[7].value = id
+                    state.input_editor_face_last[7].index_help = id
                 }
+                storeCharacterEditor.setCustomization()
                 break;
             default:
                 break;
         }
-        storeCharacterEditor.setCustomization()
     }
 
     return (

@@ -112,14 +112,14 @@ const CharacterEditor = observer(()=>{
         resetEditorCharacter(4)
     }
     const saveCustomization = () => {
-        console.log(state.validInfo.name, state.validInfo.surname, state.validInfo.age)
+        console.log(state.info_character.first_name, state.info_character.last_name, state.info_character.old)
         if(state.validInfo.name && state.validInfo.surname && state.validInfo.age) {
             try {
-                mp.trigger('client:events:custom:set' , JSON.stringify(state.input_editor_face), JSON.stringify(state.input_editor_nose), JSON.stringify(state.input_editor_eyes_lips), JSON.stringify(state.input_editor_face_last), state.cheked_sex, state.slider[0].index_help, state.slider[1].index_help, state.slider[2].index_help, state.slider[3].index_help, true) // eslint-disable-line
-
-                mp.trigger('client:events:custom:save', state.stats.endurance, state.stats.driving, state.stats.flying, state.stats.psychics, state.stats.shooting, state.stats.stealth, state.stats.strength, state.info_character); // eslint-disable-line
-                
-                mp.trigger('client:events:custom:choiceRole', 0) // eslint-disable-line
+                mp.trigger('client:events:custom:save', state.stats.endurance, state.stats.driving, state.stats.flying, state.stats.psychics, state.stats.shooting, state.stats.stealth, state.stats.strength, state.info_character.first_name, state.info_character.last_name, state.info_character.old); // eslint-disable-line
+               
+                setTimeout(() => {
+                    mp.trigger('client:events:custom:set' , JSON.stringify(state.input_editor_face), JSON.stringify(state.input_editor_nose), JSON.stringify(state.input_editor_eyes_lips), JSON.stringify(state.input_editor_face_last), state.cheked_sex, state.slider[0].index_help, state.slider[1].index_help, state.slider[2].index_help, state.slider[3].index_help, true) // eslint-disable-line 
+                }, 1000);
             } catch (e) {
                 console.log('save', e);
             }

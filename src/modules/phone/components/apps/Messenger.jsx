@@ -2,8 +2,6 @@ import React from 'react';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 
-import Image from '../../img/ava.png'
-
 class Messenger extends React.Component {
     constructor(props) {
         super(props)
@@ -53,10 +51,7 @@ class Messenger extends React.Component {
             <React.Fragment>
                 <div className="dedbit-menu">
                     <div className="u-title">
-                        <span className="u-texttittle-center">Messages</span>
-                        <div className="search-message">
-                            <input type="text" placeholder='Search' />
-                        </div>
+                        <span className="u-texttittle-center">Onion Messenger</span>
                     </div>
                     <div className="messenger-main">
                         {this.state.chats.map((e, i) => {
@@ -65,9 +60,7 @@ class Messenger extends React.Component {
                                 return (
                                     <div className="m-box-sms" key={index}
                                         onClick={() => this.props.selectChat(e.phone_number)}>
-                                        {e.new_messages !== undefined && e.new_messages > 0 ?
-                                            <div className="m-crl-box"></div> : null}
-                                        <img src={Image} alt="" className="m-img-sms" />
+                                        <img src="https://a.rsg.sc//n/socialclub" alt="" className="m-img-sms" />
                                         <div className="m-box-messeng">
                                             <div className="m-box-clm-mes">
                                                 <div
@@ -78,7 +71,8 @@ class Messenger extends React.Component {
                                             <div className="m-box-clm-info">
                                                 <div
                                                     className="m-time">{e.message.length !== 0 ? e.message[0].time.substr(0, 5) : ''}</div>
-
+                                                {e.new_messages !== undefined && e.new_messages > 0 ?
+                                                    <div className="m-crl-box">{e.new_messages}</div> : null}
                                             </div>
                                         </div>
                                     </div>

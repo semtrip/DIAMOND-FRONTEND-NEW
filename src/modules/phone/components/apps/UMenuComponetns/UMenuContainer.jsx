@@ -2,6 +2,9 @@ import React from 'react';
 import UMenuContainerItem from './UMenuContainerItem';
 
 class UMenuContainer extends React.Component {
+    constructor(props) {
+        super(props)
+    }
 
     componentDidCatch(error, errorInfo) {
         mp.trigger('client:ui:debug', 'UMenuContainer.jsx', error, errorInfo); // eslint-disable-line

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import UFrame from './UFrame';
-// import Icon from '../../../../hud/components/MainMenu/uikit/Icon'
-// import {Animated} from "react-animated-css";
+import Icon from '../../../../hud/components/MainMenu/uikit/Icon'
+import {Animated} from "react-animated-css";
 
 const UMenuContainerItem = ({ e, data, callback, hidden }) => {
 

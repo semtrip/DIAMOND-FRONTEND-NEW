@@ -1,28 +1,36 @@
 .phone-position {
+    /* width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 50px; */
+
+    /*position: absolute;
+    top: 23%;
+    right: 25px;
+    z-index: 1;*/
+
     position: absolute;
     bottom  : 0;
     right   : 50px;
-    z-index : 99;
+    z-index : 1;
 }
 
-.iphone-phone {
+/* .android-phone::-webkit-scrollbar {
+    display: none;
+} */
+
+.android-phone {
     background-size: contain;
     width          : 340px;
-    height         : 660px;
     display        : flex;
     justify-content: center;
     align-items    : center;
     transition     : 1s;
 }
 
-.phone__camera {
-    position: absolute;
-    z-index : 1;
-    top     : 10px;
-    width   : 50px;
-}
-
-.rotate {
+.rotate-androind {
     margin-bottom: 100%;
     transform    : rotate(-90deg) translate(-40%, -128%) scale(2);
 }
@@ -48,238 +56,11 @@
 }
 
 .rotate-components .topbar-andr {
-    transform: rotate(-90deg) translate(-240px, -190px) scale(1.2);
-    width    : 33%;
+    width  : 90%;
+    padding: 0 5%;
 }
-
-.transport-menu-box {
-    height    : 90%;
-    margin-top: 12%;
-    position  : relative;
-}
-
-.transport-menu-box .transport-menu-container {
-    max-height     : 100%;
-    min-height     : 20%;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-}
-
-.transport-menu-box .transport-menu-container .transport-box {
-    display        : flex;
-    flex-direction : column;
-    align-items    : center;
-    justify-content: space-between;
-    overflow       : auto;
-
-}
-
-.transport-menu-box .transport-menu-container .transport-container {
-    width          : 92%;
-    height         : 200px;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-
-    margin-bottom: 20px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info,
-.transport-menu-box .transport-menu-container .transport-container .evacuate,
-.transport-menu-box .transport-menu-container .transport-container .location {
-    width: 92%;
-
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-
-    background   : #292D35;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-
-    padding      : 10px;
-    margin-bottom: 10px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate:hover,
-.transport-menu-box .transport-menu-container .transport-container .location:hover {
-    cursor: pointer;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate .info {
-    width: 150px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .location .info {
-    width: 100%;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate .info,
-.transport-menu-box .transport-menu-container .transport-container .location .info {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate .info .icon,
-.transport-menu-box .transport-menu-container .transport-container .location .info .icon {
-    max-height: 30px;
-    max-width : 30px;
-    width     : 30px;
-    height    : 30px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate .price-container {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : flex-start;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate .price-container .price-title {
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 12px;
-    line-height: 14px;
-
-    color: #565D6C;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate .price-container .price-span {
-    color: #1B76FF;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .evacuate .info .text,
-.transport-menu-box .transport-menu-container .transport-container .location .info .text {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 14px;
-    line-height: 17px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-
-    height: 100%;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .logo {
-    width       : 55px;
-    height      : 55px;
-    margin-right: 5px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .after-logo-text {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    height         : 100%;
-}
-
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .after-logo-text .main-text {
-    display       : flex;
-    flex-direction: row;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .after-logo-text .main-text .title {
-    margin-right: 5px;
-    font-family : "SF UI Display";
-    font-style  : normal;
-    font-weight : 500;
-    font-size   : 12px;
-    line-height : 14px;
-    color       : #FFFFFF;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .after-logo-text .main-text .subtitle {
-    font-family: "SF UI Display";
-    font-style : normal;
-    font-weight: 300;
-    font-size  : 10px;
-    line-height: 12px;
-    color      : #565D6C;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .after-logo-text .sub-text {
-    display       : flex;
-    flex-direction: column;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .after-logo-text .sub-text .title {
-    font-family: "SF UI Display";
-    font-style : normal;
-    font-weight: 300;
-    font-size  : 12px;
-    line-height: 14px;
-
-    color: #565D6C;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .logo-container .after-logo-text .sub-text .subtitle {
-    font-family: "SF UI Display";
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 12px;
-    line-height: 14px;
-
-    color: #FFFFFF;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .price-container .title {
-    display       : flex;
-    flex-direction: row;
-    margin-bottom : 5px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .price-container .title .price-logo {
-    margin-right: 5px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .price-container .title .title-text {
-    font-family: "SF UI Display";
-    font-style : normal;
-    font-weight: 300;
-    font-size  : 12px;
-    line-height: 14px;
-
-    color: #565D6C;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .price-container .price {
-    display       : flex;
-    flex-direction: row;
-    margin-right  : 5px;
-    font-family   : "SF UI Display";
-    font-style    : normal;
-    font-weight   : 600;
-    font-size     : 14px;
-    line-height   : 17px;
-}
-
-.transport-menu-box .transport-menu-container .transport-container .transport-main-info .price-container .price .price-span {
-    color: #1B76FF;
-}
-
 
 .phone-bg {
-    position           : relative;
     width              : 280px;
     height             : 620px;
     border-radius      : 20px;
@@ -290,6 +71,7 @@
 }
 
 .phone-gradient {
+    /* background   : linear-gradient(21deg, rgba(241, 236, 105, 1) 0%, rgba(216, 1, 50, 1) 100%); */
     width        : 280px;
     height       : 620px;
     border-radius: 20px;
@@ -299,6 +81,7 @@
 .phone__box {
     position: absolute;
     width   : 320px;
+    z-index : 100;
 }
 
 .bg-0 {
@@ -346,7 +129,7 @@
     background-size: cover;
 }
 
-.iphone-content {
+.android-content {
     width          : 100%;
     height         : 409px;
     display        : flex;
@@ -357,7 +140,7 @@
     overflow       : hidden;
 }
 
-.rotate-components .iphone-content {
+.rotate-components .android-content {
     width : inherit !important;
     height: 452px;
 }
@@ -405,6 +188,17 @@
     height        : inherit;
 }
 
+/* .main-app-box a:first-child.app-box:nth-last-child(5) ~ .rotate-components .main-app-box {
+    justify-content: center;
+} */
+/* .main-app-box a:nth-last-child(n+10) ~ .main-app-box {
+    justify-content: unset;
+} */
+
+/* .main-app-box a:nth-last-child(n+10),
+ .rotate-components .main-app-box{
+    justify-content: unset !important;
+} */
 
 .main-app-box>*:nth-last-child(n+10)~.main-app-box {
     justify-content: unset !important;
@@ -418,17 +212,21 @@
 }
 
 .main-app-box {
-    width          : 265px;
-    justify-content: space-between;
-    display        : flex;
-    flex-flow      : wrap;
-    margin-top     : 50px;
+    margin-left  : auto;
+    margin-right : auto;
+    width        : 244px;
+    display      : flex;
+    flex-flow    : wrap-reverse;
+    margin-top   : 30px;
+    /* flex-flow : row wrap;
+    align-content: stretch; */
 }
 
 .app-box {
-    width              : 55px;
-    height             : 55px;
+    width              : 46px;
+    height             : 49px;
     border-radius      : 5px;
+    margin-right       : 19px;
     display            : flex;
     align-items        : center;
     justify-content    : center;
@@ -437,7 +235,39 @@
     position           : relative;
 }
 
-.iphone-content .app-box {
+.rotate-components .android-content .app-box:nth-child(n-4),
+.android-content .app-box:last-child {
+    margin-top: 20px;
+}
+
+.android-content .app-box:nth-child(4),
+.android-content .app-box:last-child {
+    margin-right: 0px;
+}
+
+.android-content .app-box:nth-child(8),
+.android-content .app-box:last-child {
+    margin-right: 0px;
+}
+
+.android-content .app-box:nth-child(12),
+.android-content .app-box:last-child {
+    margin-right: 0px;
+}
+
+.android-content .app-box:nth-child(16),
+.android-content .app-box:last-child {
+    margin-right: 0px;
+}
+
+/* .android-content .app-box:nth-child(9), .android-content .app-box:last-child {
+    margin-top: 20px;
+} */
+
+/* .android-content .app-box:nth-child(-n+4) {
+    margin-bottom: 20px;
+} */
+.android-content .app-box {
     margin-bottom: 25px;
     border-radius: 0.8rem;
 }
@@ -472,163 +302,154 @@
 }
 
 .icons-hack2 {
-    background     : url(../img/iphone/icons/console2.svg) no-repeat center;
+    background     : url(../img/android/icons/console2.svg) no-repeat center;
     background-size: cover;
 }
 
 .icons-hack {
-    background     : url(../img/iphone/icons/hack.png) no-repeat center;
+    background     : url(../img/android/icons/hack.png) no-repeat center;
     background-size: cover;
 }
 
 .icons-console {
-    background     : url(../img/iphone/icons/console.png) no-repeat center;
+    background     : url(../img/android/icons/console.png) no-repeat center;
     background-size: cover;
 }
 
 .icons-settings {
-    background     : url(../img/iphone/icons/settings.png) no-repeat center;
-    background-size: cover;
-}
-
-.icons-transport {
-    background     : url(../img/iphone/icons/transport.png) no-repeat center;
+    background     : url(../img/android/icons/settings.png) no-repeat center;
     background-size: cover;
 }
 
 .icons-phone {
-    background     : url(../img/iphone/icons/telephone.png) no-repeat center;
+    background     : url(../img/android/icons/telephone.png) no-repeat center;
     background-size: cover;
 }
 
 .icons-sms {
-    background     : url(../img/iphone/icons/sms.png) no-repeat center;
+    background     : url(../img/android/icons/sms.png) no-repeat center;
     background-size: cover;
 }
 
 .icons-gps {
-    background     : url(../img/iphone/icons/gps.png) no-repeat center;
+    background     : url(../img/android/icons/gps.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-cont {
-    background     : url(../img/iphone/icons/cont.png) no-repeat center;
+    background     : url(../img/android/icons/cont.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-apps {
-    background     : url(../img/iphone/icons/apps.png) no-repeat center;
+    background     : url(../img/android/icons/apps.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-fleeca {
-    background     : url(../img/iphone/icons/fleeca.png) no-repeat center;
+    background     : url(../img/android/icons/fleeca.png) no-repeat center;
     background-size: cover;
-
-}
-
-.icons-calls {
-    background     : url(../img//iphone/icons/calls.png) no-repeat center;
-    background-size: cover;
+    /*filter       : invert(100%);*/
 }
 
 .icons-maze {
-    background     : url(../img/iphone/icons/maze.png) no-repeat center;
+    background     : url(../img/android/icons/maze.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-blaine {
-    background     : url(../img/iphone/icons/blaine.png) no-repeat center;
+    background     : url(../img/android/icons/blaine.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-pacific {
-    background     : url(../img/iphone/icons/pacific.png) no-repeat center;
+    background     : url(../img/android/icons/pacific.png) no-repeat center;
     background-size: cover;
+    filter         : invert(100%);
 }
 
 .icons-invader {
-    background     : url(../img/iphone/icons/invader.png) no-repeat center;
+    background     : url(../img/android/icons/invader.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-news {
-    background     : url(../img/iphone/icons/news.png) no-repeat center;
+    background     : url(../img/android/icons/news.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-uveh {
-    background     : url(../img/iphone/icons/car.png) no-repeat center;
+    background     : url(../img/android/icons/car.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-ems {
-    background     : url(../img/iphone/icons/ems.png) no-repeat center;
+    background     : url(../img/android/icons/ems.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-lspd {
-    background     : url(../img/iphone/icons/lspd.png) no-repeat center;
+    background     : url(../img/android/icons/lspd.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-lspd2 {
-    background     : url(../img/iphone/icons/lspd2.png) no-repeat center;
+    background     : url(../img/android/icons/lspd2.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-usmc {
-    background     : url(../img/iphone/icons/usmc.png) no-repeat center;
+    background     : url(../img/android/icons/usmc.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-achiev,
 .icons-trophy {
-    background     : url(../img/iphone/icons/trophy.png) no-repeat center;
+    background     : url(../img/android/icons/trophy.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-community {
-    background     : url(../img/iphone/icons/community.png) no-repeat center;
+    background     : url(../img/android/icons/community.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-family {
-    background     : url(../img/iphone/icons/families.png) no-repeat center;
+    background     : url(../img/android/icons/families.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-browser {
-    background     : url(../img/iphone/icons/safari.png) no-repeat center;
+    background     : url(../img/android/icons/safari.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-gov {
-    background     : url(../img/iphone/icons/gov.png) no-repeat center;
+    background     : url(../img/android/icons/gov.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .icons-bcsd {
-    background     : url(../img/iphone/icons/bcsd.png) no-repeat center;
+    background     : url(../img/android/icons/bcsd.png) no-repeat center;
     background-size: cover;
-
+    /*filter       : invert(100%);*/
 }
 
 .info-top {
@@ -642,7 +463,7 @@
 }
 
 .icon-network {
-    background  : url(../img/iphone/icons/network.png) no-repeat;
+    background  : url(../img/android/icons/network.png) no-repeat;
     width       : 12px;
     height      : 7px;
     margin-right: 5px;
@@ -681,21 +502,21 @@
     margin-top  : 6px;
 }
 
-
 /*ANDROID*/
-
 .rotate-components .topbar-andr {
     height     : 23px;
     margin-left: 5px;
 }
 
 .topbar-andr {
-    width     : inherit;
-    height    : 17px;
-    display   : flex;
-    z-index   : 10;
-    position  : absolute;
-    margin-top: 5px;
+    width        : inherit;
+    height       : 17px;
+    display      : flex;
+    z-index      : 1;
+    position     : absolute;
+    /* background: #2d72c1; */
+    margin-top   : -2px;
+    margin-top   : 15px;
 }
 
 .bg-blue-andr {
@@ -703,23 +524,22 @@
 }
 
 .topbar-andr .left-topbar {
-    margin-left    : auto;
-    margin-right   : 15px;
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
+    margin-left : auto;
+    display     : flex;
+    align-items : center;
+    margin-right: 10px;
 }
 
 .right-topbar {
-    margin-left: 25px;
+    margin-left: 21px;
 }
 
 .left-topbar .elements-bar {
+    /* background: url(../img/android/icons/wifi.svg) no-repeat;
+    filter: brightness(0) saturate(100%) invert(100%); */
     display        : flex;
     justify-content: center;
     align-items    : center;
-    margin-left    : 7px;
 }
 
 .elements-bar__icon {
@@ -731,20 +551,18 @@
 }
 
 .battery-info {
-    font-family: Inter;
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 12px;
-    line-height: 15px;
+    font-size   : 12px;
+    margin-right: 5px;
+    font-family : "Montserrat";
+    font-weight : 700;
+    color       : #fff;
 }
 
 .hoverable {
     cursor: pointer;
 }
 
-
 /*UMenu*/
-
 .uni-menu {
     width         : inherit;
     height        : 100%;
@@ -753,6 +571,7 @@
     margin-top    : -1px;
     width         : 101%;
     margin-left   : -1px;
+
 }
 
 .rotate-components .u-title {
@@ -760,59 +579,36 @@
 }
 
 .u-title {
-    height            : 70px;
-    min-height        : 41px;
-    display           : flex;
-    flex-direction    : column;
-    justify-content   : space-around;
-    align-items       : flex-start;
-    /* background     : #262626; */
-    box-shadow        : 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
-    padding-top       : 30px;
-    padding-bottom    : 10px;
-    margin-left       : 10px;
-}
-
-.u-title-chat {
-    height         : 70px;
+    height         : 41px;
     min-height     : 41px;
     display        : flex;
-    flex-direction : column;
-    justify-content: space-around;
-    align-items    : flex-start;
+    align-items    : center;
+    justify-content: center;
+    background     : #262626;
     box-shadow     : 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
-    padding-top    : 30px;
-    padding-bottom : 10px;
-    padding-right  : 20px;
-}
-
-.search-message {
-    max-width: 100%;
-    width    : 240px;
-    padding  : 0 10px;
-
-    background     : rgba(106, 106, 106, 0.63);
-    box-shadow     : 0px 4px 4px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(13px);
-    /* Note        : backdrop-filter has minimal browser support */
-
-    border-radius: 8px;
+    padding-top    : 34px;
 }
 
 .menu-list {
     width       : 13px;
     height      : 9px;
-    /*background: url(../img/iphone/icons/menu.png) no-repeat;
+    /*background: url(../img/android/icons/menu.png) no-repeat;
     margin-left : 10px;*/
 }
 
-.u-texttittle-center {
-    font-family: 'SF UI Display';
-    font-style : normal;
+.u-texttittle {
+    font-family: "Montserrat";
     font-weight: 600;
-    font-size  : 20px;
-    line-height: 29px;
-    color      : #C0C0C0;
+    color      : #fff;
+    font-size  : 12px;
+    width      : 70%;
+}
+
+.u-texttittle-center {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color      : #fff;
+    font-size  : 12px;
 }
 
 .u__back {
@@ -830,7 +626,7 @@
 .u-li-menu {
     width     : inherit;
     height    : 100%;
-    background: rgba(46, 46, 46, 0.7);
+    background   : rgba(46, 46, 46, 0.7);
     overflow  : scroll;
 }
 
@@ -843,6 +639,7 @@
 .umenu-family-box::-webkit-scrollbar {
     display: none;
 }
+
 
 .rotate-components .u-menu-l {
     width      : 97%;
@@ -869,7 +666,7 @@
 }
 
 .txt-title {
-    font-family  : "Montserrat";
+    font-family: "Montserrat";
     margin-bottom: 2px;
     color        : #fff;
     font-size    : 14px;
@@ -895,12 +692,11 @@
     height             : 20px;
     background-size    : 20px;
     background-position: center;
-    background         : url(../img/iphone/icons/arrow-menu.svg) no-repeat;
+    background         : url(../img/android/icons/arrow-menu.svg) no-repeat;
     margin-left        : auto;
     transform          : rotate(180deg);
     margin-right       : 10px;
 }
-
 
 /* style chekbox */
 
@@ -1002,6 +798,7 @@ h4 {
     height       : 18px;
     top          : -1px;
     box-shadow   : 0px 3px 9px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .tgl-light:checked+.tgl-btn {
@@ -1180,7 +977,6 @@ h4 {
     transform: rotateY(20deg);
 }
 
-
 /* style chekbox */
 
 .block {
@@ -1300,8 +1096,7 @@ h4 {
     display        : flex;
     align-items    : center;
     justify-content: space-between;
-    background     : rgba(243, 243, 243, 0.3);
-    backdrop-filter: blur(9px);
+    background     : rgba(0, 0, 0, 0.5);
     padding-left   : 1.2rem;
     padding-right  : 1.2rem;
     border-radius  : 1.4rem;
@@ -1335,7 +1130,7 @@ h4 {
     margin-top    : 10px;
     height        : 4px;
     background    : #fff;
-    padding-bottom: 4px;
+    padding-bottom: 14px;
     border-radius : 2rem;
     padding-left  : 40%;
     position      : absolute;
@@ -1344,13 +1139,13 @@ h4 {
 }
 
 .m-sqr-bar {
-    background: url(../img/iphone/icons/sqr-bar.svg) no-repeat;
+    background: url(../img/android/icons/sqr-bar.svg) no-repeat;
     width     : 13px;
     height    : 13px;
 }
 
 .m-crl-bar {
-    background  : url(../img/iphone/icons/crl-bar.svg) no-repeat;
+    background  : url(../img/android/icons/crl-bar.svg) no-repeat;
     width       : 14px;
     height      : 15px;
     margin-left : 64px;
@@ -1358,7 +1153,7 @@ h4 {
 }
 
 .m-trngl-bar {
-    background: url(../img/iphone/icons/trngl-bar.svg) no-repeat;
+    background: url(../img/android/icons/trngl-bar.svg) no-repeat;
     width     : 14px;
     height    : 15px;
 }
@@ -1385,104 +1180,104 @@ h4 {
 .s-wifi {
     width     : 21px;
     height    : 19px;
-    background: url(../img/iphone/icons/s-wifi.svg) no-repeat;
+    background: url(../img/android/icons/s-wifi.svg) no-repeat;
 }
 
 .s-display {
     width     : 24px;
     height    : 24px;
-    background: url(../img/iphone/icons/s-display.svg) no-repeat;
+    background: url(../img/android/icons/s-display.svg) no-repeat;
 }
 
 .s-sound {
     width     : 16px;
     height    : 20px;
-    background: url(../img/iphone/icons/s-sound.svg) no-repeat;
+    background: url(../img/android/icons/s-sound.svg) no-repeat;
 }
 
 .s-apps {
     width     : 24px;
     height    : 24px;
-    background: url(../img/iphone/icons/s-apps.svg) no-repeat;
+    background: url(../img/android/icons/s-apps.svg) no-repeat;
 }
 
 .s-volume {
     width     : 24px;
     height    : 24px;
-    background: url(../img/iphone/icons/s-volume.svg) no-repeat;
+    background: url(../img/android/icons/s-volume.svg) no-repeat;
     filter    : invert(69%) sepia(25%) saturate(765%) hue-rotate(125deg) brightness(87%) contrast(93%);
 }
 
 .s-bluetooh {
     width     : 24px;
     height    : 24px;
-    background: url(../img/iphone/icons/s-bluetooh.svg) no-repeat;
+    background: url(../img/android/icons/s-bluetooh.svg) no-repeat;
 }
 
 .s-fleeca {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/fleeca.png) no-repeat center;
+    background     : url(../img/android/icons/fleeca.png) no-repeat center;
     background-size: 24px;
-
+    /*filter       : invert(100%);*/
 }
 
 .s-maze {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/maze.png) no-repeat center;
+    background     : url(../img/android/icons/maze.png) no-repeat center;
     background-size: 24px;
-
+    /*filter       : invert(100%);*/
 }
 
 .s-blaine {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/blaine.png) no-repeat center;
+    background     : url(../img/android/icons/blaine.png) no-repeat center;
     background-size: 24px;
-
+    /*filter       : invert(100%);*/
 }
 
 .s-pacific {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/pacific.png) no-repeat center;
+    background     : url(../img/android/icons/pacific.png) no-repeat center;
     background-size: 24px;
 }
 
 .s-invader {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/invader.png) no-repeat center;
+    background     : url(../img/android/icons/invader.png) no-repeat center;
     background-size: 24px;
-
+    /*filter       : invert(100%);*/
 }
 
 .s-car {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/car.png) no-repeat center;
+    background     : url(../img/android/icons/car.png) no-repeat center;
     background-size: 24px;
 }
 
 .s-community {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/community.png) no-repeat center;
+    background     : url(../img/android/icons/community.png) no-repeat center;
     background-size: 24px;
 }
 
 .s-green {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/green.png) no-repeat center;
+    background     : url(../img/android/icons/green.png) no-repeat center;
     background-size: 24px;
 }
 
 .s-red {
     width          : 24px;
     height         : 24px;
-    background     : url(../img/iphone/icons/red.png) no-repeat center;
+    background     : url(../img/android/icons/red.png) no-repeat center;
     background-size: 24px;
 }
 
@@ -1627,6 +1422,7 @@ h4 {
     height         : 24px;
     display        : flex;
     justify-content: center;
+
 }
 
 .b-tabs-radio .material-icons.md-dark {
@@ -1660,9 +1456,9 @@ h4 {
 .title-b-hist {
     color       : #fff;
     margin-top  : 8px;
-    font-family : "Montserrat";
-    font-weight : bold;
-    font-size   : 24px;
+    font-family: "Montserrat";
+font-weight: bold;
+    font-size   : 34px;
     padding-left: 10px;
     padding-top : 34px;
 }
@@ -1719,6 +1515,7 @@ h4 {
     display       : flex;
     flex-direction: column;
 }
+
 
 .b-inf-name-missed {
     font-family: "Montserrat";
@@ -1825,6 +1622,7 @@ h4 {
 .phonebook__search__input::-webkit-input-placeholder {
     padding-left: 26px !important;
 }
+
 
 .c-player-contact .c-nameplayer {
     font-family: "Montserrat";
@@ -2074,7 +1872,7 @@ figure img {
 }
 
 .u-input-text {
-    font-family  : "Montserrat";
+    font-family: "Montserrat";
     font-style   : normal;
     font-size    : 14px;
     color        : #fff;
@@ -2137,9 +1935,7 @@ figure img {
     align-items    : center;
 }
 
-
 /*checkbox*/
-
 .u-checkbox-style {
     display: unset !important;
 }
@@ -2251,21 +2047,23 @@ BankCard
 }
 
 .bank-card__part {
-    font-family                : "Montserrat";
-    box-shadow                 : 1px 1px #aaa3a3;
-    top                        : 0;
-    position                   : absolute;
-    z-index                    : 1000;
-    left                       : 0;
-    display                    : inline-block;
-    width                      : 320px;
-    height                     : 190px;
-    background-image           : url('../img/iphone/bankBg.png');
-    background-color           : #000000;
-    background-repeat          : no-repeat;
-    background-position        : center;
-    background-size            : cover;
-    border-radius              : 8px;
+    font-family: "Montserrat";
+
+    box-shadow         : 1px 1px #aaa3a3;
+    top                : 0;
+    position           : absolute;
+    z-index            : 1000;
+    left               : 0;
+    display            : inline-block;
+    width              : 320px;
+    height             : 190px;
+    background-image   : url('../img/android/background/bankBg.png');
+    background-color   : #000000;
+    background-repeat  : no-repeat;
+    background-position: center;
+    background-size    : cover;
+    border-radius      : 8px;
+
     -webkit-transition         : all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     -moz-transition            : all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     -ms-transition             : all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -2275,9 +2073,11 @@ BankCard
     -moz-transform-style       : preserve-3d;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility   : hidden;
-    zoom                       : 0.7;
-    margin                     : 0 19px;
-    animation                  : pulse 5s infinite;
+
+    zoom  : 0.7;
+    margin: 0 19px;
+
+    animation: pulse 5s infinite;
 }
 
 .bank-card__front {
@@ -2398,6 +2198,7 @@ BankCard
 .bank-card:hover .bank-card__front {
     /*-webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);*/
+
 }
 
 .bank-card:hover .bank-card__back {
@@ -2525,17 +2326,11 @@ BankCard
 }
 
 .m-box-sms {
-    position          : relative;
-    width             : 100%;
-    display           : flex;
-    flex-direction    : row;
-    margin-bottom     : 8px;
-    min-height        : 60px;
-    /* margin-left    : 25px; */
-
-    background     : rgba(33, 33, 33, 0.63);
-    box-shadow     : 0px 4px 4px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(13px);
+    width         : 99%;
+    display       : flex;
+    flex-direction: row;
+    margin-bottom : 8px;
+    min-height    : 60px;
 }
 
 .m-box-sms:hover {
@@ -2549,7 +2344,7 @@ BankCard
     display        : flex;
     align-items    : center;
     justify-content: center;
-    margin-left    : 30px;
+    margin-left    : 8px;
     margin-right   : 16px;
     margin-top     : 10px;
 }
@@ -2568,11 +2363,6 @@ BankCard
 .mes-title {
     color        : #E9EEF4;
     margin-bottom: 6px;
-    font-family  : "SF Pro Regular";
-    font-style   : normal;
-    font-weight  : normal;
-    font-size    : 14px;
-    line-height  : 17px;
 }
 
 .mes-text {
@@ -2580,38 +2370,31 @@ BankCard
     white-space  : nowrap;
     text-overflow: ellipsis;
     overflow     : hidden;
-    font-family  : "SF Pro Regular";
-    font-style   : normal;
-    font-weight  : normal;
-    font-size    : 12px;
-    line-height  : 14px;
-
-    color: #A8A8A8;
+    color        : #7D8B97;
+    margin-bottom: 4px;
 }
 
 .m-time {
     font-family: "Montserrat";
-    font-weight: 600;
+font-weight: 600;
     color      : #7D8B97;
     font-size  : 12px;
     line-height: 18px;
-    position   : absolute;
-    right      : 5px;
+    text-align : right;
 }
 
 .m-crl-box {
-    position       : absolute;
-    width          : 15px;
-    height         : 15px;
-    background     : #0474DB;
+    width          : 20px;
+    height         : 20px;
+    background     : #64AFE9;
     display        : flex;
     justify-content: center;
     align-items    : center;
     color          : #fff;
     font-size      : 12px;
     border-radius  : 10px;
-    top            : 25px;
-    left           : 5px;
+    margin-top     : auto;
+    margin-left    : auto;
 }
 
 .rotate-components .m-box-clm-info {
@@ -2639,7 +2422,7 @@ BankCard
 
 .dedbit-title-name {
     font-family: "Montserrat";
-    font-weight: 600;
+font-weight: 600;
     color      : #fff;
     font-size  : 14px;
     text-align : left;
@@ -2668,7 +2451,8 @@ BankCard
     width        : 100%;
     box-sizing   : border-box;
     /* min-height: 20px; */
-    font-family  : "SF Compact Display Medium";
+    font-family: "Montserrat";
+    /* либо "SF Compact Display Medium"*/
     font-size    : 14px;
     margin-bottom: 4px;
     position     : relative;
@@ -2693,6 +2477,8 @@ BankCard
     white-space   : pre-wrap;
     word-wrap     : break-word;
     word-break    : break-word;
+
+
 }
 
 .rotate-components .ded-vxod {
@@ -2700,16 +2486,16 @@ BankCard
 }
 
 .ded-vxod {
+    background   : #212D3B;
     margin-left  : 6px;
-    background   : #262629;
-    border-radius: 9px;
+    border-radius: 12px 12px 3px 12px;
 }
 
 .ded-isxod {
-    background   : #0474DB;
-    border-radius: 9px;
+    background   : #3B628D;
     margin-left  : auto;
     margin-right : 6px;
+    border-radius: 12px 12px 3px 12px;
 }
 
 .ded-isxod .block-sms-info-time {
@@ -2970,6 +2756,7 @@ BankCard
     color: #FFFFFF;
 }
 
+
 .fix-phonebook {
     position: relative;
     height  : 100%;
@@ -3015,8 +2802,8 @@ BankCard
 }
 
 .iphone__app__name {
-    font-family : "Montserrat";
-    font-weight : bold;
+    font-family: "Montserrat";
+font-weight: bold;
     font-size   : 34px;
     padding-left: 10px;
 }
@@ -3075,9 +2862,7 @@ BankCard
     margin-left: 5px;
 }
 
-
 /*Achiev*/
-
 .rotate-components .achiev-menu {
     height     : 502px;
     margin-left: 2px;
@@ -3116,7 +2901,7 @@ BankCard
     height             : 20px;
     background-size    : 20px;
     background-position: center;
-    background         : url(../img/iphone/icons/arrow-menu.svg) center center no-repeat;
+    background         : url(../img/android/icons/arrow-menu.svg) center center no-repeat;
     transform          : rotate(180deg);
     filter             : invert(100%) sepia(12%) saturate(7498%) hue-rotate(179deg) brightness(106%) contrast(98%);
     cursor             : pointer;
@@ -3145,9 +2930,10 @@ BankCard
     display       : flex;
     align-items   : center;
     flex-direction: column;
-    overflow      : scroll;
-    padding-top   : 8px;
-    overflow      : scroll;
+
+    overflow   : scroll;
+    padding-top: 8px;
+    overflow   : scroll;
 }
 
 .achiev-main::-webkit-scrollbar {
@@ -3163,6 +2949,7 @@ BankCard
     border-bottom : 1px solid rgba(0, 0, 0, 0.3);
     transition    : 0.3s all;
     min-height    : 55px;
+
 }
 
 .achiev-box {
@@ -3230,9 +3017,11 @@ BankCard
     margin-bottom: 5px;
     padding      : 10px;
     overflow-x   : auto;
-    transition   : 0.3s all;
-    display      : block;
-    opacity      : 1;
+
+    transition: 0.3s all;
+
+    display: block;
+    opacity: 1;
 }
 
 .i-achiev-title-three-hide {
@@ -3284,12 +3073,9 @@ BankCard
 .textfor-app {
     position   : absolute;
     bottom     : -16px;
+    font-family: "Montserrat";
     text-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 200;
-    font-size  : 10px;
-    line-height: 14px;
+    font-size  : 12px;
 }
 
 .rotate-components .messenger-addchat {
@@ -3455,1090 +3241,4 @@ BankCard
 
 .umenu-title-name {
     margin-right: auto;
-}
-
-.bank-main-content-box {
-    height         : 70%;
-    width          : inherit;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-
-    margin-top: 40px;
-
-    position: relative;
-}
-
-.bank-main-content-box .title {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-
-    color: #636363;
-}
-
-.bank-main-content-box .card-box {
-    height: 180px;
-    width : 90%;
-
-    position: inherit;
-
-    border-radius: 16px;
-}
-
-.bank-main-content-box .card-box .card-number {
-    font-family   : 'Lato';
-    font-style    : normal;
-    font-weight   : bold;
-    font-size     : 18px;
-    line-height   : 29px;
-    letter-spacing: 0.02em;
-    color         : #FDFDFD;
-}
-
-
-.bank-main-content-box .card-box .card-holder {
-    font-family   : 'Poppins';
-    font-style    : normal;
-    font-weight   : 500;
-    font-size     : 16px;
-    line-height   : 24px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-
-.bank-main-content-box .card-box .valid-card {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-    width          : 70px;
-}
-
-.bank-main-content-box .card-box .valid-card .text {
-    width: 16px;
-
-    font-family   : 'Poppins';
-    font-style    : normal;
-    font-weight   : normal;
-    font-size     : 8px;
-    line-height   : 100%;
-    text-transform: uppercase;
-}
-
-.bank-main-content-box .card-box .valid-card .valid {
-    font-family: 'Poppins';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 21px;
-}
-
-.bank-main-content-box .balance-card-box {
-    height: 50px;
-    width : 90%;
-
-    display        : flex;
-    flex-direction : row;
-    align-items    : center;
-    justify-content: space-between;
-
-    background   : rgba(150, 150, 150, 0.4);
-    border       : 1px solid #969696;
-    box-sizing   : border-box;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 9px;
-}
-
-.bank-main-content-box .balance-card-box .title {
-    margin-left: 10px;
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-    color      : #636363;
-}
-
-.bank-main-content-box .balance-card-box .text {
-    font-family : 'SF UI Display';
-    font-style  : normal;
-    font-weight : 500;
-    font-size   : 14px;
-    line-height : 17px;
-    margin-right: 10px;
-}
-
-.bank-main-content-box .account-status {
-    width          : 90%;
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-}
-
-.bank-main-content-box .account-status .text-box {
-
-    height: 60px;
-    width : 67%;
-
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : flex-start;
-
-    background   : rgba(150, 150, 150, 0.4);
-    border       : 1px solid #969696;
-    box-sizing   : border-box;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 9px;
-
-    padding: 7px;
-}
-
-.bank-main-content-box .account-status .text-box .text {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 12px;
-    line-height: 14px;
-
-    color: #636363;
-}
-
-.bank-main-content-box .account-status .text-box .status {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 18px;
-    line-height: 21px;
-}
-
-.bank-main-content-box .account-status .cash-out {
-    width          : 70px;
-    height         : 70px;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-    border-radius  : 13px;
-
-    cursor: pointer;
-}
-
-
-.bank-main-content-box .account-status .cash-out img {
-    width: 80%;
-}
-
-.bank-main-content-box .history-card-info {
-    width : 90%;
-    cursor: pointer;
-}
-
-.bank-main-content-box .history-card-info img {
-    width: 100%;
-}
-
-
-.bank-main-content-box .card-box.fleeca {
-    background: url(../img/iphone/fleeca_card.png) no-repeat center;
-}
-
-.bank-main-content-box .account-status.fleeca .cash-out {
-    background: #81C245;
-}
-
-.bank-main-content-box .account-status.fleeca .text-box .status {
-    color: #33A71F;
-}
-
-.bank-main-content-box .balance-card-box.fleeca .text {
-    color: #33A71F;
-}
-
-.bank-main-content-box .card-box.fleeca .card-number {
-    position: absolute;
-    left    : 24px;
-    bottom  : 80px;
-}
-
-.bank-main-content-box .card-box.fleeca .card-holder {
-    position: absolute;
-    left    : 24px;
-    bottom  : 50px;
-}
-
-.bank-main-content-box .card-box.fleeca .valid-card {
-    position: absolute;
-    left    : 24px;
-    bottom  : 20px;
-}
-
-.bank-main-content-box .card-box.blaine {
-    background: url(../img/iphone/blaine_card.png) no-repeat center;
-}
-
-.bank-main-content-box .account-status.blaine .cash-out {
-    background: #7272FF;
-}
-
-.bank-main-content-box .account-status.blaine .text-box .status {
-    color: #7272FF;
-}
-
-.bank-main-content-box .balance-card-box.blaine .text {
-    color: #7272FF;
-}
-
-.bank-main-content-box .card-box.blaine .card-number {
-    position: absolute;
-    left    : 24px;
-    bottom  : 50px;
-}
-
-.bank-main-content-box .card-box.blaine .card-holder {
-    position: absolute;
-    left    : 24px;
-    bottom  : 20px;
-}
-
-.bank-main-content-box .card-box.blaine .valid-card {
-    position: absolute;
-    right   : 24px;
-    bottom  : 20px;
-}
-
-.bank-main-content-box .card-box.maze {
-    background: url(../img/iphone/maze_card.png) no-repeat center;
-}
-
-.bank-main-content-box .account-status.maze .cash-out {
-    background: #B50E0E;
-}
-
-.bank-main-content-box .account-status.maze .text-box .status {
-    color: #B50E0E;
-}
-
-.bank-main-content-box .balance-card-box.maze .text {
-    color: #B50E0E;
-}
-
-.bank-main-content-box .card-box.maze .card-number {
-    position: absolute;
-    left    : 24px;
-    bottom  : 50px;
-}
-
-.bank-main-content-box .card-box.maze .card-holder {
-    position: absolute;
-    left    : 24px;
-    bottom  : 20px;
-}
-
-.bank-main-content-box .card-box.maze .valid-card {
-    position: absolute;
-    right   : 24px;
-    bottom  : 55px;
-}
-
-.bank-main-content-box .card-box.pacific {
-    background: url(../img/iphone/pacific_card.png) no-repeat center;
-}
-
-.bank-main-content-box .account-status.pacific .cash-out {
-    background: #31373F;
-}
-
-.bank-main-content-box .account-status.pacific .text-box .status {
-    color: #31373F;
-}
-
-.bank-main-content-box .balance-card-box.pacific .text {
-    color: #31373F;
-}
-
-.bank-main-content-box .card-box.pacific .card-number {
-    position: absolute;
-    left    : 24px;
-    bottom  : 50px;
-}
-
-.bank-main-content-box .card-box.pacific .card-holder {
-    position: absolute;
-    left    : 24px;
-    bottom  : 20px;
-}
-
-.bank-main-content-box .card-box.pacific .valid-card {
-    position: absolute;
-    left    : 24px;
-    bottom  : 85px;
-}
-
-.bank-main-content-box .card-box.pacific {
-    background: #222831;
-}
-
-.news-content-box {
-    height         : 100%;
-    width          : inherit;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-
-    margin-top: 40px;
-
-    position: relative;
-}
-
-.news-content-box .text-title {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-}
-
-.news-content-box .title {
-    position      : absolute;
-    top           : 40px;
-    width         : 88%;
-    height        : 60px;
-    display       : flex;
-    flex-direction: row;
-    padding       : 10px;
-    background    : #CBCBCB;
-    box-shadow    : 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius : 5px;
-}
-
-.news-content-box .title .icon {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-.news-content-box .title .icon img {
-    width        : 50px;
-    height       : 50px;
-    border-radius: 50px;
-}
-
-.news-content-box .title .text {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : flex-start;
-
-    height: 40px;
-}
-
-.news-content-box .title .text .name {
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-
-    color: #C1244B;
-}
-
-.news-content-box .title .text .login-id {
-    display       : flex;
-    flex-direction: row;
-
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 300;
-    font-size  : 12px;
-    line-height: 15px;
-    color      : #565D6C;
-}
-
-.news-content-box .add-news-container {
-    position: absolute;
-    right   : 30px;
-    bottom  : 54px;
-    cursor  : pointer;
-}
-
-.news-content-box .add-news-container img {
-    width: 50px;
-}
-
-.news-content-box .news-history {
-    position     : relative;
-    height       : 68%;
-    width        : inherit;
-    margin-bottom: 55px;
-
-    display       : flex;
-    flex-direction: column;
-    align-items   : center;
-    overflow      : auto;
-}
-
-.news-content-box .news-history .news-container {
-    width           : 88%;
-    padding         : 10px;
-    background-color: #CBCBCB;
-    border-radius   : 5px;
-    margin-bottom   : 10px;
-    position        : relative;
-}
-
-.news-content-box .news-history .news-container .title {
-    position      : initial;
-    top           : initial;
-    width         : initial;
-    height        : initial;
-    display       : initial;
-    flex-direction: initial;
-    padding       : initial;
-    background    : initial;
-    box-shadow    : initial;
-    border-radius : initial;
-
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 18px;
-    line-height: 22px;
-
-    color: #C1244B;
-}
-
-.news-content-box .news-history .news-container .mainText {
-    margin-top: 5px;
-
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 14px;
-    line-height: 17px;
-
-    color: #494949;
-}
-
-.news-content-box .news-history .news-container .bottom {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-
-    height    : 30px;
-    width     : 100%;
-    margin-top: 15px;
-
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 300;
-    font-size  : 12px;
-    line-height: 15px;
-
-    color: #565D6C;
-}
-
-.news-content-box .news-history .news-container .bottom .name-tag {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : flex-start;
-
-}
-
-.news-content-box .news-history .news-container .bottom .name-tag .name {
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-    color      : #494949;
-}
-
-.news-content-box .news-history .news-container .bottom .date-time {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : flex-end;
-}
-
-.news-content-box .news-history .add-news-box {
-    position: relative;
-
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-}
-
-.news-content-box .news-history .add-news-box textarea {
-    padding: 10px;
-    resize : none;
-    outline: none;
-
-    box-sizing   : border-box;
-    background   : #CBCBCB;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-}
-
-.news-content-box .news-history .add-news-box .label {
-    letter-spacing: initial;
-    display       : initial;
-    text-align    : initial;
-
-    position: absolute;
-    right   : 15px;
-    bottom  : 60px;
-
-    font-family: Inter;
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 12px;
-    line-height: 15px;
-
-    text-transform: uppercase;
-
-    color: #494949;
-}
-
-.news-content-box .news-history .add-news-box .buttons {
-    height: 40px;
-    width : 100%;
-
-    margin-top: 15px;
-
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-}
-
-.news-content-box .news-history .add-news-box .buttons .cancel-button {
-    height: 40px;
-    width : 90px;
-
-    background     : #C93939;
-    border-radius  : 3px;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-
-    cursor: pointer;
-}
-
-.news-content-box .news-history .add-news-box .buttons .sent-button {
-    height: 40px;
-    width : 120px;
-
-    background     : #386DF5;
-    border-radius  : 3px;
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-
-    cursor: pointer;
-}
-
-.gps-container {
-    height         : 100%;
-    width          : inherit;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-
-    margin-top: 40px;
-
-    position: relative;
-}
-
-.gps-container .title {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-}
-
-.gps-container .search-box {
-    position       : relative;
-    display        : flex;
-    flex-direction : row;
-    justify-content: center;
-    align-items    : center;
-    width          : 95%;
-}
-
-.gps-container .search-box input {
-    width  : 100%;
-    height : 15px;
-    padding: 10px;
-
-    background     : rgba(55, 55, 55, 0.63);
-    box-shadow     : 0px 4px 4px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(13px);
-    border-radius  : 8px;
-}
-
-.gps-container .search-box img {
-    position: absolute;
-    right   : 15px;
-}
-
-.gps-container .gps-box {
-    position       : relative;
-    width          : 95%;
-    height         : 90%;
-    display        : flex;
-    flex-direction : column;
-    justify-content: center;
-    align-items    : center;
-}
-
-.gps-container .gps-box .title-box {
-    height: 30px;
-    width : 100%;
-
-    display        : flex;
-    flex-direction : row;
-    align-items    : center;
-    justify-content: space-between;
-
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 14px;
-    line-height: 17px;
-
-    color: #535863;
-}
-
-.gps-container .gps-box .gps-content {
-    width        : 100%;
-    height       : 90%;
-    margin-bottom: 60px;
-
-    display       : flex;
-    flex-direction: column;
-    align-items   : center;
-
-    overflow: auto;
-}
-
-.gps-container .gps-box .gps-content .gps-main-content {
-    position: relative;
-
-    min-height: 40px;
-    width     : 100%;
-
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-
-    background     : rgba(55, 55, 55, 0.63);
-    box-shadow     : 0px 4px 4px rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(13px);
-    border-radius  : 8px;
-
-    margin-bottom: 10px;
-
-    cursor: pointer;
-}
-
-
-.gps-container .gps-box .gps-content .gps-main-content .icon-title {
-    width: 38%;
-
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-    margin-left    : 10px;
-}
-
-.gps-container .gps-box .gps-content .gps-main-content .icon-title .icon {
-    width: 25px;
-}
-
-.gps-container .gps-box .gps-content .gps-main-content .subtitle {
-    position: absolute;
-    right   : 7px;
-    bottom  : 5px;
-
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-
-    color: #606060;
-}
-
-.settings-main-box {
-    height            : 100%;
-    width             : inherit;
-    display           : flex;
-    flex-direction    : column;
-    /* justify-content: space-between; */
-    align-items       : center;
-
-    margin-top: 40px;
-
-    position: relative;
-}
-
-.settings-main-box .text-title {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-}
-
-.settings-main-box .title {
-    height        : 60px;
-    width         : 88%;
-    display       : flex;
-    flex-direction: row;
-    align-items   : center;
-    padding       : 10px;
-    background    : #3E4043;
-    box-shadow    : 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius : 5px;
-}
-
-.settings-main-box .title .icon {
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-}
-
-.settings-main-box .title .icon img {
-    width        : 50px;
-    height       : 50px;
-    border-radius: 50px;
-}
-
-.settings-main-box .title .text {
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : flex-start;
-    height         : 30px;
-}
-
-.settings-main-box .title .text .name {
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 14px;
-    line-height: 17px;
-    color      : #FFFFFF;
-}
-
-.settings-main-box .title .text .login-id {
-    display       : flex;
-    flex-direction: row;
-    font-family   : 'Inter';
-    font-style    : normal;
-    font-weight   : 300;
-    font-size     : 12px;
-    line-height   : 15px;
-    color         : #9F9F9F;
-}
-
-.settings-main-box .phone-box {
-    height: 20px;
-    width : 88%;
-
-    padding: 10px;
-
-    margin-top: 10px;
-
-    display       : flex;
-    flex-direction: row;
-    align-items   : center;
-
-    background   : #3E4043;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-
-.settings-main-box .phone-box .icon {
-    width: 25px;
-
-    margin-right: 10px;
-}
-
-.settings-main-box .space {
-    height: 1px;
-    width : 94%;
-
-    margin       : 20px 0px 10px 0;
-    background   : #292D35;
-    border-radius: 1px;
-}
-
-.settings-main-box .other-box {
-    height: 30px;
-    width : 88%;
-
-    padding: 10px;
-
-    margin-top: 10px;
-
-    display       : flex;
-    flex-direction: row;
-    align-items   : center;
-
-    background   : #3E4043;
-    box-shadow   : 0px 4px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-
-    cursor: pointer;
-}
-
-.settings-main-box .other-box .text {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 16px;
-    line-height: 19px;
-
-    color: #FFFFFF;
-}
-
-.settings-main-box .other-box img {
-    width: 30px;
-
-    margin-right: 10px;
-}
-
-
-.wallpapers-box {
-    height         : 100%;
-    width          : inherit;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-
-    margin-top   : 40px;
-    margin-bottom: 20px;
-
-    position: relative;
-}
-
-.wallpapers-box .title-box {
-    display        : flex;
-    flex-direction : row;
-    justify-content: space-between;
-    align-items    : center;
-
-    width: 88%;
-}
-
-.wallpapers-box .title-box .title {
-
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 18px;
-    line-height: 24px;
-
-    color: #FFFFFF;
-}
-
-.wallpapers-box .title-box .subtitle {
-    display       : flex;
-    flex-direction: row;
-    align-items   : center;
-
-    cursor: pointer;
-}
-
-.wallpapers-box .title-box .subtitle .text {
-    font-family: 'Inter';
-    font-style : normal;
-    font-weight: 500;
-    font-size  : 15px;
-    line-height: 18px;
-
-    margin-right: 5px;
-
-    color: #FFFFFF;
-}
-
-.wallpapers-box .title-box .subtitle .icon {
-    width: 18px;
-}
-
-.wallpapers-box .wallpapers-content {
-    width : 88%;
-    height: 74%;
-
-    margin-bottom: 120px;
-    padding      : 0 5px 0 0;
-
-    display        : flex;
-    flex-direction : row;
-    flex-wrap      : wrap;
-    justify-content: space-between;
-    align-items    : center;
-
-    overflow: auto;
-}
-
-.wallpapers-box .wallpapers-content .wallpaper-box {
-    position     : relative;
-    width        : 45%;
-    margin-bottom: 10px;
-
-    cursor: pointer;
-}
-
-.wallpapers-box .wallpapers-content .wallpaper-box img {
-    width: 100%;
-}
-
-.wallpapers-box .wallpapers-content .wallpaper-box .checkbox {
-    position: absolute;
-
-    right : 10px;
-    bottom: 8px;
-
-    border-radius: 50%;
-
-    width : 20px;
-    height: 20px;
-
-    background: #171B21;
-
-    margin-right  : initial;
-    display       : initial;
-    line-height   : initial;
-    font-size     : initial;
-    vertical-align: initial;
-}
-
-.wallpapers-box .wallpapers-content .wallpaper-box .checkbox.active {
-    background: url(../img/iphone/icons/accept_icon.png) no-repeat center;
-}
-
-.wallpapers-box .button {
-    width : 90%;
-    height: 40px;
-
-    position: absolute;
-    bottom  : 65px;
-
-    display        : flex;
-    flex-direction : row;
-    justify-content: center;
-    align-items    : center;
-
-
-    background   : #1B76FF;
-    border-radius: 5px;
-
-    cursor: pointer;
-}
-
-.add-new-wallpaper {
-    height         : 100%;
-    width          : inherit;
-    display        : flex;
-    flex-direction : column;
-    justify-content: space-between;
-    align-items    : center;
-
-    margin-top   : 40px;
-    margin-bottom: 20px;
-
-    position: absolute;
-}
-
-.add-new-wallpaper .wallpaper-add-box {
-    height         : 100%;
-    width          : inherit;
-    display        : flex;
-    flex-direction : column;
-    justify-content: center;
-    align-items    : center;
-
-    position: relative;
-}
-
-.add-new-wallpaper .wallpaper-add-box .wallpaper-add-content {
-    height: 40%;
-    width : 90%;
-
-    padding: 10px;
-
-    display        : flex;
-    flex-direction : column;
-    justify-content: center;
-    align-items    : center;
-
-    background     : rgba(62, 64, 67, 0.8);
-    border         : 1px solid #3E4043;
-    box-sizing     : border-box;
-    box-shadow     : 0px 4px 4px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(12px);
-    border-radius  : 20px;
-}
-
-.add-new-wallpaper .wallpaper-add-box .wallpaper-add-content .other-box {
-    font-family: 'SF UI Display';
-    font-style : normal;
-    font-weight: normal;
-    font-size  : 12px;
-    line-height: 17px;
-
-    color: #C1C1C1;
-}
-
-.add-new-wallpaper .wallpaper-add-box .wallpaper-add-content .other-box .url {
-    width: 99%;
-
-    margin-top: 10px;
-
-    padding: 10px 5px;
-
-    background     : rgba(62, 64, 67, 0.7);
-    border         : 1px solid #3E4043;
-    box-sizing     : border-box;
-    backdrop-filter: blur(12px);
-
-    border-radius: 5px;
-}
-
-.add-new-wallpaper .wallpaper-add-box .wallpaper-add-content .other-box .button {
-    
-    min-height: 40px;
-    width: 100%;
-
-    margin-top: 10px;
-
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-
-background: #1B76FF;
-border: 1px solid #1B76FF;
-box-sizing: border-box;
-backdrop-filter: blur(12px);
-/* Note: backdrop-filter has minimal browser support */
-
-border-radius: 5px;
 }

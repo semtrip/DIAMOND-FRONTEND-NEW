@@ -1,12 +1,12 @@
 import React from 'react';
-// import MaterialIcon from 'material-icons-react';
-// import Avatar from '@material-ui/core/Avatar';
-import '../Iphone/Calls/css/rotated.css'
-import InputNumber from '../Iphone/Calls/InputNumber'
-// import ActionList from '../Iphone/Calls/ActionList'
-import Keyboard from '../Iphone/Calls/Keyboard';
-import DoCallButton from '../Iphone/Calls/DoCallButton'
-// import NavigationBar from '../Iphone/Calls/NavigationBar';
+import MaterialIcon from 'material-icons-react';
+import Avatar from '@material-ui/core/Avatar';
+import '../Android/Calls/css/rotated.css'
+import InputNumber from '../Android/Calls/InputNumber'
+import ActionList from '../Android/Calls/ActionList'
+import Keyboard from '../Android/Calls/Keyboard';
+import DoCallButton from '../Android/Calls/DoCallButton'
+import NavigationBar from '../Android/Calls/NavigationBar';
 
 class Calls extends React.Component {
     constructor(props) {

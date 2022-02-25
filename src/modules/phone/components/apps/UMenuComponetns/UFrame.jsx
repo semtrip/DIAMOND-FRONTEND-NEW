@@ -247,7 +247,7 @@ class UFrame extends React.Component {
                                     <UTable title={this.props.item.title} columns={this.props.item.columns}
                                             data={this.props.item.data} readonly={this.props.item.readonly}/>
                                 </div>
-                                : <div className="umenu-title-box">Turn your phone over to view the table.</div>}
+                                : <div className="umenu-title-box">Для просмотра таблицы переверните телефон.</div>}
                         </React.Fragment> : ''
                     }
 
