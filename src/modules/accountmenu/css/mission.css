@@ -1,4 +1,5 @@
 .mission {
+    position: relative;
     width: 100%;
     height: 100%;
     display: flex;
@@ -36,26 +37,29 @@
 }
 
 .mission .container {
-    width: 863px;
+    width: 890px;
     height: 620px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: wrap;
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
 .mission .container .task {
+    position: relative;
     min-height: 265px;
     width: 196px;
     border-radius: 13px;
     background: #242932;
-    margin-right: 21px;
     margin-bottom: 28px;
     padding: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    margin-right: 7px;
 }
 
 .mission .container .task.active {
@@ -176,4 +180,14 @@
 
 .mission .container .task .btn:hover {
     background: rgb(86, 132, 247);
+}
+
+.mission .back {
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    height: 29px;
+    width: 29px;
+    background: url(../img/back.png) no-repeat center;
+    cursor: pointer;
 }

@@ -134,8 +134,8 @@ const AccountMenu = observer(() => {
                             <div className="mainNav menuBlock">
                                 <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_player' to='/player'/>
                                 <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_property' to={{pathname: '/property',}} />
-                                {/* <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_reports' to='/reports'/>
-                                <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_mission' to='/mission'/> */}
+                                {/* <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_reports' to='/reports'/> */}
+                                <NavLink className={({ isActive }) => isActive ? "" : "navButton"} id='b_mission' to='/mission'/>
                             </div>
                             <NavLink className={({ isActive }) => isActive ? "" : "settings menuBlock"} to='/settings'/>
                         </div>

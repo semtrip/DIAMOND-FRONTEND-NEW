@@ -110,13 +110,7 @@ class AccountMenuStore {
                         price: 100000,
                     },
                 ]
-            },
-            {
-                title: 'Криминальный мир',
-                discriptor: 'Вам предстоит, пройти суровый мир криминала, убивать людей, грабить банки,получить уважение и почет! Не забудьте,вы находитесь в криминальном мире DIAMOND ROLE PLAY',
-                img: 'url',
-                price: 100000,
-            },
+            }
 
         ]
     }
@@ -256,13 +250,11 @@ class AccountMenuStore {
             console.log('closeAccountMenu')
         }
     }
-    clickTask = (e) => {
-        let el = e.target
-        let id = el.closest('.task').id
+    clickTask = (taskId, id) => {
         try {
-            mp.trigger('startMission', id) // eslint-disable-line
+            mp.trigger('startMission',taskId, id) // eslint-disable-line
         } catch (error) {
-            console.log('startMission', id)
+            console.log('startMission',taskId, id)
         }
     }
     moneyFormat(n) {
